@@ -2,13 +2,6 @@ import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Home from "./pages/Home";
 import './styles/style.css';
-import Header from "./components/Header";
-import Hero from './components/Hero';
-import {  Segment } from 'semantic-ui-react';
-import Main from './components/Main';
-import Footer from './components/Footer';
-
-
 
 function App() {
     return (
@@ -16,12 +9,7 @@ function App() {
             <Router>
                 <Switch>
                     <Route path="/">
-                            <Segment.Group>
-                                <Header/>
-                                <Hero/>
-                                <Main/>
-                                <Footer/>
-                            </Segment.Group>
+                        <Home/>
                     </Route>
                 </Switch>
             </Router>
