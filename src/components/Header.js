@@ -1,5 +1,5 @@
-import React, { useState }from 'react';
-import { Segment, Header, Grid, Icon, Image, Sidebar } from 'semantic-ui-react';
+import React from 'react';
+import { Segment, Header, Grid, Icon, Image } from 'semantic-ui-react';
 
 function HeaderBar({onToggleMenu}) {
     

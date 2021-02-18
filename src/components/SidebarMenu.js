@@ -1,10 +1,6 @@
-import React, { useState } from 'react';
+import React from 'react';
 import {
-    Checkbox,
-    Grid,
-    Header,
     Icon,
-    Image,
     Menu,
     Segment,
     Sidebar,
@@ -14,7 +10,6 @@ import {
 
 function SidebarMenu({visible, setVisible}) {
     
-
     return (
             <Sidebar.Pushable>
                 <Sidebar

@@ -9,7 +9,6 @@ function Home() {
     const [visible, setVisible] = useState(false); 
 
     const onToggleMenu = () => {
-        console.log('hello')
         setVisible(!visible);
     }
 
