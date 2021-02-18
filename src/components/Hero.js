@@ -3,7 +3,7 @@ import { Grid, Segment, Header, Button } from 'semantic-ui-react';
 
 function Hero() {
     return (
-        <Segment size='large' padded='very' className="hero-section">
+        <Segment size='large' padded='very' className="hero-section" color="blue" raised>
             <Grid container>
                 <Grid.Row floated='left'>
                     <Grid.Column width={16}>
