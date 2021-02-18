@@ -11,3 +11,6 @@ html {
 
 body {
   box-sizing: border-box; }
+
+.hero-section {
+  background-color: linear-gradient(135deg, #2AFADF 0%, #4C83FF 100%); }

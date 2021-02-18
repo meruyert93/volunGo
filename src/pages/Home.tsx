@@ -1,11 +1,10 @@
 import React from 'react'
-import Hero from '../components/Hero';
+import { Segment, Container } from 'semantic-ui-react';
 
 function Home() {
     return (
-        <div>
-            <Hero/>
-        </div>
+        <>
+        </>
     )
 }
 
