@@ -6,6 +6,7 @@ import Header from "./components/Header";
 import Hero from './components/Hero';
 import {  Segment } from 'semantic-ui-react';
 import Main from './components/Main';
+import Footer from './components/Footer';
 
 
 
@@ -19,6 +20,7 @@ function App() {
                                 <Header/>
                                 <Hero/>
                                 <Main/>
+                                <Footer/>
                             </Segment.Group>
                     </Route>
                 </Switch>

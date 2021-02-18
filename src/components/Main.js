@@ -1,5 +1,5 @@
 import React from 'react';
-import { Grid, Segment, Header, Container, Icon } from 'semantic-ui-react';
+import { Grid, Segment, Header, Icon } from 'semantic-ui-react';
 
 
 function Main() {
