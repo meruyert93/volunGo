@@ -3,14 +3,12 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import { StateProvider } from "./contexts/StateProvider";
 import 'semantic-ui-css/semantic.min.css';
+
 
 ReactDOM.render(
     <React.StrictMode>
-        <StateProvider>
             <App />
-        </StateProvider>
     </React.StrictMode>,
   document.getElementById('root')
 );

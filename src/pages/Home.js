@@ -1,22 +1,16 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { Segment } from 'semantic-ui-react';
-import Header from '../components/Header';
-import Footer from '../components/Footer'
-import SidebarMenu from '../components/SidebarMenu';
+import Hero from '../components/Hero';
+import Main from '../components/Main';
 
 
-function Home() {
-    const [visible, setVisible] = useState(false); 
-
-    const onToggleMenu = () => {
-        setVisible(!visible);
-    }
+function Home({visible, setVisible}) {
+    
 
     return (
         <Segment.Group>
-            <Header onToggleMenu={onToggleMenu}/>
-                <SidebarMenu visible={visible} setVisible={setVisible}/>
-            <Footer/>
+            <Hero/>
+            <Main/>
         </Segment.Group>
     )
 }

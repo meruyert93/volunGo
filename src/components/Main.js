@@ -1,28 +1,31 @@
 import React from 'react';
 import { Grid, Segment, Header, Icon } from 'semantic-ui-react';
-
+import { useTranslation } from "react-i18next";
+import "../translations/i18n";
 
 function Main() {
+    const { t } = useTranslation();
+
     return (
         <Segment size='large' padded='very' >
-            <Header  as='h2'>
-                Why VolunGO?
+            <Header  as='h2'> 
+                {t('why')}
             </Header>
             <Grid stackable columns={3}>
                 <Grid.Column width={5}>
                     <Icon name="search" color="blue"size="large"/>
-                    <Header as ="h4">Find volunteer opportunities</Header>
-                    <p>Find volunteer opportunities that fit you in your city or ways to help from home when you’re free.</p>
+                    <Header as ="h4">{t('opportunities')}</Header>
+                    <p>{t('sub_text_opportunities')}</p>
                 </Grid.Column>
                 <Grid.Column  width={5}>
                     <Icon name="group" color="blue"size="large"/>
-                    <Header as ="h4">Join your local organizations</Header>
-                    <p>Join your local organizations who provide volunteer opportunities that are suit to you.</p>
+                    <Header as ="h4">{t('organizations')}</Header>
+                    <p>{t('sub_text_organizations')}</p>
                 </Grid.Column>
                 <Grid.Column  width={5}>
                     <Icon name="line graph" color="blue"size="large"/>
-                    <Header as ="h4">Track your impact</Header>
-                    <p>See all your individual impact (volunteer hours and organizations) at a glance.</p>
+                    <Header as ="h4">{t('impact')}</Header>
+                    <p>{t('sub_text_impact')}</p>
                 </Grid.Column>
             </Grid>
         </Segment>

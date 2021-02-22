@@ -1,5 +1,6 @@
 import React, { createContext, useContext } from "react";
 
+
 // Prepares the dataLayer
 export const StateContext = createContext();
 
