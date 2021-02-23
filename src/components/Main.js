@@ -7,7 +7,7 @@ function Main() {
     const { t } = useTranslation();
 
     return (
-        <Segment size='large' padded='very' >
+        <Segment size='large' padded='very'>
             <Header  as='h2'> 
                 {t('why')}
             </Header>

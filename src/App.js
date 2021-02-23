@@ -5,7 +5,8 @@ import {
     Segment,
     Sidebar,
   } from 'semantic-ui-react';
-import Forms from "./components/Forms";
+import FormsBasic from "./components/FormsBasic";
+import FormsAdd from "./components/FormsAdd"
 import Header from './components/Header';
 import Footer from './components/Footer';
 import './styles/style.css';
@@ -34,8 +35,11 @@ function App() {
                                 <Route exact path="/">
                                     <Home/>
                                 </Route>
-                                <Route path="/sign-up">
-                                    <Forms/>
+                                <Route path="/sign-up1">
+                                    <FormsBasic/>
+                                </Route>
+                                <Route path="/sign-up2">
+                                    <FormsAdd/>
                                 </Route>
                             </Switch>
                         </Sidebar.Pusher>
