@@ -19,7 +19,7 @@ function FormsAdd() {
         history.push(path);
     }
     const RouteChangeNext = () => {
-        let path = `newPath`;
+        let path = `sign-up-finish`;
         history.push(path);
     }
 

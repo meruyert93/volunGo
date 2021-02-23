@@ -25,5 +25,12 @@ export const TRANSLATIONS_EN = {
     first_name: "First name",
     last_name: "Last name",
     year_birth: "Year of birth",
-    gender: "Gender"
+    gender: "Gender",
+
+    //sign up finish
+    congratulation: "Congratulations!",
+    personalize: "Personalize your feed",
+    sub_text_personalize: "Volunteer opportunities you may find interesting will show up more in your feed.",
+    complete_profile: "Complete profile",
+    skip_now: "Skip now"
    };

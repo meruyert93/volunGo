@@ -4,17 +4,14 @@ import Home from "./pages/Home";
 import {
     Segment,
     Sidebar,
-  } from 'semantic-ui-react';
+} from 'semantic-ui-react';
 import FormsBasic from "./components/FormsBasic";
 import FormsAdd from "./components/FormsAdd"
 import Header from './components/Header';
 import Footer from './components/Footer';
 import './styles/style.css';
 import SidebarMenu from './components/SidebarMenu';
-
-
-
-
+import SignUpFinish from './components/SignUpFinish'
 
 function App() {
     const [visible, setVisible] = useState(false); 
@@ -40,6 +37,9 @@ function App() {
                                 </Route>
                                 <Route path="/sign-up2">
                                     <FormsAdd/>
+                                </Route>
+                                <Route path="/sign-up-finish">
+                                    <SignUpFinish/>
                                 </Route>
                             </Switch>
                         </Sidebar.Pusher>
