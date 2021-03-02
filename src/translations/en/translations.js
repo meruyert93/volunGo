@@ -44,5 +44,9 @@ export const TRANSLATIONS_EN = {
     make_difference: 'Which way do you want to make a difference?',
 
     //details-skills
-    put_your_skills: 'What skills/abilities do you want to put to good use?'
+    put_your_skills: 'What skills/abilities do you want to put to good use?',
+
+    //home page hero section
+    welcome: 'Welcome, Alison!', 
+    profile: 'Complete your profile, make results better.'
    };
