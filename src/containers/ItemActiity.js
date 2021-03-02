@@ -6,7 +6,7 @@ function ItemActivity({id, name, image}) {
     const { t } = useTranslation();
 
     return (
-        <Grid.Column mobile={16} tablet={8} computer={5}>
+        <Grid.Column mobile={8} tablet={8} computer={5}>
             <Segment color='grey' inverted size='big'>
                 <Grid columns={2} relaxed>
                 <Grid.Row stretched>

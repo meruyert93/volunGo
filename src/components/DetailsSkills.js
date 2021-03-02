@@ -8,11 +8,11 @@ function DetailsSkills() {
     const { t } = useTranslation();
 
     return (
-        <Segment size='large'>
+        <Segment size='large' padded='very'>
             <Header as='h2'>
             {t('put_your_skills')}
             </Header>
-            <Grid stackable>
+            <Grid columns={2}>
                 {dataSkills.map((item) =>{
                     return(
                         <ItemSkill key={item.id} {...item}/>
