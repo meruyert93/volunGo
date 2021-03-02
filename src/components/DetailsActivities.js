@@ -19,6 +19,11 @@ function DetailsActivities () {
                     )
                 })}
                 </Grid>
+                <Divider hidden/>
+                <Button.Group widths='2'>
+                                <Button basic color='blue' as='a'>{t('back')}</Button>
+                                <Button primary type='submit'>{t('next')}</Button>
+                </Button.Group>
         </Segment>
     )
 }

@@ -42,4 +42,7 @@ export const TRANSLATIONS_EN = {
 
     //details-activities
     make_difference: 'Which way do you want to make a difference?',
+
+    //details-skills
+    put_your_skills: 'What skills/abilities do you want to put to good use?'
    };
