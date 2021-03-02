@@ -1,10 +1,18 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Grid, Segment, Header, Icon, Button, Checkbox, Form, Select  } from 'semantic-ui-react';
 import { useHistory } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import "../translations/i18n";
+import { useForm, Controller } from "react-hook-form";
+import { useStateMachine } from "little-state-machine";
+import updateAction from "../adapters/updateAction";
 
 function FormsAdd() {
+    const { state, actions } =  useStateMachine({ updateAction });
+    const { handleSubmit, errors, register, control } = useForm({
+        defaultValues: state.yourDetails
+    });
+
     const { t } = useTranslation();
     const genderOptions = [
         { key: 'm', text: 'Male', value: 'male' },
@@ -18,9 +26,11 @@ function FormsAdd() {
         let path = `sign-up1`;
         history.push(path);
     }
-    const RouteChangeNext = () => {
+    const RouteChangeNext = (data) => {
+        actions.updateAction(data);
         let path = `sign-up-finish`;
         history.push(path);
+        console.log(data);
     }
 
     return (
@@ -31,32 +41,51 @@ function FormsAdd() {
             </Header>
             <Grid.Row>
                 <Grid.Column>
-                    <Form>
+                    <Form onSubmit={handleSubmit(RouteChangeNext)}>
                         <Form.Field>
                             <label>{t('first_name')}</label>
-                            <input/>
+                            <input
+                                name="firstName"
+                                ref={register({ required: "This is required"})}
+                            />
                         </Form.Field>
                         <Form.Field>
                             <label>{t('last_name')}</label>
-                            <input/>
+                            <input
+                                name="lastName"
+                                ref={register({ required: "This is required"})}
+                            />
                         </Form.Field>
                         <Form.Group widths='equal'>
                             <Form.Field>
                                 <label>{t('year_birth')}</label>
-                                <input/>
+                                <input
+                                    name="yearOfBirth"
+                                    ref={register({ required: "This is required"})}
+                                />
                             </Form.Field>
-                            <Form.Field
-            	                control={Select}
-                                options={genderOptions}
+                            <Controller
+                                as={<Form.Field control={Select}/>}
+                                name="gender"
+                                control= {control}
                                 label={{ children: 'Gender', htmlFor: 'form-select-control-gender' }}
-                                placeholder='Gender'
-                                search
                                 searchInput={{ id: 'form-select-control-gender' }}
+                                search
+                                placeholder='Gender'
+                                options={genderOptions}
+                                defaultValue=""
+                                render={ ({Select, onChange, onBlur, value, name, ref }) => {
+                                    return (
+                                    <Form.Field
+            	                    control={Select}
+                                    />
+                                    )
+                                }}
                             />
                         </Form.Group>
                         <Button.Group widths='2'>
                             <Button basic color='blue' onClick={RouteChangeBack}>{t('back')}</Button>
-                            <Button primary onClick={RouteChangeNext}>{t('next')}</Button>
+                            <Button primary onClick={handleSubmit(RouteChangeNext)} type='submit'>{t('next')}</Button>
                         </Button.Group>
                     </Form>
                 </Grid.Column>

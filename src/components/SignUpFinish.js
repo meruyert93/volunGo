@@ -2,9 +2,14 @@ import React from 'react';
 import { Grid, Segment, Header, Icon, Button, Checkbox, Form, Image, Divider  } from 'semantic-ui-react';
 import { useTranslation } from "react-i18next";
 import "../translations/i18n";
+import { useForm, Controller } from "react-hook-form";
+import { useStateMachine } from "little-state-machine";
+import updateAction from "../adapters/updateAction";
 
 function SignUpFinish() {
     const { t } = useTranslation();
+
+    const { state } = useStateMachine(updateAction);
 
     return (
         <Segment size='large' padded='very'>
@@ -14,7 +19,7 @@ function SignUpFinish() {
                 </Header>
                 <Grid.Row centered >
                     <Grid.Column computer={6} textAlign="center">
-                        <Image src='./images/celebration.svg' fluid size="large"/>
+                        <Image src='./images/celebration.svg' fluid />
                         <Header as='h3'>
                         {t('personalize')}
                     </Header>

@@ -1,10 +1,19 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Grid, Segment, Header, Icon, Button, Checkbox, Form  } from 'semantic-ui-react';
 import { useHistory } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import "../translations/i18n";
+import { useForm, Controller, ErrorMessage } from "react-hook-form";
+import { useStateMachine } from "little-state-machine";
+import updateAction from "../adapters/updateAction";
+
 
 function Forms() {
+    const { state, actions } =  useStateMachine({ updateAction });
+    const { handleSubmit, errors, register } = useForm({
+        defaultValues: state.yourDetails
+    });
+
     const { t } = useTranslation();
 
     const history = useHistory();
@@ -14,9 +23,11 @@ function Forms() {
         history.push(path);
     }
 
-    const RouteChangeNext = () => {
+    const RouteChangeNext = (data) => {
+        actions.updateAction(data);
         let path = `sign-up2`;
         history.push(path);
+        console.log(data)
     }
 
     return (
@@ -27,22 +38,32 @@ function Forms() {
                 </Header>
                 <Grid.Row streched>
                     <Grid.Column>
-                        <Form>
+                        <Form onSubmit={handleSubmit(RouteChangeNext)}>
                             <Form.Field>
                                 <label>{t('email')}</label>
-                                <input/>
+                                <input 
+                                    name="email"
+                                    ref={register({ required: "This is required"})}
+                                />
+                                {/* <ErrorMessage errors={errors} as="p"/> */}
                             </Form.Field>
                             <Form.Field>
                                 <label>{t('password')}</label>
-                                <input/>
+                                <input
+                                    name="password"
+                                    ref={register({ required: "This is required"})}
+                                />
                             </Form.Field>
                             <Form.Field>
                                 <label>{t('confirm_password')}</label>
-                                <input/>
+                                <input
+                                    name="passwordConfirm"
+                                    ref={register({ required: "This is required"})}
+                                />
                             </Form.Field>
                             <Button.Group widths='2'>
                                 <Button basic color='blue' as='a' onClick={RouteChangeBack}>{t('back')}</Button>
-                                <Button primary onClick={RouteChangeNext}>{t('next')}</Button>
+                                <Button primary onClick={handleSubmit(RouteChangeNext)} type='submit'>{t('next')}</Button>
                             </Button.Group>
                         </Form>
                     </Grid.Column>

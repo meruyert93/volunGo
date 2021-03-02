@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import { BrowserRouter, Route, Switch } from "react-router-dom";
+import { BrowserRouter, Route, Switch, useLocation } from "react-router-dom";
 import Home from "./pages/Home";
 import {
     Segment,
@@ -11,7 +11,21 @@ import Header from './components/Header';
 import Footer from './components/Footer';
 import './styles/style.css';
 import SidebarMenu from './components/SidebarMenu';
-import SignUpFinish from './components/SignUpFinish'
+import SignUpFinish from './components/SignUpFinish';
+import { StateMachineProvider, createStore } from "little-state-machine";
+
+
+createStore({
+    yourDetails: {
+        email:'',
+        password: '',
+        passwordConfirm:'',
+        firsName:'',
+        lastName:'',
+        yearOfBirth:'',
+        gender:''
+    }
+})
 
 function App() {
     const [visible, setVisible] = useState(false); 
@@ -21,7 +35,7 @@ function App() {
     }
 
     return (
-        <div>
+        <StateMachineProvider>
             <BrowserRouter>
                 <Segment.Group>
                     <Header  onToggleMenu={onToggleMenu}/>
@@ -47,7 +61,7 @@ function App() {
                     <Footer/>
                 </Segment.Group>
             </BrowserRouter>
-        </div>
+        </StateMachineProvider>
     );
 }
 
