@@ -12,6 +12,8 @@ import Footer from './components/Footer';
 import './styles/style.css';
 import SidebarMenu from './components/SidebarMenu';
 import SignUpFinish from './components/SignUpFinish';
+import DetailsLocation from './components/DetailsLocation';
+import DetailsActivities from './components/DetailsActivities';
 import { StateMachineProvider, createStore } from "little-state-machine";
 
 
@@ -54,6 +56,12 @@ function App() {
                                 </Route>
                                 <Route path="/sign-up-finish">
                                     <SignUpFinish/>
+                                </Route>
+                                <Route path="/details-location">
+                                    <DetailsLocation/>
+                                </Route>
+                                <Route path="/details-activities">
+                                    <DetailsActivities/>
                                 </Route>
                             </Switch>
                         </Sidebar.Pusher>

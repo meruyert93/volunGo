@@ -32,5 +32,14 @@ export const TRANSLATIONS_EN = {
     personalize: "Personalize your feed",
     sub_text_personalize: "Volunteer opportunities you may find interesting will show up more in your feed.",
     complete_profile: "Complete profile",
-    skip_now: "Skip now"
+    skip_now: "Skip now",
+
+    //details-location
+    location_info: "Lastly, we need to know your location",
+    sub_text_location_info: "To show you volunteer opportunities within your area.",
+    city: "City",
+    postal_code: "Postal code (optional)",
+
+    //details-activities
+    make_difference: 'Which way do you want to make a difference?',
    };
