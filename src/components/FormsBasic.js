@@ -36,7 +36,7 @@ function Forms() {
                 <Header  as='h3'> 
                 {t('account')}
                 </Header>
-                <Grid.Row streched>
+                <Grid.Row streched="true">
                     <Grid.Column>
                         <Form onSubmit={handleSubmit(RouteChangeNext)}>
                             <Form.Field>

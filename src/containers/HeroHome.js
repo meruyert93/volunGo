@@ -8,7 +8,7 @@ function HeroHome() {
 
     return (
         <Segment size='large' padded='very' color="orange" inverted>
-            <Grid floated='left' stretched >
+            <Grid floated='left'>
                 <Grid.Row floated='left'>
                     <Grid.Column width={16}>
                         <Header as='h1'>

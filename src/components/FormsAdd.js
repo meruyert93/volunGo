@@ -28,7 +28,7 @@ function FormsAdd() {
     }
     const RouteChangeNext = (data) => {
         actions.updateAction(data);
-        let path = `sign-up-finish`;
+        let path = `details-location`;
         history.push(path);
         console.log(data);
     }
