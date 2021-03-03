@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
-import { BrowserRouter, Route, Switch, useLocation } from "react-router-dom";
+import { BrowserRouter, Route, Switch } from "react-router-dom";
+import Landing from "./pages/Landing";
 import Home from "./pages/Home";
 import {
     Segment,
@@ -12,6 +13,9 @@ import Footer from './components/Footer';
 import './styles/style.css';
 import SidebarMenu from './components/SidebarMenu';
 import SignUpFinish from './components/SignUpFinish';
+import DetailsLocation from './components/DetailsLocation';
+import DetailsActivities from './components/DetailsActivities';
+import DetailsSkills from './components/DetailsSkills'
 import { StateMachineProvider, createStore } from "little-state-machine";
 
 
@@ -23,7 +27,9 @@ createStore({
         firstName:'',
         lastName:'',
         yearOfBirth:'',
-        gender:''
+        gender:'',
+        city:'',
+        postalCode:'',
     }
 })
 
@@ -44,7 +50,7 @@ function App() {
                         <Sidebar.Pusher dimmed={visible}>
                             <Switch>
                                 <Route exact path="/">
-                                    <Home/>
+                                    <Landing/>
                                 </Route>
                                 <Route path="/sign-up1">
                                     <FormsBasic/>
@@ -54,6 +60,18 @@ function App() {
                                 </Route>
                                 <Route path="/sign-up-finish">
                                     <SignUpFinish/>
+                                </Route>
+                                <Route path="/details-location">
+                                    <DetailsLocation/>
+                                </Route>
+                                <Route path="/details-activities">
+                                    <DetailsActivities/>
+                                </Route>
+                                <Route path="/details-skills">
+                                    <DetailsSkills/>
+                                </Route>
+                                <Route path="/home">
+                                    <Home/>
                                 </Route>
                             </Switch>
                         </Sidebar.Pusher>

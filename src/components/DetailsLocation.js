@@ -1,14 +1,12 @@
-import React, { useState } from 'react'
-import { Grid, Segment, Header, Icon, Button, Checkbox, Form  } from 'semantic-ui-react';
-import { useHistory } from "react-router-dom";
+import React from 'react';
+import { Grid, Segment, Header, Button, Form,  } from 'semantic-ui-react';
 import { useTranslation } from "react-i18next";
-import "../translations/i18n";
+import { useHistory } from "react-router-dom";
 import { useForm, Controller, ErrorMessage } from "react-hook-form";
 import { useStateMachine } from "little-state-machine";
 import updateAction from "../adapters/updateAction";
 
-
-function Forms() {
+function DetailsLocation () {
     const { state, actions } =  useStateMachine({ updateAction });
     const { handleSubmit, errors, register } = useForm({
         defaultValues: state.yourDetails
@@ -19,46 +17,43 @@ function Forms() {
     const history = useHistory();
 
     const RouteChangeBack = () => {
-        let path = `newPath`;
+        let path = `sign-up2`;
         history.push(path);
     }
 
     const RouteChangeNext = (data) => {
         actions.updateAction(data);
-        let path = `sign-up2`;
+        let path = `sign-up-finish`;
         history.push(path);
-        console.log(data)
+        console.log(data);
+        console.log(JSON.stringify(state, null, 2));
     }
 
     return (
         <Segment size='large' padded='very'>
-            <Grid stackable columns={2} verticalAlign='middle' centered>
-                <Header  as='h3'> 
-                {t('account')}
-                </Header>
-                <Grid.Row streched="true">
+            <Grid>
+            <Header  as='h2'> 
+            {t('location_info')}
+            </Header>
+            <Header as ='h5'>
+            {t('sub_text_location_info')}
+            </Header>
+            <Grid.Row streched="true">
                     <Grid.Column>
-                        <Form onSubmit={handleSubmit(RouteChangeNext)}>
+                        <Form>
                             <Form.Field>
-                                <label>{t('email')}</label>
+                                <label>{t('city')}</label>
                                 <input 
-                                    name="email"
-                                    ref={register({ required: "This is required"})}
+                                    name="city"
+                                    ref={register}
                                 />
                                 {/* <ErrorMessage errors={errors} as="p"/> */}
                             </Form.Field>
                             <Form.Field>
-                                <label>{t('password')}</label>
+                                <label>{t('postal_code')}</label>
                                 <input
-                                    name="password"
-                                    ref={register({ required: "This is required"})}
-                                />
-                            </Form.Field>
-                            <Form.Field>
-                                <label>{t('confirm_password')}</label>
-                                <input
-                                    name="passwordConfirm"
-                                    ref={register({ required: "This is required"})}
+                                    name="postalCode"
+                                    ref={register}
                                 />
                             </Form.Field>
                             <Button.Group widths='2'>
@@ -68,9 +63,10 @@ function Forms() {
                         </Form>
                     </Grid.Column>
                 </Grid.Row>
+
             </Grid>
         </Segment>
     )
 }
 
-export default Forms
+export default DetailsLocation 
