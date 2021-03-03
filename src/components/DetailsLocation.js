@@ -1,5 +1,5 @@
 import React from 'react';
-import { Grid, Segment, Header, Icon, Button, Checkbox, Form, Select  } from 'semantic-ui-react';
+import { Grid, Segment, Header, Button, Form,  } from 'semantic-ui-react';
 import { useTranslation } from "react-i18next";
 import { useHistory } from "react-router-dom";
 import { useForm, Controller, ErrorMessage } from "react-hook-form";

@@ -65,7 +65,7 @@ function FormsAdd() {
                                 />
                             </Form.Field>
                             <Controller
-                                as={<Form.Field control={Select}/>}
+                                // as={<Form.Field control={Select}/>}
                                 name="gender"
                                 control= {control}
                                 label={{ children: 'Gender', htmlFor: 'form-select-control-gender' }}
@@ -76,8 +76,10 @@ function FormsAdd() {
                                 defaultValue=""
                                 render={ ({Select, onChange, onBlur, value, name, ref }) => {
                                     return (
-                                    <Form.Field
+                                    <Select
             	                    control={Select}
+                                    
+                                    on
                                     />
                                     )
                                 }}
