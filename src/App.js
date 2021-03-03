@@ -20,7 +20,7 @@ createStore({
         email:'',
         password: '',
         passwordConfirm:'',
-        firsName:'',
+        firstName:'',
         lastName:'',
         yearOfBirth:'',
         gender:''

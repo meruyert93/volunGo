@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { Grid, Segment, Header, Icon, Button, Checkbox, Form, Select  } from 'semantic-ui-react';
+import { Grid, Segment, Header, Icon, Button, Checkbox, Form, Select, Dropdown  } from 'semantic-ui-react';
 import { useHistory } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import "../translations/i18n";
@@ -9,7 +9,7 @@ import updateAction from "../adapters/updateAction";
 
 function FormsAdd() {
     const { state, actions } =  useStateMachine({ updateAction });
-    const { handleSubmit, errors, register, control } = useForm({
+    const { handleSubmit, errors, register, control, setValue } = useForm({
         defaultValues: state.yourDetails
     });
 
@@ -21,6 +21,8 @@ function FormsAdd() {
     ]
 
     const history = useHistory();
+
+    const handleOnChange = (e, data) => { setValue("gender", data.value); }
 
     const RouteChangeBack = () => {
         let path = `sign-up1`;
@@ -64,24 +66,21 @@ function FormsAdd() {
                                     ref={register({ required: "This is required"})}
                                 />
                             </Form.Field>
-                            <Controller
-                                as={<Form.Field control={Select}/>}
-                                name="gender"
-                                control= {control}
-                                label={{ children: 'Gender', htmlFor: 'form-select-control-gender' }}
-                                searchInput={{ id: 'form-select-control-gender' }}
-                                search
-                                placeholder='Gender'
-                                options={genderOptions}
-                                defaultValue=""
-                                render={ ({Select, onChange, onBlur, value, name, ref }) => {
-                                    return (
-                                    <Form.Field
-            	                    control={Select}
-                                    />
-                                    )
-                                }}
+                            <Form.Field>
+                                <label>{t('gender')}</label>
+                                <Controller
+                                    name="gender"
+                                    control= {control}
+                                    placeholder='Gender'
+                                    render={ () => {
+                                        return (
+                                        <Form.Dropdown
+                                        options={genderOptions} fluid selection onChange={handleOnChange}
+                                        />
+                                        )
+                                    }}
                             />
+                            </Form.Field>
                         </Form.Group>
                         <Button.Group widths='2'>
                             <Button basic color='blue' onClick={RouteChangeBack}>{t('back')}</Button>
