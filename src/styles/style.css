@@ -1,2 +1,2 @@
-:global(#root) .heroSection {
-  background-color: red; }
+:global(#root) .ui.segment.heroSection {
+  background-color: red  !important; }

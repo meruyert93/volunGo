@@ -2,12 +2,12 @@ import React from 'react'
 import { Grid, Segment, Header, Icon, Button, Checkbox, Form, Image, Container  } from 'semantic-ui-react';
 import { useTranslation } from "react-i18next";
 
-function ItemActivity({id, name, image}) {
+function ItemActivity({id, name, image, toggleHandler}) {
     const { t } = useTranslation();
 
     return (
         <Grid.Column mobile={8} tablet={8} computer={5}>
-            <Segment color='grey' inverted size='big'>
+            <Segment color='grey' inverted size='big' onClick={() => toggleHandler(id)}>
                 <Grid columns={2} relaxed>
                 <Grid.Row stretched>
                     <Grid.Column  floated='left' width={2}>

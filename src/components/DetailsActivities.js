@@ -1,12 +1,30 @@
-import React from 'react'
+import React, {useState} from 'react'
 import { Grid, Segment, Header, Icon, Button, Checkbox, Form, Select, Divider  } from 'semantic-ui-react';
 import { useTranslation } from "react-i18next";
 import ItemActivity from '../containers/ItemActiity';
 import dataActivities from '../data/dataActivities';
 
+    let collectedItems = []
 function DetailsActivities () {
+    const [collect, setCollect] = useState(collectedItems);
+    const [selectItem, setSelectItem] = useState(false); 
+
     const { t } = useTranslation();
 
+    
+
+    const toggleHandler = (id) => {
+        const clickedtem = dataActivities.filter((item) => item.id === id);
+        const item = clickedtem[0].name.toLowerCase();
+        console.log(item);
+            if (collectedItems.includes(item)) {
+                collectedItems = collectedItems.filter(el =>  el !== item)
+            } else {
+                collectedItems.push(item)
+            }
+        console.log(collectedItems);
+        
+    }
     return (
         <Segment size='large'>
                 <Header as='h2'>
@@ -15,7 +33,7 @@ function DetailsActivities () {
                 <Grid stackable>
                 {dataActivities.map((item) => {
                     return(
-                        <ItemActivity key={item.id} {...item}/>
+                        <ItemActivity key={item.id} {...item} toggleHandler={toggleHandler}/>
                     )
                 })}
                 </Grid>

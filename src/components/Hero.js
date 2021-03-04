@@ -2,7 +2,7 @@ import React from 'react'
 import { Grid, Segment, Header, Button } from 'semantic-ui-react';
 import { useTranslation } from "react-i18next";
 import "../translations/i18n";
-import styles from "../sass/main.scss";
+import styles from "../styles/style.css";
 
 function Hero() {
     const { t } = useTranslation();
