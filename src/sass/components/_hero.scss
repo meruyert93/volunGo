@@ -1,3 +1,5 @@
-.hero-section {
-    background-color: $color-primary;
+:global(#root) {
+    .heroSection {
+        background-color: red;
+    }
 }

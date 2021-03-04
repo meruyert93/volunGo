@@ -1,16 +1,2 @@
-*,
-*::after,
-*::before {
-  margin: 0;
-  padding: 0;
-  box-sizing: inherit; }
-
-html {
-  /*62.5% is 10 px*/
-  font-size: 62.5%; }
-
-body {
-  box-sizing: border-box; }
-
-.hero-section {
-  background-color: linear-gradient(135deg, #2AFADF 0%, #4C83FF 100%); }
+:global(#root) .heroSection {
+  background-color: red; }

@@ -17,7 +17,7 @@ import DetailsLocation from './components/DetailsLocation';
 import DetailsActivities from './components/DetailsActivities';
 import DetailsSkills from './components/DetailsSkills'
 import { StateMachineProvider, createStore } from "little-state-machine";
-
+import '../src/styles/style.css';
 
 createStore({
     yourDetails: {
