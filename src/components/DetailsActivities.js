@@ -11,8 +11,8 @@ function DetailsActivities () {
     const { t } = useTranslation();
 
     const toggleHandler = (id) => {
-        const clickedtem = dataActivities.filter((item) => item.id === id);
-        const item = clickedtem[0].name.toLowerCase();
+        const clickedItem = dataActivities.filter((item) => item.id === id);
+        const item = clickedItem[0].name.toLowerCase();
         console.log(item);
             if (collectedItems.includes(item)) {
                 collectedItems = collectedItems.filter(el =>  el !== item)
