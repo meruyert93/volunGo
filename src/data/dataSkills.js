@@ -50,22 +50,22 @@ const activities = [
     name: 'Film  & photography',
     },
     {
-    id: 10,
+    id: 11,
     image:'/images/skills/skills11.svg',
     name: 'PC skills',
     },
     {
-    id: 10,
+    id: 12,
     image:'/images/skills/skills12.svg',
     name: 'Programming',
     },
     {
-    id: 10,
+    id: 13,
     image:'/images/skills/skills13.svg',
     name: 'Physical work',
     },
     {
-    id: 10,
+    id: 14,
     image:'/images/skills/skills14.svg',
     name: 'Construction skills',
     },

@@ -1,2 +1,8 @@
-:global(#root) .ui.segment.heroSection {
-  background-color: red  !important; }
+#root .itemDefault {
+  background-color: #AAB6C5; }
+
+#root .itemPicker {
+  background-color: #2684FF; }
+
+#root .heroSection {
+  background-color: #4C83FF; }

@@ -7,11 +7,8 @@ import dataActivities from '../data/dataActivities';
     let collectedItems = []
 function DetailsActivities () {
     const [collect, setCollect] = useState(collectedItems);
-    const [selectItem, setSelectItem] = useState(false); 
 
     const { t } = useTranslation();
-
-    
 
     const toggleHandler = (id) => {
         const clickedtem = dataActivities.filter((item) => item.id === id);
@@ -23,7 +20,6 @@ function DetailsActivities () {
                 collectedItems.push(item)
             }
         console.log(collectedItems);
-        
     }
     return (
         <Segment size='large'>
