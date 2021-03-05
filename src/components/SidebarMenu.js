@@ -16,21 +16,18 @@ function SidebarMenu({visible, setVisible}) {
                 vertical
                 visible={visible}
                 onHide={() => setVisible(false)}
-                direction='right'
+                direction='top'
                 width='thin'
             >
-            <Menu.Item as='a'>
-                <Icon name='home' />
-                    Home
-            </Menu.Item>
-            <Menu.Item as='a'>
-                        <Icon name='gamepad' />
-                        Games
+                <Menu.Item as='a'>
+                    Volunteers
                 </Menu.Item>
-                    <Menu.Item as='a'>
-                        <Icon name='camera' />
-                        Channels
-                    </Menu.Item>
+                <Menu.Item as='a'>
+                    Organizations
+                </Menu.Item>
+                <Menu.Item as='a'>
+                    Sign in
+                </Menu.Item>
             </Sidebar>
     )
 }
