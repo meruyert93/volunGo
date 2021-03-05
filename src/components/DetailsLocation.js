@@ -6,6 +6,8 @@ import { useForm, Controller, ErrorMessage } from "react-hook-form";
 import { useStateMachine } from "little-state-machine";
 import updateAction from "../adapters/updateAction";
 
+
+
 function DetailsLocation () {
     const { state, actions } =  useStateMachine({ updateAction });
     const { handleSubmit, errors, register } = useForm({

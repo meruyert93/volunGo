@@ -6,7 +6,9 @@ import "../translations/i18n";
 import { useForm, Controller, ErrorMessage } from "react-hook-form";
 import { useStateMachine } from "little-state-machine";
 import updateAction from "../adapters/updateAction";
-
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faEye } from "@fortawesome/free-solid-svg-icons";
+const eye = <FontAwesomeIcon icon={faEye} />;
 
 function Forms() {
     const [passwordShown, setPasswordShown] = useState(false);
@@ -18,7 +20,7 @@ function Forms() {
     password.current = watch("password", "");
 
     const togglePasswordVisiblity = () => {
-        // setPasswordShown(!passwordShown);
+        setPasswordShown(!passwordShown);
         console.log('toggling')
       };
 
@@ -54,14 +56,13 @@ function Forms() {
                                     name="email"
                                     ref={register({ required: true})}
                                 />
-                              
                             </Form.Field>
                             {errors.email && <p as="p" className="red">Your must specify an email</p>}
                               {/* <ErrorMessage errors={errors} as="p"/> */}
                             <Form.Field required>
                                 <label>{t('password')}</label>
                                 <input
-                                    type="password"
+                                    type={passwordShown ? "text" : "password"}
                                     name="password"
                                     ref={register({ required: "You must specify a password",
                                                     minLength: {
@@ -70,14 +71,14 @@ function Forms() {
                                                     }
                                     })}
                                 />
-                    
+                            <i onClick={togglePasswordVisiblity}>{eye}</i>
                             </Form.Field>
                             {errors.password && <p as="p" className="red">{errors.password.message}</p>}
                             <Form.Field required>
                                 <label>{t('confirm_password')}</label>
                                 <input
                                     name="passwordConfirm"
-                                    type="password"
+                                    type={passwordShown ? "text" : "password"}
                                     ref={register({ validate: value =>
                                                         value === password.current || "The passwords do not match"
                                     })}

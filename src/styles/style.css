@@ -1,3 +1,11 @@
+#root i {
+  position: absolute;
+  top: 41%;
+  right: 2%; }
+
+#root i:hover {
+  cursor: pointer; }
+
 #root .itemDefault {
   background-color: #AAB6C5; }
 
