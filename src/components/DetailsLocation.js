@@ -27,8 +27,8 @@ function DetailsLocation () {
         actions.updateAction(data);
         let path = `sign-up-finish`;
         history.push(path);
-        console.log(data);
-        console.log(JSON.stringify(state, null, 2));
+        // console.log(data);
+        // console.log(JSON.stringify(state, null, 2));
     }
 
     return (

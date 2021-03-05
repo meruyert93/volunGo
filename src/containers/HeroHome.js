@@ -1,10 +1,18 @@
 import React from 'react'
 import { Grid, Segment, Header, Icon, Container } from 'semantic-ui-react';
 import { useTranslation } from "react-i18next";
+import { useHistory } from "react-router-dom";
 import "../translations/i18n";
 
 function HeroHome() {
     const { t } = useTranslation();
+
+    const history = useHistory();
+
+    const RouteChangeMoreInfo = () => {
+        let path = `details-activities`;
+        history.push(path);
+    }
 
     return (
         <Segment size='large' padded='very' color="orange" inverted>
@@ -24,7 +32,7 @@ function HeroHome() {
                         
                     </Grid.Column>
                     <Grid.Column mobile={4} tablet={4} computer={12} floated='left'>
-                    <Icon name="arrow alternate circle right" size='big' fitted/>
+                    <Icon name="arrow alternate circle right" size='big' fitted onClick={() => RouteChangeMoreInfo()}/>
                     </Grid.Column>
                 </Grid.Row>
             </Grid>
