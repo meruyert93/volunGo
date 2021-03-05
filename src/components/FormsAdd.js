@@ -44,28 +44,34 @@ function FormsAdd() {
             <Grid.Row>
                 <Grid.Column>
                     <Form onSubmit={handleSubmit(RouteChangeNext)}>
-                        <Form.Field>
+                        <Form.Field required>
                             <label>{t('first_name')}</label>
                             <input
+                                type="text"
                                 name="firstName"
-                                ref={register({ required: "This is required"})}
+                                ref={register({ required: true, pattern: /^[A-Za-z]+$/i})}
                             />
                         </Form.Field>
-                        <Form.Field>
+                        {errors.firstName && <p as="p" className="red">This field is required</p>}
+                        <Form.Field required>
                             <label>{t('last_name')}</label>
                             <input
+                                type="text"
                                 name="lastName"
-                                ref={register({ required: "This is required"})}
+                                ref={register({ required: true, pattern: /^[A-Za-z]+$/i})}
                             />
                         </Form.Field>
+                        {errors.lastName && <p as="p" className="red">This field is required</p>}
                         <Form.Group widths='equal'>
-                            <Form.Field>
+                            <Form.Field required>
                                 <label>{t('year_birth')}</label>
                                 <input
+                                    type="number"
                                     name="yearOfBirth"
-                                    ref={register({ required: "This is required"})}
+                                    ref={register({ required: true})}
                                 />
                             </Form.Field>
+                            {errors.lastName && <p as="p" className="red">This field is required</p>}
                             <Form.Field>
                                 <label>{t('gender')}</label>
                                 <Controller

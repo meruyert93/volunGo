@@ -37,8 +37,8 @@ export const TRANSLATIONS_EN = {
     //details-location
     location_info: "Lastly, we need to know your location",
     sub_text_location_info: "To show you volunteer opportunities within your area.",
-    city: "City",
-    postal_code: "Postal code (optional)",
+    city: "City (optional)",
+    postal_code: "Postal code",
 
     //details-activities
     make_difference: 'Which way do you want to make a difference?',

@@ -43,19 +43,21 @@ function DetailsLocation () {
                         <Form>
                             <Form.Field>
                                 <label>{t('city')}</label>
-                                <input 
+                                <input
+                                    type="text" 
                                     name="city"
                                     ref={register}
                                 />
                                 {/* <ErrorMessage errors={errors} as="p"/> */}
                             </Form.Field>
-                            <Form.Field>
+                            <Form.Field required>
                                 <label>{t('postal_code')}</label>
                                 <input
                                     name="postalCode"
-                                    ref={register}
+                                    ref={register({required: true})}
                                 />
                             </Form.Field>
+                            {errors.postalCode && <p as="p" className="red">This field is required</p>}
                             <Button.Group widths='2'>
                                 <Button basic color='blue' as='a' onClick={RouteChangeBack}>{t('back')}</Button>
                                 <Button primary onClick={handleSubmit(RouteChangeNext)} type='submit'>{t('next')}</Button>
