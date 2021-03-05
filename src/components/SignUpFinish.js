@@ -10,13 +10,14 @@ import updateAction from "../adapters/updateAction";
 function SignUpFinish() {
     const { t } = useTranslation();
 
-    const { state, actions } = useStateMachine(updateAction);
+    const { state } = useStateMachine(updateAction);
 
     const history = useHistory();
 
     const RouteChangeHome = () => {
         let path = `home`;
         history.push(path);
+        console.log(JSON.stringify(state, null, 2))
     }
 
     const RouteChangeMoreInfo = () => {

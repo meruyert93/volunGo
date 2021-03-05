@@ -32,7 +32,7 @@ function FormsAdd() {
         actions.updateAction(data);
         let path = `details-location`;
         history.push(path);
-        console.log(data);
+        //console.log(data);
     }
 
     return (

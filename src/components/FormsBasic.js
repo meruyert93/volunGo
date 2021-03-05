@@ -27,7 +27,7 @@ function Forms() {
         actions.updateAction(data);
         let path = `sign-up2`;
         history.push(path);
-        console.log(data)
+        //console.log(data)
     }
 
     return (

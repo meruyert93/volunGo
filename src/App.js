@@ -30,7 +30,11 @@ createStore({
         gender:'',
         city:'',
         postalCode:'',
-    }
+        activities: [],
+        skills: [],
+    },
+    
+    
 })
 
 function App() {

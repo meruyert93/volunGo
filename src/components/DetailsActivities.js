@@ -4,9 +4,12 @@ import { useTranslation } from "react-i18next";
 import { useHistory } from "react-router-dom";
 import ItemActivity from '../containers/ItemActiity';
 import dataActivities from '../data/dataActivities';
+import { useStateMachine } from "little-state-machine";
+import updateAction from "../adapters/updateAction";
 
     let collectedItems = []
 function DetailsActivities () {
+    const { actions } =  useStateMachine({ updateAction });
     const [collect, setCollect] = useState(collectedItems);
 
     const { t } = useTranslation();
@@ -22,7 +25,13 @@ function DetailsActivities () {
             } else {
                 collectedItems.push(item)
             }
-        console.log(collectedItems);
+            // collectedItems = state.activities;
+        //console.log(collectedItems);
+        updateActionForActivities({activities: collectedItems});
+    }
+
+    const updateActionForActivities = (data) => {
+        actions.updateAction(data);
     }
 
     const RouteChangeBack = () => {

@@ -4,11 +4,15 @@ import { useTranslation } from "react-i18next";
 import dataSkills from "../data/dataSkills";
 import ItemSkill from "../containers/ItemSkill";
 import { useHistory } from "react-router-dom";
+import { useStateMachine } from "little-state-machine";
+import updateAction from "../adapters/updateAction";
 
     let collectedItems = [];
 
 function DetailsSkills() {
-    const [collect, setCollect] = useState(collectedItems);
+    const { state, actions } =  useStateMachine({ updateAction });
+
+    // const [collect, setCollect] = useState(collectedItems);
 
     const { t } = useTranslation();
 
@@ -24,7 +28,12 @@ function DetailsSkills() {
         else {
             collectedItems.push(item);
         }
-        console.log((collectedItems));
+        //console.log((collectedItems));
+        updateActionForSkills({skills: collectedItems})
+    }
+    //Updating actions for object 
+    const updateActionForSkills = (data) => {
+        actions.updateAction(data);
     }
 
     const RouteChangeBack = () => {
@@ -33,8 +42,15 @@ function DetailsSkills() {
     }
 
     const RouteChangeHome = () => {
+        
         let path = `home`;
         history.push(path);
+        FetchData()
+    }
+
+    const FetchData  = () => {
+        console.log(JSON.stringify(state, null, 2))
+        // console.log(state)
     }
 
     return (
