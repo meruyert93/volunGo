@@ -1,6 +1,7 @@
 import React, {useState} from 'react'
 import { Grid, Segment, Header, Icon, Button, Checkbox, Form, Select, Divider  } from 'semantic-ui-react';
 import { useTranslation } from "react-i18next";
+import { useHistory } from "react-router-dom";
 import ItemActivity from '../containers/ItemActiity';
 import dataActivities from '../data/dataActivities';
 
@@ -9,6 +10,8 @@ function DetailsActivities () {
     const [collect, setCollect] = useState(collectedItems);
 
     const { t } = useTranslation();
+
+    const history = useHistory();
 
     const toggleHandler = (id) => {
         const clickedItem = dataActivities.filter((item) => item.id === id);
@@ -20,6 +23,16 @@ function DetailsActivities () {
                 collectedItems.push(item)
             }
         console.log(collectedItems);
+    }
+
+    const RouteChangeBack = () => {
+        let path = `sign-up-finish`;
+        history.push(path);
+    }
+
+    const RouteChangeMoreInfo = () => {
+        let path = `details-skills`;
+        history.push(path);
     }
     return (
         <Segment size='large'>
@@ -35,8 +48,8 @@ function DetailsActivities () {
                 </Grid>
                 <Divider hidden/>
                 <Button.Group widths='2'>
-                                <Button basic color='blue' as='a'>{t('back')}</Button>
-                                <Button primary type='submit'>{t('next')}</Button>
+                                <Button basic color='blue' as='a' onClick={() => RouteChangeBack()}>{t('back')}</Button>
+                                <Button primary type='submit' onClick={() => RouteChangeMoreInfo()}>{t('next')}</Button>
                 </Button.Group>
         </Segment>
     )

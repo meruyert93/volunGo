@@ -19,7 +19,7 @@ function Forms() {
     const history = useHistory();
 
     const RouteChangeBack = () => {
-        let path = `newPath`;
+        let path = `/`;
         history.push(path);
     }
 

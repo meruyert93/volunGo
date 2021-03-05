@@ -3,13 +3,26 @@ import { Grid, Segment, Header, Icon, Button, Checkbox, Form, Image, Divider  } 
 import { useTranslation } from "react-i18next";
 import "../translations/i18n";
 import { useForm, Controller } from "react-hook-form";
+import { useHistory } from "react-router-dom";
 import { useStateMachine } from "little-state-machine";
 import updateAction from "../adapters/updateAction";
 
 function SignUpFinish() {
     const { t } = useTranslation();
 
-    const { state } = useStateMachine(updateAction);
+    const { state, actions } = useStateMachine(updateAction);
+
+    const history = useHistory();
+
+    const RouteChangeHome = () => {
+        let path = `home`;
+        history.push(path);
+    }
+
+    const RouteChangeMoreInfo = () => {
+        let path = `details-activities`;
+        history.push(path);
+    }
 
     return (
         <Segment size='large' padded='very'>
@@ -24,9 +37,9 @@ function SignUpFinish() {
                         {t('personalize')}
                     </Header>
                     <p>{t('sub_text_personalize')}</p>
-                    <Button fluid primary>{t('complete_profile')}</Button>
+                    <Button fluid primary onClick={() => {RouteChangeMoreInfo()}}>{t('complete_profile')}</Button>
                     <Divider hidden />
-                    <Button fluid basic color='blue'>{t('skip_now')}</Button>
+                    <Button fluid basic color='blue' onClick={() => RouteChangeHome()}>{t('skip_now')}</Button>
                     </Grid.Column>
                 </Grid.Row>
             </Grid>

@@ -3,12 +3,16 @@ import { Grid, Segment, Header, Icon, Button, Checkbox, Form, Select, Divider  }
 import { useTranslation } from "react-i18next";
 import dataSkills from "../data/dataSkills";
 import ItemSkill from "../containers/ItemSkill";
+import { useHistory } from "react-router-dom";
 
     let collectedItems = [];
 
 function DetailsSkills() {
     const [collect, setCollect] = useState(collectedItems);
+
     const { t } = useTranslation();
+
+    const history = useHistory();
 
     const toggleHandler = (id) => {
         const clickedItem = dataSkills.filter((item) => item.id === id);
@@ -21,6 +25,16 @@ function DetailsSkills() {
             collectedItems.push(item);
         }
         console.log((collectedItems));
+    }
+
+    const RouteChangeBack = () => {
+        let path = `details-activities`;
+        history.push(path);
+    }
+
+    const RouteChangeHome = () => {
+        let path = `home`;
+        history.push(path);
     }
 
     return (
@@ -37,8 +51,8 @@ function DetailsSkills() {
             </Grid>
             <Divider hidden/>
             <Button.Group widths='2'>
-                <Button basic color='blue' as='a'>{t('back')}</Button>
-                <Button primary type='submit'>{t('next')}</Button>
+                <Button basic color='blue' as='a' onClick={() => RouteChangeBack()}>{t('back')}</Button>
+                <Button primary type='submit'  onClick={() => RouteChangeHome()}>{t('next')}</Button>
             </Button.Group>
         </Segment>
     )
