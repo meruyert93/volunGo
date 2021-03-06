@@ -1,5 +1,5 @@
 import React from 'react';
-import { Grid, Segment, Header, Divider, Image } from 'semantic-ui-react';
+import { Grid, Segment, Header, Divider} from 'semantic-ui-react';
 import { useTranslation } from "react-i18next";
 import "../translations/i18n";
 import ItemPerson from '../containers/ItemPerson';

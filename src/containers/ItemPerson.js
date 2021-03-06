@@ -21,6 +21,6 @@ function ItemPerson({id, name, image, position}) {
             </Segment>
         </Grid.Column>
     )
-
+}
 
 export default ItemPerson

@@ -29,5 +29,16 @@
 #root .textWhite {
   color: white; }
 
+#root .flexSpaceEvenly {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly; }
+
+#root .flexCenter {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center; }
+
 #root .headingText {
   color: #090088; }
