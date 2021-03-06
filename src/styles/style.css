@@ -3,7 +3,8 @@
   font-size: 62.5%; }
 
 #root body {
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  height: 100vh; }
 
 #root i {
   position: absolute;
@@ -22,11 +23,11 @@
 #root .red {
   color: red; }
 
-#root .headingText {
-  color: #090088; }
-
 #root .backgroundDark {
   background-color: #090088; }
 
 #root .textWhite {
   color: white; }
+
+#root .headingText {
+  color: #090088; }

@@ -14,6 +14,10 @@ export const TRANSLATIONS_EN = {
     impact: "Track your impact",
     sub_text_impact: "See all your individual impact (volunteer hours and organizations) at a glance.",
 
+    //About us
+    about_us: "about us",
+    sub_text_about_us: "We aim to bring like-minded people together to make humanitarian aid reach more populations",
+    
     //sign up first page
     account: "Create your account",
     email: "E-mail",

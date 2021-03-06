@@ -27,7 +27,7 @@ function Hero() {
                         <Button color='pink' onClick={() =>  {RouteChangeSignUp()}}>{t('get_started')}</Button>
                     </Grid.Column>
                     <Grid.Column width={8} only='computer tablet'>
-                       <Image src="./images/heroSection/heroVolunteers.jpg" size="large" rounded/>
+                        <Image src="./images/heroSection/heroVolunteers.jpg" size="large" rounded/>
                     </Grid.Column>
                 </Grid.Row>
             </Grid>
