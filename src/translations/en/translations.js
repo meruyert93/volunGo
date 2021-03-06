@@ -1,10 +1,12 @@
 export const TRANSLATIONS_EN = {
     //hero section
     find: 'Find the best volunteer opportunities',
-    get_started: 'Get Started',
+    sub_text_find: 'We help volunteers to find volunteer opportunities and nonprofit organizations in their city quickly and easily.',
+    get_started: 'JOIN US VOLUNTEER',
 
     //main section
     why:"Why VolunGO?",
+    sub_text_why:"VolunGO helps volunteers to find volunteer opportunities in their city quickly and easily",
     opportunities: "Find volunteer opportunities",
     sub_text_opportunities: "Find volunteer opportunities that fit you in your city or ways to help from home when you’re free.",
     organizations: 'Join your local organizations',

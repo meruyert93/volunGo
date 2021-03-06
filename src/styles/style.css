@@ -1,3 +1,10 @@
+#root html {
+  /*62.5% is 10 px*/
+  font-size: 62.5%; }
+
+#root body {
+  box-sizing: border-box; }
+
 #root i {
   position: absolute;
   top: 41%;
@@ -15,5 +22,11 @@
 #root .red {
   color: red; }
 
-#root .heroSection {
-  background-color: #4C83FF; }
+#root .headingText {
+  color: #090088; }
+
+#root .backgroundDark {
+  background-color: #090088; }
+
+#root .textWhite {
+  color: white; }
