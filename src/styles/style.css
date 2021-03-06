@@ -3,8 +3,7 @@
   font-size: 62.5%; }
 
 #root body {
-  box-sizing: border-box;
-  height: 100vh; }
+  box-sizing: border-box; }
 
 #root i {
   position: absolute;
@@ -13,6 +12,9 @@
 
 #root i:hover {
   cursor: pointer; }
+
+#root .height70 {
+  height: 70vh; }
 
 #root .itemDefault {
   background-color: #AAB6C5; }

@@ -15,17 +15,21 @@ html {
 
 body {
     box-sizing: border-box;
-    height: 100vh;
 }
 
 i {
     position: absolute;
     top: 41%;
     right: 2%;
-  }
+}
   i:hover {
     cursor: pointer;
-  }
+}
+
+.height70 {
+    height: 70vh;
+}
+
 }
 
 

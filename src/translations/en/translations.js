@@ -19,7 +19,9 @@ export const TRANSLATIONS_EN = {
     sub_text_about_us: "We aim to bring like-minded people together to make humanitarian aid reach more populations",
     
     //sign up first page
-    account: "Create your account",
+    step1: "step 1/3",
+    account: "Create Your Account",
+    sub_text_account: "VolunGO is a platform for bringing volunteers and nonprofit organizations together.",
     email: "E-mail",
     password: 'Password',
     confirm_password: 'Confirm Password',

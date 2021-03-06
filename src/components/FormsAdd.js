@@ -36,7 +36,7 @@ function FormsAdd() {
     }
 
     return (
-        <Segment size='large' padded='very'>
+        <Segment size='large' padded='very' className="height70">
         <Grid stackable columns={2} verticalAlign='middle' centered>
             <Header  as='h3'> 
             {t('about_you')}
@@ -89,8 +89,8 @@ function FormsAdd() {
                             </Form.Field>
                         </Form.Group>
                         <Button.Group widths='2'>
-                            <Button basic color='blue' onClick={RouteChangeBack}>{t('back')}</Button>
-                            <Button primary onClick={handleSubmit(RouteChangeNext)} type='submit'>{t('next')}</Button>
+                            <Button basic color='pink' onClick={RouteChangeBack}>{t('back')}</Button>
+                            <Button color='pink' onClick={handleSubmit(RouteChangeNext)} type='submit'>{t('next')}</Button>
                         </Button.Group>
                     </Form>
                 </Grid.Column>

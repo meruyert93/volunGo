@@ -32,7 +32,7 @@ function DetailsLocation () {
     }
 
     return (
-        <Segment size='large' padded='very'>
+        <Segment size='large' padded='very' className="height70">
             <Grid>
             <Header  as='h2'> 
             {t('location_info')}
@@ -61,8 +61,8 @@ function DetailsLocation () {
                             </Form.Field>
                             {errors.postalCode && <p as="p" className="red">This field is required</p>}
                             <Button.Group widths='2'>
-                                <Button basic color='blue' as='a' onClick={RouteChangeBack}>{t('back')}</Button>
-                                <Button primary onClick={handleSubmit(RouteChangeNext)} type='submit'>{t('next')}</Button>
+                                <Button basic color='pink' as='a' onClick={RouteChangeBack}>{t('back')}</Button>
+                                <Button color="pink" onClick={handleSubmit(RouteChangeNext)} type='submit'>{t('next')}</Button>
                             </Button.Group>
                         </Form>
                     </Grid.Column>

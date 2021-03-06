@@ -26,7 +26,7 @@ function SignUpFinish() {
     }
 
     return (
-        <Segment size='large' padded='very'>
+        <Segment size='large' padded='very' className="height70">
             <Grid stackable columns={1} verticalAlign='middle' centered>
                 <Header  as='h2'> 
                 {t('congratulation')}
@@ -38,9 +38,9 @@ function SignUpFinish() {
                         {t('personalize')}
                     </Header>
                     <p>{t('sub_text_personalize')}</p>
-                    <Button fluid primary onClick={() => {RouteChangeMoreInfo()}}>{t('complete_profile')}</Button>
+                    <Button fluid color="pink" onClick={() => {RouteChangeMoreInfo()}}>{t('complete_profile')}</Button>
                     <Divider hidden />
-                    <Button fluid basic color='blue' onClick={() => RouteChangeHome()}>{t('skip_now')}</Button>
+                    <Button fluid basic color='pink' onClick={() => RouteChangeHome()}>{t('skip_now')}</Button>
                     </Grid.Column>
                 </Grid.Row>
             </Grid>

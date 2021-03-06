@@ -1,5 +1,5 @@
 import React, { useRef, useState } from 'react'
-import { Grid, Segment, Header, Icon, Button, Checkbox, Form, Message, Input  } from 'semantic-ui-react';
+import { Grid, Segment, Header, Icon, Button, Checkbox, Form, Message, Input, Divider  } from 'semantic-ui-react';
 import { useHistory } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import "../translations/i18n";
@@ -41,13 +41,25 @@ function Forms() {
     }
 
     return (
-        <Segment size='large' padded='very'>
-            <Grid stackable columns={2} verticalAlign='middle' centered>
-                <Header  as='h3'> 
-                {t('account')}
-                </Header>
+        <Segment size='large' padded='very' className="height70">
+            <Grid stackable verticalAlign='middle' centered> 
+                    <Grid.Column width={16} textAlign="center">
+                        <Header as="h6" color="grey">
+                            {t('step1')}
+                        </Header>
+                    </Grid.Column>
+                    <Grid.Column width={16} textAlign="center">
+                        <Header  as='h2' className="headingText"> 
+                            {t('account')}
+                        </Header>
+                    </Grid.Column>
+                    <Grid.Column width={16} textAlign="center">
+                        <Header as="h6" color="grey">
+                        {t('sub_text_account')}
+                        </Header>
+                    </Grid.Column>
                 <Grid.Row streched="true">
-                    <Grid.Column>
+                    <Grid.Column mobile={16} tablet={8} computer={3}>
                         <Form onSubmit={handleSubmit(RouteChangeNext)}>
                             <Form.Field required>
                                 <label>{t('email')}</label>
@@ -86,8 +98,8 @@ function Forms() {
                             </Form.Field>
                             {errors.passwordConfirm && <p as="p" className="red">{errors.passwordConfirm.message}</p>}
                             <Button.Group widths='2'>
-                                <Button basic color='blue' as='a' onClick={RouteChangeBack}>{t('back')}</Button>
-                                <Button primary onClick={handleSubmit(RouteChangeNext)} type='submit'>{t('next')}</Button>
+                                <Button basic color='pink' as='a' onClick={RouteChangeBack}>{t('back')}</Button>
+                                <Button color='pink' onClick={handleSubmit(RouteChangeNext)} type='submit'>{t('next')}</Button>
                             </Button.Group>
                         </Form>
                     </Grid.Column>
