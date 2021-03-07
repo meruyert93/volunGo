@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { Grid, Image, Card, Icon } from 'semantic-ui-react';
-import { useTranslation } from "react-i18next";
 import "../translations/i18n";
 
 function ItemProject({id, image, name, organization, duration, days, time, place}) {

@@ -17,9 +17,19 @@ body {
     box-sizing: border-box;
 }
 
-.iconEye {
+.inputPassword {
+    position: relative;
+    display: flex;
+}
+
+.iconEye1 {
     position: absolute;
     top: 39%;
+    right: 3%;
+}
+.iconEye2 {
+    position: absolute;
+    top: 66%;
     right: 3%;
 }
 .iconEye:hover {

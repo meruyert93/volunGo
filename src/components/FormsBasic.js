@@ -3,7 +3,7 @@ import { Grid, Segment, Header, Button, Form, Progress, Divider} from 'semantic-
 import { useHistory } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import "../translations/i18n";
-import { useForm, Controller, ErrorMessage } from "react-hook-form";
+import { useForm } from "react-hook-form";
 import { useStateMachine } from "little-state-machine";
 import updateAction from "../adapters/updateAction";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -83,8 +83,9 @@ function Forms() {
                                                         message: "Password must have at least 8 characters"
                                                     }
                                     })}
+                                    className="inputPassword"
                                 />
-                                <i onClick={togglePasswordVisiblity} className="iconEye">{eye}</i>
+                                <i key={1} onClick={togglePasswordVisiblity} className="iconEye1">{eye}</i>
                             </Form.Field>
                             {errors.password && <p as="p" className="red">{errors.password.message}</p>}
                             <Form.Field required>
@@ -95,7 +96,9 @@ function Forms() {
                                     ref={register({ validate: value =>
                                                         value === password.current || "The passwords do not match"
                                     })}
+                                    className="inputPassword"
                                 />
+                                <i key={2} onClick={togglePasswordVisiblity} className="iconEye2">{eye}</i>
                             </Form.Field>
                             {errors.passwordConfirm && <p as="p" className="red">{errors.passwordConfirm.message}</p>}
                             <Divider hidden/>

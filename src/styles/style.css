@@ -5,9 +5,18 @@
 #root body {
   box-sizing: border-box; }
 
-#root .iconEye {
+#root .inputPassword {
+  position: relative;
+  display: flex; }
+
+#root .iconEye1 {
   position: absolute;
   top: 39%;
+  right: 3%; }
+
+#root .iconEye2 {
+  position: absolute;
+  top: 66%;
   right: 3%; }
 
 #root .iconEye:hover {
@@ -66,7 +75,8 @@
 
 #root .imageSelect {
   border-style: solid;
-  border-color: #F94877; }
+  border-color: #F94877;
+  border-radius: 0.5rem; }
 
 #root .textCard {
   position: absolute;
