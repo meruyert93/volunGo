@@ -8,8 +8,20 @@
         top: 2%;
         right: 1%;
     }
+    .redHeart {
+        color: red;
+    }
+    .whiteHeart {
+        color: rgb(255,255,255);opacity:0.6;
+    }
+    .iconHeart:hover {
+        cursor: pointer;
+    }
     .borderRed {
         border-style: solid;
         border-color:red;
+    }
+    .backgroundProject {
+        background-color: #F8F8F8;
     }
 }

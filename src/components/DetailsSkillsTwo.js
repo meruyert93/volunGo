@@ -9,7 +9,7 @@ import updateAction from "../adapters/updateAction";
 
     let collectedItems = [];
 
-function DetailsSkills() {
+function DetailsSkillsTwo() {
     const { state, actions } =  useStateMachine({ updateAction });
 
     // const [collect, setCollect] = useState(collectedItems);
@@ -74,4 +74,4 @@ function DetailsSkills() {
     )
 }
 
-export default DetailsSkills
+export default DetailsSkillsTwo

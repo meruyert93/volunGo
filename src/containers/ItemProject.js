@@ -1,14 +1,22 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Grid, Segment, Header, Divider, Image, Card, Icon } from 'semantic-ui-react';
 import { useTranslation } from "react-i18next";
 import "../translations/i18n";
 
 function ItemProject({id, image, name, organization, duration, days, time, place}) {
+    const [active, setActive] = useState();
+
+    const chosenHandler= (id) => {
+        setActive(id);
+        if (active) {
+            setActive();
+        }
+    }
     return (
         <Grid.Column mobile={16} tablet={5} computer={5} stretched>
             <Card>
                 <Image src={image} wrapped ui={false} className="imageProject"/>
-                <Icon name="heart" color="red" size="large" className="iconHeart"/>
+                <Icon name="heart" size="big" className={active ? "redHeart iconHeart" : "whiteHeart iconHeart"} onClick={() => chosenHandler(id)}/>
                 <Card.Content>
                     <Card.Header className="cardHeadingText">{name}</Card.Header>
                     <p className="red smallText">{organization}</p>

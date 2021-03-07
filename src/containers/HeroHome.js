@@ -1,5 +1,5 @@
 import React from 'react'
-import { Grid, Segment, Header, Icon, Container } from 'semantic-ui-react';
+import { Grid, Segment, Header, Icon, Container, Button } from 'semantic-ui-react';
 import { useTranslation } from "react-i18next";
 import { useHistory } from "react-router-dom";
 import "../translations/i18n";
@@ -19,27 +19,26 @@ function HeroHome() {
     }
 
     return (
-        <Segment size='large' padded='very' color="orange" inverted>
-            <Grid floated='left'>
-                <Grid.Row floated='left'>
+        <Segment size='large' padded='very' className="heroHome">
+            <Grid>
+                <Grid.Row>
                     <Grid.Column width={16}>
-                        <Header as='h1'>
+                        <Header as='h1'className="textWhite">
                         {t('welcome')}
                         {state.yourDetails.firstName + "!"}
                         </Header>
                     </Grid.Column>
                 </Grid.Row>
-                <Grid.Row floated='left'>
-                    <Grid.Column mobile={12} tablet={12} computer={4} floated='left'>
+                    <Grid.Column mobile={16} tablet={12} computer={8} floated='left'>
                         <Container fluid text>
-                            <p>{t('profile')}</p>
+                            <p className="textWhite">{t('profile')}</p>
                         </Container>
                         
                     </Grid.Column>
-                    <Grid.Column mobile={4} tablet={4} computer={12} floated='left'>
-                    <Icon name="arrow alternate circle right" size='big' fitted onClick={() => RouteChangeMoreInfo()}/>
+                    <Grid.Column mobile={16} tablet={4} computer={5} floated='right'>
+                    {/* <Icon name="arrow alternate circle right" size='big' fitted /> */}
+                    <Button color="pink"  onClick={() => RouteChangeMoreInfo()}>{t('preferences')}</Button>
                     </Grid.Column>
-                </Grid.Row>
             </Grid>
         </Segment>
     )

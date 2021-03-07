@@ -54,6 +54,9 @@
 #root .headingText {
   color: #090088; }
 
+#root .heroHome {
+  background: linear-gradient(274deg, #090088 -30.65%, #f94877 117.82%); }
+
 #root .imageProject {
   position: relative;
   display: flex; }
@@ -63,6 +66,19 @@
   top: 2%;
   right: 1%; }
 
+#root .redHeart {
+  color: red; }
+
+#root .whiteHeart {
+  color: white;
+  opacity: 0.6; }
+
+#root .iconHeart:hover {
+  cursor: pointer; }
+
 #root .borderRed {
   border-style: solid;
   border-color: red; }
+
+#root .backgroundProject {
+  background-color: #F8F8F8; }

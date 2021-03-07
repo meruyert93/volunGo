@@ -60,5 +60,9 @@ export const TRANSLATIONS_EN = {
 
     //home page hero section
     welcome: 'Welcome, ', 
-    profile: 'Complete your profile, make results better.'
+    profile: 'Complete your profile now to get your feed more personalized.',
+    preferences: "SET PREFERENCES",
+
+    //home page project section
+    recommended:"Recommended for you"
    };

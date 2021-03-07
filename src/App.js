@@ -2,6 +2,7 @@ import React, {useState} from 'react';
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import Landing from "./pages/Landing";
 import Home from "./pages/Home";
+import HomeProject from "./pages/HomeProject";
 import {
     Segment,
     Sidebar,
@@ -15,7 +16,8 @@ import SidebarMenu from './components/SidebarMenu';
 import SignUpFinish from './components/SignUpFinish';
 import DetailsLocation from './components/DetailsLocation';
 import DetailsActivities from './components/DetailsActivities';
-import DetailsSkills from './components/DetailsSkills'
+import DetailsSkills from './components/DetailsSkills';
+import DetailsSkillsTwo from "./components/DetailsSkillsTwo";
 import { StateMachineProvider, createStore } from "little-state-machine";
 import '../src/styles/style.css';
 
@@ -74,8 +76,14 @@ function App() {
                                 <Route path="/details-skills">
                                     <DetailsSkills/>
                                 </Route>
+                                <Route path="/details-skills-two">
+                                    <DetailsSkillsTwo/>
+                                </Route>
                                 <Route path="/home">
                                     <Home/>
+                                </Route>
+                                <Route path="/projects">
+                                    <HomeProject/>
                                 </Route>
                             </Switch>
                         </Sidebar.Pusher>
