@@ -7,7 +7,8 @@ function ItemProject({id, image, name, organization, duration, days, time, place
     return (
         <Grid.Column mobile={16} tablet={5} computer={5} stretched>
             <Card>
-                <Image src={image} wrapped ui={false} />
+                <Image src={image} wrapped ui={false} className="imageProject"/>
+                <Icon name="heart" color="red" size="large" className="iconHeart"/>
                 <Card.Content>
                     <Card.Header className="cardHeadingText">{name}</Card.Header>
                     <p className="red smallText">{organization}</p>

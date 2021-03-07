@@ -53,3 +53,16 @@
 
 #root .headingText {
   color: #090088; }
+
+#root .imageProject {
+  position: relative;
+  display: flex; }
+
+#root .iconHeart {
+  position: absolute;
+  top: 2%;
+  right: 1%; }
+
+#root .borderRed {
+  border-style: solid;
+  border-color: red; }

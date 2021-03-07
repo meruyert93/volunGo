@@ -1,0 +1,15 @@
+#root {
+    .imageProject {
+        position: relative;
+        display: flex;
+    }
+    .iconHeart {
+        position:absolute;
+        top: 2%;
+        right: 1%;
+    }
+    .borderRed {
+        border-style: solid;
+        border-color:red;
+    }
+}
