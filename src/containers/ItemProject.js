@@ -15,8 +15,8 @@ function ItemProject({id, image, name, organization, duration, days, time, place
     return (
         <Grid.Column mobile={16} tablet={5} computer={5} stretched>
             <Card>
-                <Image src={image} wrapped ui={false} className="imageProject"/>
-                <Icon name="heart" size="big" className={active ? "redHeart iconHeart" : "whiteHeart iconHeart"} onClick={() => chosenHandler(id)}/>
+                <Image src={image} wrapped ui={false} className="imageCard"/>
+                <Icon name="heart" size="big" className={active ? "redHeart iconSelect" : "whiteHeart iconSelect"} onClick={() => chosenHandler(id)}/>
                 <Card.Content>
                     <Card.Header className="cardHeadingText">{name}</Card.Header>
                     <p className="red smallText">{organization}</p>

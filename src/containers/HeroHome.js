@@ -14,7 +14,7 @@ function HeroHome() {
     const history = useHistory();
 
     const RouteChangeMoreInfo = () => {
-        let path = `details-activities`;
+        let path = `details-activities2`;
         history.push(path);
     }
 

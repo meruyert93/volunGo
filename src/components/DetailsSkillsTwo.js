@@ -1,8 +1,8 @@
 import React, { useState } from 'react'
-import { Grid, Segment, Header, Icon, Button, Checkbox, Form, Select, Divider  } from 'semantic-ui-react';
+import { Grid, Segment, Header, Icon, Button, Checkbox, Form, Select, Divider, Progress  } from 'semantic-ui-react';
 import { useTranslation } from "react-i18next";
 import dataSkills from "../data/dataSkills";
-import ItemSkill from "../containers/ItemSkill";
+import ItemSkillTwo from "../containers/ItemSkills2";
 import { useHistory } from "react-router-dom";
 import { useStateMachine } from "little-state-machine";
 import updateAction from "../adapters/updateAction";
@@ -37,7 +37,7 @@ function DetailsSkillsTwo() {
     }
 
     const RouteChangeBack = () => {
-        let path = `details-activities`;
+        let path = `details-activities2`;
         history.push(path);
     }
 
@@ -55,13 +55,29 @@ function DetailsSkillsTwo() {
 
     return (
         <Segment size='large' padded='very'>
-            <Header as='h2'>
-            {t('put_your_skills')}
-            </Header>
+            <Progress percent={100} attached='top' size='medium' color='pink'/>
+            <Grid>
+                <Grid.Column width={16} textAlign="center">
+                    <Header as="h6" color="grey">
+                        {t('stepTwo')}
+                    </Header>
+                </Grid.Column>
+                <Grid.Column width={16} textAlign="center">
+                    <Header  as='h2' className="headingText"> 
+                        {t('put_your_skills')}
+                    </Header>
+                </Grid.Column>
+                {/* <Grid.Column width={16} textAlign="center">
+                    <Header as="h6" color="grey">
+                    {t('sub_text_select')}
+                    </Header>
+                </Grid.Column> */}
+            </Grid>
+
             <Grid columns={2}>
                 {dataSkills.map((item) =>{
                     return(
-                        <ItemSkill key={item.id} {...item} toggleHandler={toggleHandler}/>
+                        <ItemSkillTwo key={item.id} {...item} toggleHandler={toggleHandler}/>
                     )
                 })}
             </Grid>

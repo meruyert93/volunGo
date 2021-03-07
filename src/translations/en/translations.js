@@ -53,9 +53,13 @@ export const TRANSLATIONS_EN = {
     terms_conditions: "By continuing, you confirm that you've read and agree to our Terms and Conditions and Privacy Policy.",
 
     //details-activities
+    stepOne: "step1/2",
+    select: "Select Types of Volunteer Opportunities",
+    sub_text_select: "Select the type of work that you want to do and we'll tailor your feed to your selections.",
     make_difference: 'Which way do you want to make a difference?',
 
     //details-skills
+    stepTwo:"step2/2",
     put_your_skills: 'What skills/abilities do you want to put to good use?',
 
     //home page hero section

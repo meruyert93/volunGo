@@ -23,7 +23,7 @@
   background-color: #AAB6C5; }
 
 #root .itemPicker {
-  background-color: #2684FF; }
+  background-color: #F94877; }
 
 #root .red {
   color: red; }
@@ -57,14 +57,30 @@
 #root .heroHome {
   background: linear-gradient(274deg, #090088 -30.65%, #f94877 117.82%); }
 
-#root .imageProject {
+#root .imageCard {
   position: relative;
   display: flex; }
 
-#root .iconHeart {
+#root .imageSelect {
+  border-style: solid;
+  border-color: #F94877; }
+
+#root .textCard {
+  position: absolute;
+  bottom: 35px;
+  left: 12px; }
+
+#root .iconSelect {
   position: absolute;
   top: 2%;
   right: 1%; }
+
+#root .pinkChecker {
+  color: #F94877; }
+
+#root .whiteChecker {
+  color: white;
+  opacity: 0.6; }
 
 #root .redHeart {
   color: red; }
@@ -73,12 +89,17 @@
   color: white;
   opacity: 0.6; }
 
-#root .iconHeart:hover {
+#root .iconSelect:hover {
   cursor: pointer; }
 
 #root .borderRed {
   border-style: solid;
   border-color: red; }
 
-#root .backgroundProject {
+#root .backroundProject {
   background-color: #F8F8F8; }
+
+#root .overlay {
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 100%);
+  opacity: 0.7;
+  filter: brightness(30%); }

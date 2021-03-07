@@ -16,6 +16,7 @@ import SidebarMenu from './components/SidebarMenu';
 import SignUpFinish from './components/SignUpFinish';
 import DetailsLocation from './components/DetailsLocation';
 import DetailsActivities from './components/DetailsActivities';
+import DetailsActivities2 from './components/DetailsActivities2';
 import DetailsSkills from './components/DetailsSkills';
 import DetailsSkillsTwo from "./components/DetailsSkillsTwo";
 import { StateMachineProvider, createStore } from "little-state-machine";
@@ -73,10 +74,13 @@ function App() {
                                 <Route path="/details-activities">
                                     <DetailsActivities/>
                                 </Route>
+                                <Route path="/details-activities2">
+                                    <DetailsActivities2/>
+                                </Route>
                                 <Route path="/details-skills">
                                     <DetailsSkills/>
                                 </Route>
-                                <Route path="/details-skills-two">
+                                <Route path="/details-skills2">
                                     <DetailsSkillsTwo/>
                                 </Route>
                                 <Route path="/home">
