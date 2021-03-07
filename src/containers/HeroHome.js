@@ -3,9 +3,13 @@ import { Grid, Segment, Header, Icon, Container } from 'semantic-ui-react';
 import { useTranslation } from "react-i18next";
 import { useHistory } from "react-router-dom";
 import "../translations/i18n";
+import { useStateMachine } from "little-state-machine";
+import updateAction from "../adapters/updateAction";
 
 function HeroHome() {
     const { t } = useTranslation();
+
+    const { state } = useStateMachine(updateAction);
 
     const history = useHistory();
 
@@ -21,6 +25,7 @@ function HeroHome() {
                     <Grid.Column width={16}>
                         <Header as='h1'>
                         {t('welcome')}
+                        {state.yourDetails.firstName + "!"}
                         </Header>
                     </Grid.Column>
                 </Grid.Row>

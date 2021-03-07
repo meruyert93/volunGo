@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { Grid, Segment, Header, Icon, Button, Checkbox, Form, Select, Dropdown  } from 'semantic-ui-react';
+import { Grid, Segment, Header, Button, Form, Progress, Divider  } from 'semantic-ui-react';
 import { useHistory } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import "../translations/i18n";
@@ -36,13 +36,26 @@ function FormsAdd() {
     }
 
     return (
-        <Segment size='large' padded='very' className="height70">
+        <Segment size='large' padded='very' className="height80">
+        <Progress percent={66} attached='top' size='medium' color='pink'/>
         <Grid stackable columns={2} verticalAlign='middle' centered>
-            <Header  as='h3'> 
-            {t('about_you')}
-            </Header>
-            <Grid.Row>
-                <Grid.Column>
+            <Grid.Column width={16} textAlign="center">
+                <Header as="h6" color="grey">
+                    {t('step2')}
+                </Header>
+            </Grid.Column>
+            <Grid.Column width={16} textAlign="center">
+                <Header  as='h2' className="headingText"> 
+                    {t('about_you')}
+                </Header>
+            </Grid.Column>
+            <Grid.Column width={16} textAlign="center">
+                <Header as="h6" color="grey">
+                    {t('sub_text_about_you')}
+                </Header>
+            </Grid.Column>
+            <Grid.Row streched="true">
+                <Grid.Column mobile={16} tablet={8} computer={3}>
                     <Form onSubmit={handleSubmit(RouteChangeNext)}>
                         <Form.Field required>
                             <label>{t('first_name')}</label>
@@ -88,6 +101,7 @@ function FormsAdd() {
                             />
                             </Form.Field>
                         </Form.Group>
+                        <Divider hidden/>
                         <Button.Group widths='2'>
                             <Button basic color='pink' onClick={RouteChangeBack}>{t('back')}</Button>
                             <Button color='pink' onClick={handleSubmit(RouteChangeNext)} type='submit'>{t('next')}</Button>

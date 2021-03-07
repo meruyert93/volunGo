@@ -29,7 +29,9 @@ export const TRANSLATIONS_EN = {
     next: 'Next',
 
     //sign up second page
-    about_you: "Tell us about yourself",
+    step2: "step 2/3",
+    about_you: "Tell Us About Yourself",
+    sub_text_about_you: "Genuine information helps us to find the best opportunities for you.",
     first_name: "First name",
     last_name: "Last name",
     year_birth: "Year of birth",
@@ -38,15 +40,17 @@ export const TRANSLATIONS_EN = {
     //sign up finish
     congratulation: "Congratulations!",
     personalize: "Personalize your feed",
-    sub_text_personalize: "Volunteer opportunities you may find interesting will show up more in your feed.",
-    complete_profile: "Complete profile",
+    welcome_to_community: "Welecome to our volunteer community! Continue setting your preferences and get your feed more personalized." ,
+    continue: "Continue setting preferences ",
     skip_now: "Skip now",
 
     //details-location
-    location_info: "Lastly, we need to know your location",
-    sub_text_location_info: "To show you volunteer opportunities within your area.",
+    step3: "step 3/3",
+    location_info: "Specify Your Location",
+    sub_text_location_info: "Type the postal code of the location you would like to use to search for opportunities.",
     city: "City (optional)",
     postal_code: "Postal code",
+    terms_conditions: "By continuing, you confirm that you've read and agree to our Terms and Conditions and Privacy Policy.",
 
     //details-activities
     make_difference: 'Which way do you want to make a difference?',
@@ -55,6 +59,6 @@ export const TRANSLATIONS_EN = {
     put_your_skills: 'What skills/abilities do you want to put to good use?',
 
     //home page hero section
-    welcome: 'Welcome, Alison!', 
+    welcome: 'Welcome, ', 
     profile: 'Complete your profile, make results better.'
    };

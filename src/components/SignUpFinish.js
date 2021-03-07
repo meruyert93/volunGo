@@ -28,17 +28,17 @@ function SignUpFinish() {
     return (
         <Segment size='large' padded='very' className="height70">
             <Grid stackable columns={1} verticalAlign='middle' centered>
-                <Header  as='h2'> 
+                <Header  as='h2' className="headingText"> 
                 {t('congratulation')}
                 </Header>
                 <Grid.Row centered >
-                    <Grid.Column computer={6} textAlign="center">
+                    <Grid.Column mobile={16} tablet={8} computer={5} textAlign="center">
                         <Image src='./images/celebration.svg' fluid />
-                        <Header as='h3'>
+                        {/* <Header as='h3'>
                         {t('personalize')}
-                    </Header>
-                    <p>{t('sub_text_personalize')}</p>
-                    <Button fluid color="pink" onClick={() => {RouteChangeMoreInfo()}}>{t('complete_profile')}</Button>
+                        </Header> */}
+                    <Header as="h6" color="grey">{t('welcome_to_community')}</Header>
+                    <Button fluid color="pink" onClick={() => {RouteChangeMoreInfo()}}>{t('continue')}</Button>
                     <Divider hidden />
                     <Button fluid basic color='pink' onClick={() => RouteChangeHome()}>{t('skip_now')}</Button>
                     </Grid.Column>

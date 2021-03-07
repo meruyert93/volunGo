@@ -1,5 +1,5 @@
 import React from 'react';
-import { Grid, Segment, Header, Button, Form,  } from 'semantic-ui-react';
+import { Grid, Segment, Header, Button, Form, Progress, Divider } from 'semantic-ui-react';
 import { useTranslation } from "react-i18next";
 import { useHistory } from "react-router-dom";
 import { useForm, Controller, ErrorMessage } from "react-hook-form";
@@ -33,15 +33,25 @@ function DetailsLocation () {
 
     return (
         <Segment size='large' padded='very' className="height70">
+            <Progress percent={100} attached='top' size='medium' color='pink'/>
             <Grid>
-            <Header  as='h2'> 
-            {t('location_info')}
-            </Header>
-            <Header as ='h5'>
-            {t('sub_text_location_info')}
-            </Header>
+            <Grid.Column width={16} textAlign="center">
+                <Header as="h6" color="grey">
+                    {t('step3')}
+                </Header>
+            </Grid.Column>
+            <Grid.Column width={16} textAlign="center">
+                <Header  as='h2' className="headingText"> 
+                    {t('location_info')}
+                </Header>
+            </Grid.Column>
+            <Grid.Column width={16} textAlign="center">
+                <Header as="h6" color="grey">
+                    {t('sub_text_location_info')}
+                </Header>
+            </Grid.Column>
             <Grid.Row streched="true">
-                    <Grid.Column>
+                    <Grid.Column mobile={16} tablet={8} computer={3}>
                         <Form>
                             <Form.Field>
                                 <label>{t('city')}</label>
@@ -60,6 +70,8 @@ function DetailsLocation () {
                                 />
                             </Form.Field>
                             {errors.postalCode && <p as="p" className="red">This field is required</p>}
+                            <Divider hidden/>
+                            <Header as="h6" color="grey" textAlign="center">{t('terms_conditions')}</Header>
                             <Button.Group widths='2'>
                                 <Button basic color='pink' as='a' onClick={RouteChangeBack}>{t('back')}</Button>
                                 <Button color="pink" onClick={handleSubmit(RouteChangeNext)} type='submit'>{t('next')}</Button>

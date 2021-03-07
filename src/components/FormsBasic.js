@@ -1,5 +1,5 @@
 import React, { useRef, useState } from 'react'
-import { Grid, Segment, Header, Icon, Button, Checkbox, Form, Message, Input, Divider  } from 'semantic-ui-react';
+import { Grid, Segment, Header, Button, Form, Progress, Divider} from 'semantic-ui-react';
 import { useHistory } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import "../translations/i18n";
@@ -42,6 +42,7 @@ function Forms() {
 
     return (
         <Segment size='large' padded='very' className="height70">
+            <Progress percent={33} attached='top' size='medium' color='pink'/>
             <Grid stackable verticalAlign='middle' centered> 
                     <Grid.Column width={16} textAlign="center">
                         <Header as="h6" color="grey">
@@ -97,6 +98,7 @@ function Forms() {
                                 />
                             </Form.Field>
                             {errors.passwordConfirm && <p as="p" className="red">{errors.passwordConfirm.message}</p>}
+                            <Divider hidden/>
                             <Button.Group widths='2'>
                                 <Button basic color='pink' as='a' onClick={RouteChangeBack}>{t('back')}</Button>
                                 <Button color='pink' onClick={handleSubmit(RouteChangeNext)} type='submit'>{t('next')}</Button>
