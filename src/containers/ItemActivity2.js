@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Grid, Segment, Header, Icon, Button, Checkbox, Form, Image, Container, Card  } from 'semantic-ui-react';
+import { Grid, Header, Icon,  Image, Card  } from 'semantic-ui-react';
 import { useTranslation } from "react-i18next";
 
 function ItemActivity2({id, name, image2, toggleHandler}) {
@@ -17,9 +17,9 @@ function ItemActivity2({id, name, image2, toggleHandler}) {
     return (
         <Grid.Column mobile={8} tablet={5} computer={4}>
             <Card onClick={() => chosenHandler(id)} className={active && 'imageSelect'}>
-                <Image src={image2} rounded className="imageCard overlay"/>
+                <Image src={image2} rounded className="imageCard overlayImage"/>
                 <Icon name="check circle" size="big" className={active ? "iconSelect pinkChecker" : "iconSelect whiteChecker"}/>
-                <Grid className="textCard" basic>
+                <Grid className="textCard">
                     <Header className="textWhite">{name}</Header>
                 </Grid>
             </Card>

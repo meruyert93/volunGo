@@ -1,5 +1,5 @@
 import React from 'react'
-import { Grid, Segment, Header, Icon, Container, Button } from 'semantic-ui-react';
+import { Grid, Segment, Header, Container, Button } from 'semantic-ui-react';
 import { useTranslation } from "react-i18next";
 import { useHistory } from "react-router-dom";
 import "../translations/i18n";

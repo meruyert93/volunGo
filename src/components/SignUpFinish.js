@@ -1,8 +1,7 @@
 import React from 'react';
-import { Grid, Segment, Header, Icon, Button, Checkbox, Form, Image, Divider  } from 'semantic-ui-react';
+import { Grid, Segment, Header,  Button, Image, Divider  } from 'semantic-ui-react';
 import { useTranslation } from "react-i18next";
 import "../translations/i18n";
-import { useForm, Controller } from "react-hook-form";
 import { useHistory } from "react-router-dom";
 import { useStateMachine } from "little-state-machine";
 import updateAction from "../adapters/updateAction";

@@ -1,6 +1,6 @@
 import React from 'react';
 import {
-    Icon,
+
     Menu,
     Sidebar,
   } from 'semantic-ui-react';
@@ -12,7 +12,6 @@ function SidebarMenu({visible, setVisible}) {
                 as={Menu}
                 animation='overlay'
                 icon='labeled'
-                inverted
                 vertical
                 visible={visible}
                 onHide={() => setVisible(false)}

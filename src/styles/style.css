@@ -37,6 +37,9 @@
 #root .backgroundDark {
   background-color: #090088; }
 
+#root .backgroundWhite {
+  background-color: white; }
+
 #root .textWhite {
   color: white; }
 
@@ -82,13 +85,6 @@
   color: white;
   opacity: 0.6; }
 
-#root .redHeart {
-  color: red; }
-
-#root .whiteHeart {
-  color: white;
-  opacity: 0.6; }
-
 #root .iconSelect:hover {
   cursor: pointer; }
 
@@ -99,7 +95,7 @@
 #root .backroundProject {
   background-color: #F8F8F8; }
 
-#root .overlay {
+#root .overlayImage {
   background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 100%);
   opacity: 0.7;
   filter: brightness(30%); }

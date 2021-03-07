@@ -23,12 +23,6 @@
     .whiteChecker {
         color: rgb(255,255,255);opacity:0.6;
     }
-    .redHeart {
-        color: red;
-    }
-    .whiteHeart {
-        color: rgb(255,255,255);opacity:0.6;
-    }
     .iconSelect:hover {
         cursor: pointer;
     }
@@ -39,7 +33,7 @@
     .backroundProject {
         background-color: #F8F8F8;
     }
-    .overlay {
+    .overlayImage {
         background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0) 100%);
         opacity: 0.7;
         // filter: drop-shadow(0px 4px 12px rgba(0, 0, 0, 0.15));

@@ -1,5 +1,5 @@
 import React, {useState} from 'react'
-import { Grid, Segment, Header, Icon, Button, Checkbox, Form, Select, Divider, Progress  } from 'semantic-ui-react';
+import { Grid, Segment, Header,  Button, Divider, Progress  } from 'semantic-ui-react';
 import { useTranslation } from "react-i18next";
 import { useHistory } from "react-router-dom";
 import ItemActivity2 from '../containers/ItemActivity2';
