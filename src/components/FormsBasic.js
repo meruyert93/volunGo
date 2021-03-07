@@ -84,7 +84,7 @@ function Forms() {
                                                     }
                                     })}
                                 />
-                                <i onClick={togglePasswordVisiblity}>{eye}</i>
+                                <i onClick={togglePasswordVisiblity} className="iconEye">{eye}</i>
                             </Form.Field>
                             {errors.password && <p as="p" className="red">{errors.password.message}</p>}
                             <Form.Field required>

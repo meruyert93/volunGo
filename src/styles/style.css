@@ -5,12 +5,12 @@
 #root body {
   box-sizing: border-box; }
 
-#root i {
+#root .iconEye {
   position: absolute;
   top: 39%;
   right: 3%; }
 
-#root i:hover {
+#root .iconEye:hover {
   cursor: pointer; }
 
 #root .height70 {
@@ -27,6 +27,12 @@
 
 #root .red {
   color: red; }
+
+#root .smallText {
+  font-size: 0.80rem; }
+
+#root .cardHeadingText {
+  font-size: 1.2rem; }
 
 #root .backgroundDark {
   background-color: #090088; }
