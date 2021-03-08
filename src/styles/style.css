@@ -52,6 +52,9 @@
 #root .textWhite {
   color: white; }
 
+#root .textPrimary {
+  color: #F94877; }
+
 #root .flexSpaceEvenly {
   display: flex;
   flex-direction: row;
@@ -109,3 +112,6 @@
   background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 100%);
   opacity: 0.8;
   filter: brightness(30%); }
+
+#root .projectCard:hover {
+  transform: translateY(-0.5rem) scale(1.01); }

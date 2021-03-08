@@ -13,12 +13,12 @@ function ItemProject({id, image, name, organization, duration, days, time, place
     }
     return (
         <Grid.Column mobile={16} tablet={5} computer={5} stretched>
-            <Card>
+            <Card  onDoubleClick={() => chosenHandler(id)} className="projectCard">
                 <Image src={image} wrapped ui={false} className="imageCard"/>
                 <Icon name="heart" size="big" className={active ? "pinkChecker iconSelect" : "whiteChecker iconSelect"} onClick={() => chosenHandler(id)}/>
                 <Card.Content>
                     <Card.Header className="cardHeadingText">{name}</Card.Header>
-                    <p className="red smallText">{organization}</p>
+                    <p className="textPrimary smallText">{organization}</p>
                 </Card.Content>
                 <Card.Content>
                     <Card.Meta>

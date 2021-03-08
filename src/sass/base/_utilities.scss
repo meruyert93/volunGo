@@ -8,6 +8,9 @@
     .textWhite {
         color:white
     }
+    .textPrimary {
+        color: $color-volunteer-primary;
+    }
     .flexSpaceEvenly {
         display: flex;
         flex-direction: row;
