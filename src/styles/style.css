@@ -107,5 +107,5 @@
 
 #root .overlayImage {
   background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 100%);
-  opacity: 0.7;
+  opacity: 0.8;
   filter: brightness(30%); }
