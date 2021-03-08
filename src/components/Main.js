@@ -24,7 +24,7 @@ function Main() {
                     </Grid.Column>
                     <Grid.Column  width={5}  textAlign='center'>
                         <Divider hidden/>
-                        <Image src="./images/heroSection/find.svg" centered/>
+                        <Image src="./images/heroSection/join.svg" centered/>
                         <Header as ="h4" className="textWhite">{t('organizations')}</Header>
                         <p className="textWhite">{t('sub_text_organizations')}</p>
                     </Grid.Column>
