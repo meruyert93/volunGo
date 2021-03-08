@@ -14,8 +14,8 @@ const people = [
     {
     id: 3,
     image: '/images/profilePhotos/profile3.jpg',
-    name: 'Michelle Torres-Linke',
-    position: "Agile Coach"
+    name: 'Aleksei Nepochatykh',
+    position: "Software Engineer"
     },
     {
     id: 4,
@@ -26,8 +26,8 @@ const people = [
     {
     id: 5,
     image: '/images/profilePhotos/profile5.jpg',
-    name: 'Aleksei Nepochatykh',
-    position: "Software Engineer"
+    name: 'Michelle Torres-Linke',
+    position: "Agile Coach"
     },
     {
     id: 6,
