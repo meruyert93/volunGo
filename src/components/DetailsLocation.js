@@ -59,6 +59,7 @@ function DetailsLocation () {
                                     type="text" 
                                     name="city"
                                     ref={register}
+                                    placeholder={t('city_placeholder')}
                                 />
                                 {/* <ErrorMessage errors={errors} as="p"/> */}
                             </Form.Field>
@@ -67,6 +68,7 @@ function DetailsLocation () {
                                 <input
                                     name="postalCode"
                                     ref={register({required: true})}
+                                    placeholder={t('postal_code_placeholder')}
                                 />
                             </Form.Field>
                             {errors.postalCode && <p as="p" className="red">This field is required</p>}

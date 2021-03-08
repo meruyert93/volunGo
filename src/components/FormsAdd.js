@@ -63,6 +63,7 @@ function FormsAdd() {
                                 type="text"
                                 name="firstName"
                                 ref={register({ required: true, pattern: /^[A-Za-z]+$/i})}
+                                placeholder={t('first_name_placeholder')}
                             />
                         </Form.Field>
                         {errors.firstName && <p as="p" className="red">This field is required</p>}
@@ -72,6 +73,7 @@ function FormsAdd() {
                                 type="text"
                                 name="lastName"
                                 ref={register({ required: true, pattern: /^[A-Za-z]+$/i})}
+                                placeholder={t('last_name_placeholder')}
                             />
                         </Form.Field>
                         {errors.lastName && <p as="p" className="red">This field is required</p>}
@@ -82,6 +84,7 @@ function FormsAdd() {
                                     type="number"
                                     name="yearOfBirth"
                                     ref={register({ required: true})}
+                                    placeholder={t('year_placeholder')}
                                 />
                             </Form.Field>
                             {errors.lastName && <p as="p" className="red">This field is required</p>}

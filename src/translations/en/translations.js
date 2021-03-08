@@ -36,9 +36,13 @@ export const TRANSLATIONS_EN = {
     about_you: "Tell Us About Yourself",
     sub_text_about_you: "Genuine information helps us to find the best opportunities for you.",
     first_name: "First name",
+    first_name_placeholder: "Your first name",
     last_name: "Last name",
+    last_name_placeholder: "Your last name",
     year_birth: "Year of birth",
+    year_placeholder: "e.g. 1996",
     gender: "Gender",
+    gender_placeholder: "Select gender",
 
     //sign up finish
     congratulation: "Congratulations!",
@@ -52,7 +56,9 @@ export const TRANSLATIONS_EN = {
     location_info: "Specify Your Location",
     sub_text_location_info: "Type the postal code of the location you would like to use to search for opportunities.",
     city: "City (optional)",
+    city_placeholder: "Munich",
     postal_code: "Postal code",
+    postal_code_placeholder:"e.g. 87671",
     terms_conditions: "By continuing, you confirm that you've read and agree to our Terms and Conditions and Privacy Policy.",
 
     //details-activities
