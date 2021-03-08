@@ -32,7 +32,7 @@ function DetailsLocation () {
     }
 
     return (
-        <Segment size='large' padded='very' className="height80">
+        <Segment size='large' padded='very' className="height100">
             <Progress percent={100} attached='top' size='medium' color='pink'/>
             <Grid centered>
             <Grid.Column width={16} textAlign="center">

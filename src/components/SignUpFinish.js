@@ -25,7 +25,7 @@ function SignUpFinish() {
     }
 
     return (
-        <Segment size='large' padded='very' className="height80">
+        <Segment size='large' padded='very' className="height100">
             <Grid stackable columns={1} verticalAlign='middle' centered>
                 <Header  as='h2' className="headingText"> 
                 {t('congratulation')}

@@ -41,7 +41,7 @@ function Forms() {
     }
 
     return (
-        <Segment size='large' padded='very' className="height80">
+        <Segment size='large' padded='very' className="height100">
             <Progress percent={33} attached='top' size='medium' color='pink'/>
             <Grid stackable verticalAlign='middle' centered> 
                     <Grid.Column width={16} textAlign="center">
