@@ -7,13 +7,13 @@ function HeaderBar({onToggleMenu}) {
         <Segment basic attached="top" vertical compact size='small'>
             <Grid container columns={3}>
                 <Grid.Row>
-                    <Grid.Column floated='left' width={3}>
+                    <Grid.Column floated='left' mobile={8} tablet={4} computer={3}>
                         <Image src='./images/Logo.png' />
                     </Grid.Column>
                     {/* <Grid.Column floated='left' width={11}>
                         <Header as='h1'>VolunGO</Header>
                     </Grid.Column> */}
-                    <Grid.Column floated='right' width={2}>
+                    <Grid.Column floated='right' mobile={3} tablet={2} computer={2}>
                         <Icon 
                             link 
                             name="sidebar" 
