@@ -23,8 +23,11 @@ export const TRANSLATIONS_EN = {
     account: "Create Your Account",
     sub_text_account: "VolunGO is a platform for bringing volunteers and nonprofit organizations together.",
     email: "E-mail",
+    email_placeholder: "example@email.com", 
     password: 'Password',
+    password_placeholder: "must have at least 8 characters",
     confirm_password: 'Confirm Password',
+    confirm_password_placeholder: "confirm your password", 
     back:'Back',
     next: 'Next',
 

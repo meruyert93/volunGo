@@ -68,6 +68,7 @@ function Forms() {
                                     type="text" 
                                     name="email"
                                     ref={register({ required: true})}
+                                    placeholder={t('email_placeholder')}
                                 />
                             </Form.Field>
                             {errors.email && <p as="p" className="red">Your must specify an email</p>}
@@ -84,6 +85,7 @@ function Forms() {
                                                     }
                                     })}
                                     className="inputPassword"
+                                    placeholder={t('password_placeholder')}
                                 />
                                 <i key={1} onClick={togglePasswordVisiblity} className="iconEye1">{eye}</i>
                             </Form.Field>
@@ -97,6 +99,7 @@ function Forms() {
                                                         value === password.current || "The passwords do not match"
                                     })}
                                     className="inputPassword"
+                                    placeholder={t('confirm_password_placeholder')}
                                 />
                                 <i key={2} onClick={togglePasswordVisiblity} className="iconEye2">{eye}</i>
                             </Form.Field>
