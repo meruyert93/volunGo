@@ -42,6 +42,9 @@ createStore({
         email: "",
         password:"",
         passwordConfirm: "",
+    },
+    projects:{
+        
     }
     
 })
@@ -98,7 +101,7 @@ function App() {
                                 <Route path="/ngo-sign-up1">
                                     <NGOSignUpBasic/>
                                 </Route>
-                                <Route path="ngo-sign-up2" component={NGOSignUpAdd}/>
+                                <Route path="/ngo-sign-up2" component={NGOSignUpAdd}/>
                             </Switch>
                         </Sidebar.Pusher>
                     </Sidebar.Pushable>

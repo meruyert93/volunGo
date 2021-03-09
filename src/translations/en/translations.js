@@ -18,7 +18,7 @@ export const TRANSLATIONS_EN = {
     about_us: "about us",
     sub_text_about_us: "We aim to bring like-minded people together to make humanitarian aid reach more populations",
     
-    //sign up first page
+    //sign up first page for Volunteers and NGO
     step1: "step 1/3",
     account: "Create Your Account",
     sub_text_account: "VolunGO is a platform for bringing volunteers and nonprofit organizations together.",
@@ -77,5 +77,33 @@ export const TRANSLATIONS_EN = {
     preferences: "SET PREFERENCES",
 
     //home page project section
-    recommended:"Recommended for you"
-   };
+    recommended:"Recommended for you",
+
+    //NGO Sign UP Additional info
+    register_org: "Register your organization",
+    sub_text_register_org: "This information will appear on your organization profile. Precise information helps users to find and join your opportunities.",
+    name_org: "Name of your organization",
+    about_org: "About your organization",
+    url_org: "Website URL (Homepage, Facebook, Instagram, etc)",
+    
+    //NGO Adding New Project Basic Info
+    about_project: "About the project",
+    sub_text_about_project: "Let’s start with filling in  the overall information on the project.",
+    basic_info: "Basic Information",
+    project_title: "Project title",
+    contact_person: "Name of contact person",
+    contact_info: "Contact email",
+    number_of_volunteers: "Number of volunteers needed",
+    no_specify: "Don't specify",
+    location_info_project: "Location",
+    online_or_offline: "Is it going to be online or offfile project?",
+    offline: "offline",
+    online:"online",
+    location_project: "Location of the project - Address",
+    location_project_placeholder: "add location",
+    time_info:"Time",
+    date_info:"date",
+
+
+
+};
