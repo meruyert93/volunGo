@@ -5,9 +5,13 @@ import { useTranslation } from "react-i18next";
 import { useForm } from "react-hook-form";
 import { useStateMachine } from "little-state-machine";
 import UpdateProjectAction from "../../adapters/updateProjectAction";
+import DatePicker from "react-datepicker";
+import "react-datepicker/dist/react-datepicker.css";
 
 function ProjectInfoBasic() {
     const [radio, setRadio] = useState('');
+    const [startDate, setStartDate] = useState(new Date());
+    const [endDate, setEndDate] = useState(new Date());
     const { t } = useTranslation();
     const { state, actions } =  useStateMachine({ UpdateProjectAction });
     const { handleSubmit, errors, register, watch } = useForm({
@@ -29,7 +33,7 @@ function ProjectInfoBasic() {
     }
 
     return (
-        <Segment  size='large' padded='very' className="height100">
+        <Segment  size='large' padded='very' className="height180">
             <Progress percent={33} attached='top' size='medium' color='blue'/>
             <Grid stackable verticalAlign='middle' centered>
                 <Grid.Column width={16} textAlign="center">
@@ -69,7 +73,7 @@ function ProjectInfoBasic() {
                                     ref={register({ required: true})} 
                                 />
                             </Form.Field>
-                            <Form.Field required>
+                            <Form.Field>
                                 <label>{t('number_of_volunteers')}</label>
                                 <input
                                     type="number" 
@@ -106,14 +110,22 @@ function ProjectInfoBasic() {
                                 />
                             </Form.Field>
                             <Header>{t('time_info')}</Header>
-
+                            <Form.Group>
+                                <Form.Field>
+                                    <label>{t('starting_date')}</label>
+                                    <DatePicker selected={startDate} selectsStart startDate={startDate} endDate={endDate} onChange={date => setStartDate(date)} />
+                                </Form.Field>
+                                <Form.Field>
+                                    <label>{t('ending_date')}</label>
+                                    <DatePicker selected={endDate} selectsEnd startDate={startDate} endDate={endDate} onChange={date => setEndDate(date)} />
+                                </Form.Field>
+                            </Form.Group>
                             <Grid.Row columns={1}>
                                 <Grid.Column>
                                     <Button color="blue" onClick={RouteChangeBack}>{t('back')}</Button>
                                     <Button primary onClick={handleSubmit(RouteChangeNext)}>{t('next')}</Button>
                                 </Grid.Column>
                             </Grid.Row>
-                        
                         </Form>
                     </Grid.Column>
                 </Grid.Row>

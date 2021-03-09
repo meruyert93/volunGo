@@ -103,5 +103,7 @@ export const TRANSLATIONS_EN = {
     location_project_placeholder: "add location",
     time_info:"Time",
     date_info:"date",
+    starting_date: "Starting date",
+    ending_date:"Ending date"
 
 };
