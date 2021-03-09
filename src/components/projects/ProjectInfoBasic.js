@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Grid, Segment, Header, Button, Form, Progress, Divider, Checkbox} from 'semantic-ui-react';
 import { useHistory } from "react-router-dom";
 import { useTranslation } from "react-i18next";
@@ -7,6 +7,7 @@ import { useStateMachine } from "little-state-machine";
 import UpdateProjectAction from "../../adapters/updateProjectAction";
 
 function ProjectInfoBasic() {
+    const [radio, setRadio] = useState('');
     const { t } = useTranslation();
     const { state, actions } =  useStateMachine({ UpdateProjectAction });
     const { handleSubmit, errors, register, watch } = useForm({
@@ -38,9 +39,9 @@ function ProjectInfoBasic() {
                     <p> {t('sub_text_about_project')}</p>
                 </Grid.Column>
                 <Grid.Row>
-                    <Grid.Column mobile={16} tablet={8} computer={3}>
-                        <Header>{t('basic_info')}</Header>
+                    <Grid.Column mobile={16} tablet={8} computer={5}>
                         <Form>
+                            <Header>{t('basic_info')}</Header>
                             <Form.Field required>
                                 <label>{t('project_title')}</label>
                                 <input
@@ -78,6 +79,34 @@ function ProjectInfoBasic() {
                                 />                             
                             </Form.Field>
                             <Form.Field label={t('no_specify')} name='not_specified' control='input' type='checkbox'  ref={register({ required: true})}/>
+                            
+                            <Header>{t('location_info_project')}</Header>
+                            <Form.Group grouped>
+                                <label>{t('online_or_offline')}</label>
+                                <Form.Radio
+                                    label={t('offline')}
+                                    value='offline'
+                                    checked={radio ==='offline'}
+                                    onChange={() => setRadio('offline')}
+                                />
+                                <Form.Radio
+                                    label={t('online')}
+                                    value='online'
+                                    checked={radio ==='online'}
+                                    onChange={() => setRadio('online')}
+                                />
+                            </Form.Group>
+                            <Form.Field required>
+                                <label>{t('location_project')}</label>
+                                <input
+                                    type="text" 
+                                    name="contact_person"
+                                    placeholder={t('location_project_placeholder')}
+                                    ref={register({ required: true})} 
+                                />
+                            </Form.Field>
+                            <Header>{t('time_info')}</Header>
+
                             <Grid.Row columns={1}>
                                 <Grid.Column>
                                     <Button color="blue" onClick={RouteChangeBack}>{t('back')}</Button>

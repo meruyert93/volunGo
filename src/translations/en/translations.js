@@ -96,7 +96,7 @@ export const TRANSLATIONS_EN = {
     number_of_volunteers: "Number of volunteers needed",
     no_specify: "Don't specify",
     location_info_project: "Location",
-    online_or_offline: "Is it going to be online or offfile project?",
+    online_or_offline: "Is it going to be online or offline project?",
     offline: "offline",
     online:"online",
     location_project: "Location of the project - Address",
