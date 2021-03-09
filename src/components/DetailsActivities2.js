@@ -71,10 +71,13 @@ function DetailsActivities () {
                 })}
                 </Grid>
                 <Divider hidden/>
-                <Button.Group widths='2'>
+                <Grid columns={4} centered>
+                <Button.Group widths='2' compact>
                                 <Button basic color='pink' as='a' onClick={() => RouteChangeBack()}>{t('back')}</Button>
                                 <Button color='pink' type='submit' onClick={() => RouteChangeMoreInfo()}>{t('next')}</Button>
                 </Button.Group>
+                <Divider hidden/>
+                </Grid>
         </Segment>
     )
 }
