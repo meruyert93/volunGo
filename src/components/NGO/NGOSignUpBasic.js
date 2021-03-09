@@ -71,7 +71,7 @@ function NGOSignUpBasic() {
                             <Grid.Row columns={1}>
                                 <Grid.Column>
                                     <Button color="blue" onClick={RouteChangeBack}>{t('back')}</Button>
-                                    <Button primary onClick={handleSubmit(RouteChangeNext)}>{t('back')}</Button>
+                                    <Button primary onClick={handleSubmit(RouteChangeNext)}>{t('next')}</Button>
                                 </Grid.Column>
                             </Grid.Row>
                         </Form>

@@ -104,6 +104,4 @@ export const TRANSLATIONS_EN = {
     time_info:"Time",
     date_info:"date",
 
-
-
 };
