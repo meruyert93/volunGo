@@ -19,6 +19,8 @@ import DetailsActivities from './components/DetailsActivities';
 import DetailsActivities2 from './components/DetailsActivities2';
 import DetailsSkills from './components/DetailsSkills';
 import DetailsSkillsTwo from "./components/DetailsSkillsTwo";
+import NGOSignUpBasic from "./components/NGO/NGOSignUpBasic";
+import NGOSignUpAdd from "./components/NGO/NGOSignUpAdd"; 
 import { StateMachineProvider, createStore } from "little-state-machine";
 import '../src/styles/style.css';
 
@@ -36,7 +38,11 @@ createStore({
         activities: [],
         skills: [],
     },
-    
+    ngoDetails:{
+        email: "",
+        password:"",
+        passwordConfirm: "",
+    }
     
 })
 
@@ -89,6 +95,10 @@ function App() {
                                 <Route path="/projects">
                                     <HomeProject/>
                                 </Route>
+                                <Route path="/ngo-sign-up1">
+                                    <NGOSignUpBasic/>
+                                </Route>
+                                <Route path="ngo-sign-up2" component={NGOSignUpAdd}/>
                             </Switch>
                         </Sidebar.Pusher>
                     </Sidebar.Pushable>
