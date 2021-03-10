@@ -103,10 +103,10 @@ export const TRANSLATIONS_EN = {
     location_project_placeholder: "add location",
     time_info:"Time",
     date_info:"date",
-    starting_date: "Starting date",
-    ending_date:"Ending date",
+    starting_date: "Start date",
+    ending_date:"End date",
     starting_time: "Start time",
     ending_time: "End time",
-    weekdays:"Weekdays"
+    weekdays:"Weekdays (Optional)"
 
 };

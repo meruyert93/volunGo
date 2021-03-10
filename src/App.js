@@ -22,6 +22,7 @@ import DetailsSkillsTwo from "./components/DetailsSkillsTwo";
 import NGOSignUpBasic from "./components/NGO/NGOSignUpBasic";
 import NGOSignUpAdd from "./components/NGO/NGOSignUpAdd"; 
 import ProjectInfoBasic from "./components/projects/ProjectInfoBasic";
+import ProjectImage from "./components/projects/ProjectImage";
 import { StateMachineProvider, createStore } from "little-state-machine";
 import '../src/styles/style.css';
 
@@ -105,6 +106,7 @@ function App() {
                                 </Route>
                                 <Route path="/ngo-sign-up2" component={NGOSignUpAdd}/>
                                 <Route path="/ngo-project-info-basic" component={ProjectInfoBasic}/>
+                                <Route path="/ngo-project-image" component={ProjectImage}/>
                             </Switch>
                         </Sidebar.Pusher>
                     </Sidebar.Pushable>

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Grid, Segment, Header, Button, Form, Progress, Divider, Dropdown} from 'semantic-ui-react';
+import { Grid, Segment, Header, Button, Form, Progress, Divider} from 'semantic-ui-react';
 import { useHistory } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { useForm, Controller } from "react-hook-form";
@@ -35,6 +35,7 @@ function ProjectInfoBasic() {
     ]
 
     const timeOptions = [
+        { key: '7', text: '', value: '' },
         { key: '8', text: '8:00', value: '8:00' },
         { key: '9', text: '9:00', value: '9:00' },
         { key: '10', text: '10:00', value: '11:00'},
@@ -152,13 +153,6 @@ function ProjectInfoBasic() {
                                         )
                                     }}
                                 />
-                            
-                                {/* <Form.Radio
-                                    label={t('online')}
-                                    value='online'
-                                    checked={radio ==='online'}
-                                    onChange={() => setRadio('online')}
-                                /> */}
                             </Form.Group>
                             <Form.Field required>
                                 <label>{t('location_project')}</label>
@@ -252,6 +246,7 @@ function ProjectInfoBasic() {
                                 />
                                 </Form.Field>
                             </Form.Group>
+                            <Form.Field label={t('no_specify')} name='not_specified' control='input' type='checkbox' />
                         </Form>
                             {/* <Grid.Column className="flexColumn">
                                 <label>{t('starting_time')}</label>
