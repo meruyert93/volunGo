@@ -155,7 +155,7 @@ function ProjectInfoBasic() {
                                 />
                             </Form.Group>
                             <Form.Field required>
-                                <label>{t('location_project')}</label>
+                                <label>{t('address_1')}</label>
                                 <input
                                     type="text" 
                                     name="location"
@@ -163,6 +163,35 @@ function ProjectInfoBasic() {
                                     ref={register({ required: true})} 
                                 />
                             </Form.Field>
+                            <Form.Field required>
+                                <label>{t('address_2')}</label>
+                                <input
+                                    type="text" 
+                                    name="location"
+                                    placeholder={t('location_project_placeholder')}
+                                    ref={register({ required: true})} 
+                                />
+                            </Form.Field>
+                            <Form.Group>
+                                <Form.Field required>
+                                    <label>{t('city_project')}</label>
+                                    <input
+                                        type="text" 
+                                        name="location"
+                                        placeholder={t('location_project_placeholder')}
+                                        ref={register({ required: true})} 
+                                    />
+                                </Form.Field>
+                                <Form.Field required>
+                                    <label>{t('postalCode_project')}</label>
+                                    <input
+                                        type="text" 
+                                        name="location"
+                                        placeholder={t('location_project_placeholder')}
+                                        ref={register({ required: true})} 
+                                    />
+                                </Form.Field>
+                            </Form.Group>
                             <Header>{t('time_info')}</Header>
                             <Form.Group>
                                 <Form.Field>
@@ -222,7 +251,7 @@ function ProjectInfoBasic() {
                                             return (
                                             <Form.Dropdown
                                                 options={timeOptions} 
-                                                fluid selection 
+                                                selection 
                                                 onChange={startTimeOnChange}
                                             />
                                             )
@@ -238,7 +267,7 @@ function ProjectInfoBasic() {
                                             return (
                                             <Form.Dropdown
                                                 options={timeOptions} 
-                                                fluid selection 
+                                                selection 
                                                 onChange={endTimeOnChange}
                                             />
                                             )
@@ -247,18 +276,7 @@ function ProjectInfoBasic() {
                                 </Form.Field>
                             </Form.Group>
                             <Form.Field label={t('no_specify')} name='not_specified' control='input' type='checkbox' />
-                        </Form>
-                            {/* <Grid.Column className="flexColumn">
-                                <label>{t('starting_time')}</label>
-                                <TimeRangePicker
-                                    onChange={setTime}
-                                    value={time}
-                                    disableClock={true}
-                                    name='time_range'
-                                    autoFocus
-                                    className="timePicker"
-                                />
-                            </Grid.Column> */}
+                        
                             <Grid.Row>
                                 <Grid.Column>
                                     <Divider hidden/>
@@ -266,7 +284,7 @@ function ProjectInfoBasic() {
                                     <Button primary onClick={handleSubmit(RouteChangeNext)}>{t('next')}</Button>
                                 </Grid.Column>
                             </Grid.Row>
-                            
+                        </Form>  
                     </Grid.Column>
                 </Grid.Row>
             </Grid>
