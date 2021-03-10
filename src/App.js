@@ -25,6 +25,7 @@ import ProjectInfoBasic from "./components/projects/ProjectInfoBasic";
 import { StateMachineProvider, createStore } from "little-state-machine";
 import '../src/styles/style.css';
 
+
 createStore({
     yourDetails: {
         email:'',

@@ -51,7 +51,19 @@ body {
 .height180 {
     height: 180vh;
 }
-
+.flexColumn {
+    display: flex;
+    flex-direction: column;
+}
+.timePicker {
+    width: 0;
+    cursor: pointer;
+    line-height: 1.21428571em;
+    padding: .67857143em 1em;
+    font-size: 1em;
+    height: 60px;
+    
+}
 }
 
 

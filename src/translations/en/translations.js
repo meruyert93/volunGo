@@ -104,6 +104,9 @@ export const TRANSLATIONS_EN = {
     time_info:"Time",
     date_info:"date",
     starting_date: "Starting date",
-    ending_date:"Ending date"
+    ending_date:"Ending date",
+    starting_time: "Start time",
+    ending_time: "End time",
+    weekdays:"Weekdays"
 
 };

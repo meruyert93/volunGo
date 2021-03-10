@@ -1,24 +1,61 @@
 import React, { useState } from 'react';
-import { Grid, Segment, Header, Button, Form, Progress, Divider, Checkbox} from 'semantic-ui-react';
+import { Grid, Segment, Header, Button, Form, Progress, Divider, Dropdown} from 'semantic-ui-react';
 import { useHistory } from "react-router-dom";
 import { useTranslation } from "react-i18next";
-import { useForm } from "react-hook-form";
+import { useForm, Controller } from "react-hook-form";
 import { useStateMachine } from "little-state-machine";
 import UpdateProjectAction from "../../adapters/updateProjectAction";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
+import TimeRangePicker from '@wojtekmaj/react-timerange-picker';
+
+
 
 function ProjectInfoBasic() {
+    const [time, setTime] = useState(['7:00', '20:00']);
     const [radio, setRadio] = useState('');
     const [startDate, setStartDate] = useState(new Date());
     const [endDate, setEndDate] = useState(new Date());
     const { t } = useTranslation();
     const { state, actions } =  useStateMachine({ UpdateProjectAction });
-    const { handleSubmit, errors, register, watch } = useForm({
+    const { handleSubmit, errors, register, watch, control, setValue } = useForm({
         defaultValues: state.ngoDetails
     });
 
     const history = useHistory();
+
+    const weekOptions = [
+        { key: 'mon', text: 'Mon', value: 'Mon' },
+        { key: 'tue', text: 'Tue', value: 'Tue' },
+        { key: 'wed', text: 'Wed', value: 'Wed' },
+        { key: 'thu', text: 'Thu', value: 'Thu' },
+        { key: 'fri', text: 'Fri', value: 'Fri' },
+        { key: 'sat', text: 'Sat', value: 'Sat' },
+        { key: 'sun', text: 'Sun', value: 'Sun' },
+    ]
+
+    const timeOptions = [
+        { key: '8', text: '8:00', value: '8:00' },
+        { key: '9', text: '9:00', value: '9:00' },
+        { key: '10', text: '10:00', value: '11:00'},
+        { key: '11', text: '11:00', value: '11:00' },
+        { key: '12', text: '12:00', value: '12:00' },
+        { key: '13', text: '13:00', value: '13:00' },
+        { key: '14', text: '14:00', value: '14:00' },
+        { key: '15', text: '15:00', value: '15:00' },
+        { key: '16', text: '16:00', value: '16:00' },
+        { key: '17', text: '17:00', value: '17:00' },
+        { key: '18', text: '18:00', value: '18:00' },
+        { key: '19', text: '19:00', value: '19:00' },
+        { key: '20', text: '20:00', value: '20:00' },
+    ]
+
+    const handleOnChange = (e, data) => { setValue("weekdays", data.value); }
+    const startTimeOnChange = (e, data) => { setValue("startTime", data.value); }
+    const endTimeOnChange = (e, data) => { setValue("endTime", data.value); }
+    const radioOnChange = () => {
+        setRadio(radio === "offline" ? "online" : "offline");
+        setValue("locationType", radio)}
 
     const RouteChangeBack = () => {
         let path = `newpath`;
@@ -59,7 +96,7 @@ function ProjectInfoBasic() {
                                 <label>{t('contact_person')}</label>
                                 <input
                                     type="text" 
-                                    name="title"
+                                    name="contactPersonName"
                                     placeholder={t('contact_person')}
                                     ref={register({ required: true})} 
                                 />
@@ -68,7 +105,7 @@ function ProjectInfoBasic() {
                                 <label>{t('contact_info')}</label>
                                 <input
                                     type="text" 
-                                    name="contact_person"
+                                    name="contactPersonEmail"
                                     placeholder={t('contact_info')}
                                     ref={register({ required: true})} 
                                 />
@@ -77,34 +114,57 @@ function ProjectInfoBasic() {
                                 <label>{t('number_of_volunteers')}</label>
                                 <input
                                     type="number" 
-                                    name="number_of_volunteers"
+                                    name="numberOfVolunteers"
                                     placeholder={t('number_of_volunteers')}
-                                    ref={register({ required: true})} 
+                                    ref={register} 
                                 />                             
                             </Form.Field>
-                            <Form.Field label={t('no_specify')} name='not_specified' control='input' type='checkbox'  ref={register({ required: true})}/>
+                            <Form.Field label={t('no_specify')} name='not_specified' control='input' type='checkbox' />
                             
                             <Header>{t('location_info_project')}</Header>
                             <Form.Group grouped>
                                 <label>{t('online_or_offline')}</label>
-                                <Form.Radio
-                                    label={t('offline')}
-                                    value='offline'
-                                    checked={radio ==='offline'}
-                                    onChange={() => setRadio('offline')}
+                                <Controller
+                                    name="locationType"
+                                    control= {control}
+                                    render={() => {
+                                        return(
+                                            <Form.Radio
+                                                label={t('offline')}
+                                                value='offline'
+                                                checked={radio ==='online'}
+                                                onChange={()=> {radioOnChange()}}
+                                            />
+                                        )
+                                    }}
                                 />
-                                <Form.Radio
+                                <Controller
+                                    name="locationType"
+                                    control= {control}
+                                    render={() => {
+                                        return(
+                                            <Form.Radio
+                                                label={t('online')}
+                                                value='online'
+                                                checked={radio ==='offline'}
+                                                onChange={()=> {radioOnChange()}}
+                                            />
+                                        )
+                                    }}
+                                />
+                            
+                                {/* <Form.Radio
                                     label={t('online')}
                                     value='online'
                                     checked={radio ==='online'}
                                     onChange={() => setRadio('online')}
-                                />
+                                /> */}
                             </Form.Group>
                             <Form.Field required>
                                 <label>{t('location_project')}</label>
                                 <input
                                     type="text" 
-                                    name="contact_person"
+                                    name="location"
                                     placeholder={t('location_project_placeholder')}
                                     ref={register({ required: true})} 
                                 />
@@ -113,20 +173,105 @@ function ProjectInfoBasic() {
                             <Form.Group>
                                 <Form.Field>
                                     <label>{t('starting_date')}</label>
-                                    <DatePicker selected={startDate} selectsStart startDate={startDate} endDate={endDate} onChange={date => setStartDate(date)} />
+                                    <Controller
+                                        name="startDate"
+                                        control= {control}
+                                        render={ ({value, onChange}) => {
+                                            return (
+                                                <DatePicker
+                                                    selected={value} 
+                                                    onChange={onChange}
+                                                />
+                                            )
+                                        }}
+                                    />
                                 </Form.Field>
                                 <Form.Field>
                                     <label>{t('ending_date')}</label>
-                                    <DatePicker selected={endDate} selectsEnd startDate={startDate} endDate={endDate} onChange={date => setEndDate(date)} />
+                                    <Controller
+                                        name="endDate"
+                                        control= {control}
+                                        render={ ({value, onChange}) => {
+                                            return (
+                                                <DatePicker
+                                                    selected={value} 
+                                                    onChange={onChange} />
+                                            )
+                                        }}
+                                    />
                                 </Form.Field>
                             </Form.Group>
-                            <Grid.Row columns={1}>
+                            <Form.Field>
+                                <label>{t('weekdays')}</label>
+                                <Controller
+                                    name="weekdays"
+                                    control= {control}
+                                    placeholder='weekdays'
+                                    render={ () => {
+                                        return (
+                                        <Form.Dropdown
+                                            options={weekOptions} 
+                                            fluid selection multiple search 
+                                            onChange={handleOnChange}
+                                        />
+                                        )
+                                    }}
+                            />
+                            </Form.Field>
+                            <Form.Group>
+                                <Form.Field>
+                                    <label>{t('starting_time')}</label>
+                                    <Controller
+                                        name="startTime"
+                                        control= {control}
+                                        render={ () => {
+                                            return (
+                                            <Form.Dropdown
+                                                options={timeOptions} 
+                                                fluid selection 
+                                                onChange={startTimeOnChange}
+                                            />
+                                            )
+                                        }}
+                                />
+                                </Form.Field>
+                                <Form.Field>
+                                    <label>{t('ending_time')}</label>
+                                    <Controller
+                                        name="endTime"
+                                        control= {control}
+                                        render={ () => {
+                                            return (
+                                            <Form.Dropdown
+                                                options={timeOptions} 
+                                                fluid selection 
+                                                onChange={endTimeOnChange}
+                                            />
+                                            )
+                                        }}
+                                />
+                                </Form.Field>
+                            </Form.Group>
+                        </Form>
+                            {/* <Grid.Column className="flexColumn">
+                                <label>{t('starting_time')}</label>
+                                <TimeRangePicker
+                                    onChange={setTime}
+                                    value={time}
+                                    disableClock={true}
+                                    name='time_range'
+                                    autoFocus
+                                    className="timePicker"
+                                />
+                            </Grid.Column> */}
+                            <Grid.Row>
                                 <Grid.Column>
+                                    <Divider hidden/>
                                     <Button color="blue" onClick={RouteChangeBack}>{t('back')}</Button>
                                     <Button primary onClick={handleSubmit(RouteChangeNext)}>{t('next')}</Button>
                                 </Grid.Column>
                             </Grid.Row>
-                        </Form>
+                            
                     </Grid.Column>
                 </Grid.Row>
             </Grid>
