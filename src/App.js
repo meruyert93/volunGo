@@ -27,6 +27,7 @@ import ProjectInfoBasic from "./components/projects/ProjectInfoBasic";
 import ProjectImage from "./components/projects/ProjectImage";
 import ProjectDescription from "./components/projects/ProjectDescription";
 import ProjectRequirements from "./components/projects/ProjectRequirements";
+import NGORegistration from "./pages/NGORegistration";
 import { StateMachineProvider, createStore } from "little-state-machine";
 import '../src/styles/style.css';
 
@@ -115,6 +116,7 @@ function App() {
                                 <Route path="/ngo-project-requirements" component={ProjectRequirements}/>
                                 <Route path="/ngo-projects" component={NGOProjects}/>
                                 <Route path="/ngo-volunteers" component={NGOVolunteers}/>
+                                <Route path="/ngo-registration" component={NGORegistration}/>
                             </Switch>
                         </Sidebar.Pusher>
                     </Sidebar.Pushable>

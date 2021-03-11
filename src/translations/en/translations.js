@@ -133,6 +133,13 @@ export const TRANSLATIONS_EN = {
     //NGO Invite Volunteers
     invite_volunteers: "Invite Volunteers",
     sub_text_invite_volunteers: "Lastly, invite volunteers who match to your new project. It helps you to reach out to the potential volunteers and accelerate your recruitment process.",
+
+    //NGO Registration Steps
+    basic_information: "1. BASIC INFORMATION",
+    location_time: "2.LOCATION & TIME",
+    skill_requirements: "3. SKILL REQUIREMENTS",
+    image_description: "4. IMAGE & DESCRIPTION",
+    invite_volunteers_reg: "5. INVITE & VOLUNTEERS",
     
     
 };

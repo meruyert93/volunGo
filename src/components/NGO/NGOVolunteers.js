@@ -1,5 +1,5 @@
 import React from 'react';
-import { Grid, Segment, Header, Button, Progress } from 'semantic-ui-react';
+import { Grid, Segment, Header, Button } from 'semantic-ui-react';
 import { useHistory } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import dataVolunteers from "../../data/dataVolunteers";
