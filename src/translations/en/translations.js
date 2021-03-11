@@ -110,6 +110,11 @@ export const TRANSLATIONS_EN = {
     ending_date:"End date",
     starting_time: "Start time",
     ending_time: "End time",
-    weekdays:"Weekdays (Optional)"
+    weekdays:"Weekdays (Optional)",
+
+    //uploading image
+    uploading_image: "Upload an image",
+    sub_text_uploading_image: "Let’s upload an image that best represents the project. Try to use a real image from your team, your projects, etc, so it is authentic!",
+    attach_image: "Attach image"
 
 };

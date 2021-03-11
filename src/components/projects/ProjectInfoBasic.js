@@ -7,19 +7,15 @@ import { useStateMachine } from "little-state-machine";
 import UpdateProjectAction from "../../adapters/updateProjectAction";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
-import TimeRangePicker from '@wojtekmaj/react-timerange-picker';
 
 
 
 function ProjectInfoBasic() {
-    const [time, setTime] = useState(['7:00', '20:00']);
     const [radio, setRadio] = useState('');
-    const [startDate, setStartDate] = useState(new Date());
-    const [endDate, setEndDate] = useState(new Date());
     const { t } = useTranslation();
     const { state, actions } =  useStateMachine({ UpdateProjectAction });
     const { handleSubmit, errors, register, watch, control, setValue } = useForm({
-        defaultValues: state.ngoDetails
+        defaultValues: state.projects
     });
 
     const history = useHistory();
@@ -158,7 +154,7 @@ function ProjectInfoBasic() {
                                 <label>{t('address_1')}</label>
                                 <input
                                     type="text" 
-                                    name="location"
+                                    name="addressOne"
                                     placeholder={t('location_project_placeholder')}
                                     ref={register({ required: true})} 
                                 />
@@ -167,7 +163,7 @@ function ProjectInfoBasic() {
                                 <label>{t('address_2')}</label>
                                 <input
                                     type="text" 
-                                    name="location"
+                                    name="addtressTwo"
                                     placeholder={t('location_project_placeholder')}
                                     ref={register({ required: true})} 
                                 />
@@ -177,7 +173,7 @@ function ProjectInfoBasic() {
                                     <label>{t('city_project')}</label>
                                     <input
                                         type="text" 
-                                        name="location"
+                                        name="city"
                                         placeholder={t('location_project_placeholder')}
                                         ref={register({ required: true})} 
                                     />
@@ -186,7 +182,7 @@ function ProjectInfoBasic() {
                                     <label>{t('postalCode_project')}</label>
                                     <input
                                         type="text" 
-                                        name="location"
+                                        name="postalCode"
                                         placeholder={t('location_project_placeholder')}
                                         ref={register({ required: true})} 
                                     />
