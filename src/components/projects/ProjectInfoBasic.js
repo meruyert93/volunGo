@@ -67,8 +67,7 @@ function ProjectInfoBasic() {
     }
 
     return (
-        <Segment  size='large' padded='very' className="height180">
-            <Progress percent={33} attached='top' size='medium' color='blue'/>
+        <Segment basic size='large' padded='very' className="height180">
             <Grid stackable verticalAlign='middle' centered>
                 <Grid.Column width={16} textAlign="center">
                     <Header  as='h2' className="headingText"> 
@@ -129,7 +128,7 @@ function ProjectInfoBasic() {
                                             <Form.Radio
                                                 label={t('offline')}
                                                 value='offline'
-                                                checked={radio ==='online' || ''}
+                                                checked={radio === ('online' || '')}
                                                 onChange={()=> {radioOnChange()}}
                                             />
                                         )
@@ -143,7 +142,7 @@ function ProjectInfoBasic() {
                                             <Form.Radio
                                                 label={t('online')}
                                                 value='online'
-                                                checked={radio ==='offline' || ''}
+                                                checked={radio === ('offline' || '')}
                                                 onChange={()=> {radioOnChange()}}
                                             />
                                         )

@@ -7,7 +7,7 @@ import NGOStepsForReg from "../components/NGO/NGOStepsForReg";
 import ProjectRegistrationHolder from "../components/NGO/ProjectRegistrationHolder";
 
 function NGORegistration() {
-    const [active, setActive] = useState();
+    const [active, setActive] = useState(1);
 
     const activPicker = (num) => {
         setActive(num)
@@ -18,7 +18,7 @@ function NGORegistration() {
     return (
         <>
             <NGOStepsForReg activPicker={activPicker}/>
-            <ProjectRegistrationHolder activ={active}/>
+            <ProjectRegistrationHolder active={active}/>
         </>
     )
 }

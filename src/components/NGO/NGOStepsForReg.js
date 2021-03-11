@@ -11,7 +11,7 @@ function NGOStepsForReg({activPicker}) {
 
     return (
         <Step.Group fluid attached="top">
-            <Step onClick={() => {activPicker(1)}}>
+            <Step onClick={()=> activPicker(1)}>
                 <Step.Content>
                     <Step.Title>{t('basic_information')}</Step.Title>
                 </Step.Content>
