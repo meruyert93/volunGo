@@ -121,6 +121,11 @@ export const TRANSLATIONS_EN = {
     project_description: " Project Description",
     sub_text_project_description: "Please answer when and where your project take place, and if there are any restrictions. Precise information helps users to join your project.",
     about_your_project: "About your project",
-    tell_us_about_project: "Please tell us more about your project"
+    tell_us_about_project: "Please tell us more about your project",
 
+    //Project Requirements for Volunteers
+    requirements_for_vol: "Requirements for volunteers",
+    sub_text_requirements_for_vol:"Please specify the requirements for volunteers. Precise information helps us to match the best volunteers.",
+    
+    
 };

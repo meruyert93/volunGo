@@ -16,6 +16,8 @@ function ProjectImage() {
         defaultValues: state.projects
     });
 
+    const history = useHistory();
+
     const handleImagePreview = (e) => {
         setSelectedImage(URL.createObjectURL(e.target.files[0]));
     }

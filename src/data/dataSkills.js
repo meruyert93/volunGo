@@ -1,14 +1,14 @@
 const activities = [
-    {
-    id: 1,
-    image:'/images/skills/skills1.svg',
-    name: 'Empathy',
-    },
-    {
-    id: 2,
-    image: '/images/skills/skills2.svg',
-    name: 'Social Skills',
-    },
+    // {
+    // id: 1,
+    // image:'/images/skills/skills1.svg',
+    // name: 'Empathy',
+    // },
+    // {
+    // id: 2,
+    // image: '/images/skills/skills2.svg',
+    // name: 'Social Skills',
+    // },
     {
     id: 3,
     image:'/images/skills/skills3.svg',

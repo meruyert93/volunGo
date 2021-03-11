@@ -24,6 +24,7 @@ import NGOSignUpAdd from "./components/NGO/NGOSignUpAdd";
 import ProjectInfoBasic from "./components/projects/ProjectInfoBasic";
 import ProjectImage from "./components/projects/ProjectImage";
 import ProjectDescription from "./components/projects/ProjectDescription";
+import ProjectRequirements from "./components/projects/ProjectRequirements";
 import { StateMachineProvider, createStore } from "little-state-machine";
 import '../src/styles/style.css';
 
@@ -48,7 +49,7 @@ createStore({
         passwordConfirm: "",
     },
     projects:{
-
+        requirements: [],
     }
     
 })
@@ -109,6 +110,7 @@ function App() {
                                 <Route path="/ngo-project-info-basic" component={ProjectInfoBasic}/>
                                 <Route path="/ngo-project-image" component={ProjectImage}/>
                                 <Route path="/ngo-project-description" component={ProjectDescription}/>
+                                <Route path="/ngo-project-requirements" component={ProjectRequirements}/>
                             </Switch>
                         </Sidebar.Pusher>
                     </Sidebar.Pushable>

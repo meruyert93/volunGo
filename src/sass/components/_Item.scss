@@ -22,7 +22,7 @@
         color: $color-volunteer-primary;
     }
     .whiteChecker {
-        color: rgb(255,255,255);opacity:0.6;
+        color: $color-gray-20;
     }
     .iconSelect:hover {
         cursor: pointer;
@@ -42,5 +42,33 @@
     }
     .projectCard:hover {
         transform: translateY(-0.5rem) scale(1.01);
+    }
+    .textCardNGO {
+        position:relative;
+        bottom: -2rem;
+        left: 0.2rem;
+    }
+    .heightCard{
+        height: 7.5rem;
+        display:flex;
+        flex-direction: column;
+    }
+    .heightCard:hover {
+        cursor: pointer;
+    }
+    .iconSkills{
+        fill: $color-gray-20;
+    }
+    .ngoSecondaryColorPicker {
+        color: $color-ngo-secondary;
+    }
+    .ngoSecondaryBorder {
+        border-style: solid;
+        border-color: $color-ngo-secondary;
+        border-radius: 12px;
+        border-width: 3px;
+    }
+    .grey60 {
+        color:$color-gray-60;
     }
 }
