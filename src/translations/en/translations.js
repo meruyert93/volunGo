@@ -126,6 +126,9 @@ export const TRANSLATIONS_EN = {
     //Project Requirements for Volunteers
     requirements_for_vol: "Requirements for volunteers",
     sub_text_requirements_for_vol:"Please specify the requirements for volunteers. Precise information helps us to match the best volunteers.",
+
+    //NGO Your projects components
+    ngo_your_projects:"Your Projects"
     
     
 };

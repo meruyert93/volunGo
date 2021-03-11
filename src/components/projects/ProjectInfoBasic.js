@@ -129,7 +129,7 @@ function ProjectInfoBasic() {
                                             <Form.Radio
                                                 label={t('offline')}
                                                 value='offline'
-                                                checked={radio ==='online'}
+                                                checked={radio ==='online' || ''}
                                                 onChange={()=> {radioOnChange()}}
                                             />
                                         )
@@ -143,7 +143,7 @@ function ProjectInfoBasic() {
                                             <Form.Radio
                                                 label={t('online')}
                                                 value='online'
-                                                checked={radio ==='offline'}
+                                                checked={radio ==='offline' || ''}
                                                 onChange={()=> {radioOnChange()}}
                                             />
                                         )

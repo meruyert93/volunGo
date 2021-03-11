@@ -1,8 +1,7 @@
 import React from 'react';
-import { Grid, Segment, Header, Button, Form, Progress, Divider} from 'semantic-ui-react';
+import { Grid, Segment, Header, Button, Progress } from 'semantic-ui-react';
 import { useHistory } from "react-router-dom";
 import { useTranslation } from "react-i18next";
-import { useForm } from "react-hook-form";
 import { useStateMachine } from "little-state-machine";
 import UpdateProjectAction from "../../adapters/updateProjectAction";
 import dataSkills from "../../data/dataSkills";
@@ -27,7 +26,7 @@ function ProjectRequirements() {
             }
             // collectedItems = state.activities;
         //console.log(collectedItems);
-        updateActionForActivities({activities: collectedItems});
+        updateActionForActivities({requirements: collectedItems});
     }
 
     const updateActionForActivities = (data) => {
