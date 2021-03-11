@@ -1,41 +1,25 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Grid, Segment, Header, Button, Step } from 'semantic-ui-react';
 import { useHistory } from "react-router-dom";
 import { useTranslation } from "react-i18next";
+import NGOStepsForReg from "../components/NGO/NGOStepsForReg";
+
+import ProjectRegistrationHolder from "../components/NGO/ProjectRegistrationHolder";
 
 function NGORegistration() {
-    const { t } = useTranslation();
+    const [active, setActive] = useState();
 
-    const history = useHistory();
+    const activPicker = (num) => {
+        setActive(num)
+        console.log(num);
+        console.log(active);
+    }
 
     return (
-        <Step.Group stackable fluid attached="top">
-            <Step>
-                <Step.Content>
-                    <Step.Title>{t('basic_information')}</Step.Title>
-                </Step.Content>
-            </Step>
-            <Step>
-                <Step.Content>
-                    <Step.Title>{t('location_time')}</Step.Title>
-                </Step.Content>
-            </Step>
-            <Step>
-                <Step.Content>
-                    <Step.Title>{t('skill_requirements')}</Step.Title>
-                </Step.Content>
-            </Step>
-            <Step>
-                <Step.Content>
-                    <Step.Title>{t('image_description')}</Step.Title>
-                </Step.Content>
-            </Step>
-            <Step>
-                <Step.Content>
-                    <Step.Title>{t('invite_volunteers_reg')}</Step.Title>
-                </Step.Content>
-            </Step>
-        </Step.Group>
+        <>
+            <NGOStepsForReg activPicker={activPicker}/>
+            <ProjectRegistrationHolder activ={active}/>
+        </>
     )
 }
 

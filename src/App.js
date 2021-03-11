@@ -110,7 +110,7 @@ function App() {
                                     <NGOSignUpBasic/>
                                 </Route>
                                 <Route path="/ngo-sign-up2" component={NGOSignUpAdd}/>
-                                <Route path="/ngo-project-info-basic" component={ProjectInfoBasic}/>
+                                {/* <Route path="/ngo-project-info-basic" component={ProjectInfoBasic}/> */}
                                 <Route path="/ngo-project-image" component={ProjectImage}/>
                                 <Route path="/ngo-project-description" component={ProjectDescription}/>
                                 <Route path="/ngo-project-requirements" component={ProjectRequirements}/>
