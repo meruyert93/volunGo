@@ -128,7 +128,11 @@ export const TRANSLATIONS_EN = {
     sub_text_requirements_for_vol:"Please specify the requirements for volunteers. Precise information helps us to match the best volunteers.",
 
     //NGO Your projects components
-    ngo_your_projects:"Your Projects"
+    ngo_your_projects:"Your Projects",
+
+    //NGO Invite Volunteers
+    invite_volunteers: "Invite Volunteers",
+    sub_text_invite_volunteers: "Lastly, invite volunteers who match to your new project. It helps you to reach out to the potential volunteers and accelerate your recruitment process.",
     
     
 };
