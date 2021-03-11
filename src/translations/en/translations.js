@@ -115,6 +115,12 @@ export const TRANSLATIONS_EN = {
     //uploading image
     uploading_image: "Upload an image",
     sub_text_uploading_image: "Let’s upload an image that best represents the project. Try to use a real image from your team, your projects, etc, so it is authentic!",
-    attach_image: "Attach image"
+    attach_image: "Attach image",
+
+    //Project Description
+    project_description: " Project Description",
+    sub_text_project_description: "Please answer when and where your project take place, and if there are any restrictions. Precise information helps users to join your project.",
+    about_your_project: "About your project",
+    tell_us_about_project: "Please tell us more about your project"
 
 };

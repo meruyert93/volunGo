@@ -1,24 +1,17 @@
-import React, { useState } from 'react'
-import { Grid, Segment, Header, Button, Form, Progress, Divider, Image} from 'semantic-ui-react';
+import React from 'react'
+import { Grid, Segment, Header, Button, Form, Progress, Divider} from 'semantic-ui-react';
 import { useHistory } from "react-router-dom";
 import { useTranslation } from "react-i18next";
-import { useForm } from "react-hook-form";
+import { useForm, Controller } from "react-hook-form";
 import { useStateMachine } from "little-state-machine";
 import UpdateProjectAction from "../../adapters/updateProjectAction";
 
-function ProjectImage() {
-    const [selectedImage, setSelectedImage] = useState(null);   
+function ProjectDescription() {
     const { t } = useTranslation();
-
     const { state, actions } =  useStateMachine({ UpdateProjectAction });
-
     const { handleSubmit, errors, register, watch, control, setValue } = useForm({
         defaultValues: state.projects
     });
-
-    const handleImagePreview = (e) => {
-        setSelectedImage(URL.createObjectURL(e.target.files[0]));
-    }
 
     const RouteChangeBack = () => {
         let path = `newpath`;
@@ -33,28 +26,29 @@ function ProjectImage() {
         //console.log(data)
     }
 
+    const history = useHistory();
     return (
-        <Segment size='large' padded='very' className="height100">
+        <Segment  size='large' padded='very' className="height100">
             <Progress percent={33} attached='top' size='medium' color='blue'/>
             <Grid stackable verticalAlign='middle' centered>
                 <Grid.Column width={16} textAlign="center">
                     <Header  as='h2' className="headingText"> 
-                        {t('uploading_image')}
+                        {t('project_description')}
                     </Header>
-                    <p> {t('sub_text_uploading_image')}</p>
+                    <p> {t('sub_text_project_description')}</p>
                 </Grid.Column>
                 <Grid.Row>
-                    <Grid.Column mobile={16} tablet={8} computer={5}>
+                    <Grid.Column>
                         <Form>
                             <Form.Field>
-                                <label>{t('attach_image')}</label>
-                                <input type="file" name='imageCover' ref={register} onChange={(e) => handleImagePreview(e)}/>
+                                <label>{t('about_your_project')}</label>
+                                <textarea
+                                    type="text" 
+                                    name="description"
+                                    ref={register({ required: true})}
+                                    placeholder={t('tell_us_about_project')} 
+                                />
                             </Form.Field>
-                            <Grid.Row>
-                                <Grid.Column>
-                                    <Image src={selectedImage} size='large'/>
-                                </Grid.Column>
-                            </Grid.Row>
                             <Grid.Row>
                                 <Grid.Column>
                                     <Divider hidden/>
@@ -70,4 +64,4 @@ function ProjectImage() {
     )
 }
 
-export default ProjectImage
+export default ProjectDescription
