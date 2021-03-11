@@ -16,10 +16,13 @@ function ItemRequirements({id, name, image, toggleHandler}) {
     return (
         <Grid.Column>
             <Segment onClick={() => chosenHandler(id)} className={active ? "ngoSecondaryBorder heightCard" : "heightCard"} >
-                <Image src={image} size='mini' className="imageCard iconSkills" centered/>   
+                {/* <Image src={image} size='mini' className="imageCard iconSkills" centered/>    */}
+                    <svg className={active ? 'iconSkillsSelected iconSkills' : 'iconSkills'}>
+                    <use  xlinkHref={image}></use>
+                    </svg>
                 <Icon name="check circle" size="big" className={active ? "iconSelect ngoSecondaryColorPicker" : "iconSelect whiteChecker"}/>
                 <Grid className="textCardNGO">
-                    <Header as="h5" className={active ? 'ngoSecondaryColorPicker' : 'grey60'}>{name}</Header>
+                    <Header as="h5" textAlign="center" className={active ? 'ngoSecondaryColorPicker' : 'grey60'}>{name}</Header>
                 </Grid>
             </Segment>
         </Grid.Column>

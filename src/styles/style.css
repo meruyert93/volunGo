@@ -139,19 +139,25 @@
 
 #root .textCardNGO {
   position: relative;
-  bottom: -2rem;
+  bottom: -1.3rem;
   left: 0.2rem; }
 
 #root .heightCard {
   height: 7.5rem;
   display: flex;
-  flex-direction: column; }
+  flex-direction: column;
+  align-items: center; }
 
 #root .heightCard:hover {
   cursor: pointer; }
 
 #root .iconSkills {
-  fill: #cccccc; }
+  fill: #cccccc;
+  width: 3.5rem;
+  height: 3.5rem; }
+
+#root .iconSkillsSelected {
+  fill: #2BCDC1; }
 
 #root .ngoSecondaryColorPicker {
   color: #2BCDC1; }
