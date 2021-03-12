@@ -99,8 +99,12 @@ export const TRANSLATIONS_EN = {
     online_or_offline: "Is it going to be online or offline project?",
     offline: "offline",
     online:"online",
+
+     // Project Location
+    location_time_info: "Location & Time",
+    sub_text_location_time_info: "Fill in when and where your project takes place.",
     address_1: "Street Address",
-    address_2: "House number",
+    company_name: "Company name, C/O, ETC",
     city_project:"City",
     postalCode_project:"Postal Code",
     location_project_placeholder: "add location",
@@ -112,16 +116,18 @@ export const TRANSLATIONS_EN = {
     ending_time: "End time",
     weekdays:"Weekdays (Optional)",
 
-    //uploading image
-    uploading_image: "Upload an image",
-    sub_text_uploading_image: "Let’s upload an image that best represents the project. Try to use a real image from your team, your projects, etc, so it is authentic!",
+    //uploading image and description
+    image_description_info: "Image & Description",
+    sub_text_image_description: "Upload an image that best represents the project. Describe more details about the project to give a better understanding to volunteers.",
     attach_image: "Attach image",
 
     //Project Description
-    project_description: " Project Description",
+    project_description: "Project Description",
     sub_text_project_description: "Please answer when and where your project take place, and if there are any restrictions. Precise information helps users to join your project.",
     about_your_project: "About your project",
     tell_us_about_project: "Please tell us more about your project",
+
+
 
     //Project Requirements for Volunteers
     requirements_for_vol: "Requirements for volunteers",

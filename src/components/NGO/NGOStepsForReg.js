@@ -16,22 +16,22 @@ function NGOStepsForReg({activPicker}) {
                     <Step.Title>{t('basic_information')}</Step.Title>
                 </Step.Content>
             </Step>
-            <Step>
+            <Step onClick={()=> activPicker(2)}>
                 <Step.Content>
                     <Step.Title>{t('location_time')}</Step.Title>
                 </Step.Content>
             </Step>
-            <Step>
+            <Step onClick={()=> activPicker(3)}>
                 <Step.Content>
                     <Step.Title>{t('skill_requirements')}</Step.Title>
                 </Step.Content>
             </Step>
-            <Step>
+            <Step onClick={()=> activPicker(4)}>
                 <Step.Content>
                     <Step.Title>{t('image_description')}</Step.Title>
                 </Step.Content>
             </Step>
-            <Step>
+            <Step onClick={()=> activPicker(5)}>
                 <Step.Content>
                     <Step.Title>{t('invite_volunteers_reg')}</Step.Title>
                 </Step.Content>

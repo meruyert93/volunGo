@@ -1,18 +1,32 @@
 import React from 'react';
-import { Grid, Segment, Header, Button } from 'semantic-ui-react';
+import { Grid, Segment, Header, Button, Divider } from 'semantic-ui-react';
 import { useHistory } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import dataVolunteers from "../../data/dataVolunteers";
 import ItemVolunteer from "../../containers/ItemVolunteer";
 
-function NGOVolunteers() {
+function NGOVolunteers({activPicker}) {
 
     const { t } = useTranslation();
 
     const history = useHistory();
+
+    
+    const RouteChangeBack = () => {
+        let path = `newpath`;
+        activPicker(4)
+        //history.push(path);
+    }
+
+    const RouteChangeNext = (data) => {
+        console.log(data);
+        let path = ``;
+        //history.push(path);
+        //console.log(data)
+    }
     
     return (
-        <Segment>
+        <Segment basic size='large' padded='very' className="height100">
             <Grid stackable verticalAlign='middle' centered>
                 <Grid.Column width={16} textAlign="center">
                     <Header  as='h2' className="headingText"> 
@@ -27,6 +41,13 @@ function NGOVolunteers() {
                         )
                     })}
                 </Grid>
+                <Grid.Row>
+                                <Grid.Column>
+                                    <Divider hidden/>
+                                    <Button color="blue" onClick={() => RouteChangeBack()}>{t('back')}</Button>
+                                    <Button primary onClick={() => RouteChangeNext()}>{t('next')}</Button>
+                                </Grid.Column>
+                            </Grid.Row>
             </Grid>
         </Segment>
     )

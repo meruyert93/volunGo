@@ -24,10 +24,10 @@ import NGOSignUpAdd from "./components/NGO/NGOSignUpAdd";
 import NGOProjects from "./components/NGO/NGOProjects";
 import NGOVolunteers from "./components/NGO/NGOVolunteers";
 import ProjectInfoBasic from "./components/projects/ProjectInfoBasic";
-import ProjectImage from "./components/projects/ProjectImage";
+import ProjectImage from "./components/projects/ProjectImgDescription";
 import ProjectDescription from "./components/projects/ProjectDescription";
 import ProjectRequirements from "./components/projects/ProjectRequirements";
-import NGORegistration from "./pages/NGORegistration";
+import NGOProjectRegistration from "./pages/NGOProjectRegistration";
 import { StateMachineProvider, createStore } from "little-state-machine";
 import '../src/styles/style.css';
 
@@ -111,12 +111,12 @@ function App() {
                                 </Route>
                                 <Route path="/ngo-sign-up2" component={NGOSignUpAdd}/>
                                 {/* <Route path="/ngo-project-info-basic" component={ProjectInfoBasic}/> */}
-                                <Route path="/ngo-project-image" component={ProjectImage}/>
-                                <Route path="/ngo-project-description" component={ProjectDescription}/>
-                                <Route path="/ngo-project-requirements" component={ProjectRequirements}/>
+                                {/* <Route path="/ngo-project-image" component={ProjectImage}/> */}
+                                {/* <Route path="/ngo-project-description" component={ProjectDescription}/> */}
+                                {/* <Route path="/ngo-project-requirements" component={ProjectRequirements}/> */}
                                 <Route path="/ngo-projects" component={NGOProjects}/>
-                                <Route path="/ngo-volunteers" component={NGOVolunteers}/>
-                                <Route path="/ngo-registration" component={NGORegistration}/>
+                                {/* <Route path="/ngo-volunteers" component={NGOVolunteers}/> */}
+                                <Route path="/ngo-project-registration" component={NGOProjectRegistration}/>
                             </Switch>
                         </Sidebar.Pusher>
                     </Sidebar.Pushable>

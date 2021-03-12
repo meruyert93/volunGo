@@ -1,9 +1,13 @@
 import React, { useState } from 'react'
 import { Grid, Header, Icon,  Image, Card, Segment, Divider  } from 'semantic-ui-react';
 import { useTranslation } from "react-i18next";
+import { useStateMachine } from "little-state-machine";
+import UpdateProjectAction from "../adapters/updateProjectAction";
 
 function ItemRequirements({id, name, image, toggleHandler}) {
     const [active, setActive] = useState();
+
+    const { state, actions } =  useStateMachine({ UpdateProjectAction });
 
     const chosenHandler= (id) => {
         toggleHandler(id)

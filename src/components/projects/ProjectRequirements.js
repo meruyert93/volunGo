@@ -8,7 +8,7 @@ import dataSkills from "../../data/dataSkills";
 import ItemRequirements from "../../containers/ItemRequirements";
 
     let collectedItems = []
-function ProjectRequirements() {
+function ProjectRequirements({activPicker}) {
     const { t } = useTranslation();
     const { actions } =  useStateMachine({ UpdateProjectAction });
 
@@ -34,19 +34,21 @@ function ProjectRequirements() {
     }
 
     const RouteChangeBack = () => {
+        activPicker(2);
+        console.log('clicked')
         let path = `newpath`;
         //history.push(path);
     }
 
     const RouteChangeNext = () => {
+        activPicker(4);
         let path = ``;
         //history.push(path);
         //console.log(data)
     }
 
     return (
-        <Segment size='large' padded='very'>
-            <Progress percent={33} attached='top' size='medium' color='blue'/>
+        <Segment basic size='large' padded='very'>
                 <Grid>
                     <Grid.Column width={16} textAlign="center">
                         <Header  as='h2' className="headingText"> 
@@ -69,12 +71,12 @@ function ProjectRequirements() {
                 <Grid centered>
                     <Grid.Row>
                         <Grid.Column>
-                                <Button color="blue" onClick={() => RouteChangeBack}>{t('back')}</Button>
+                                <Button color="blue" onClick={() => RouteChangeBack()}>{t('back')}</Button>
                         </Grid.Column>
                         <Grid.Column>
                         </Grid.Column>
                         <Grid.Column>
-                            <Button primary onClick={() => RouteChangeNext}>{t('next')}</Button>
+                            <Button primary onClick={() => RouteChangeNext()}>{t('next')}</Button>
                         </Grid.Column>
                     </Grid.Row>
                 </Grid>
