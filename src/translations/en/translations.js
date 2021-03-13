@@ -161,5 +161,7 @@ export const TRANSLATIONS_EN = {
     managing: "Manage all projects in one place",
     sub_text_managing: "See all your projects and volunteers in one place. The best? You keep an organized database of projects and volunteers without any excel sheet.",
     
-    
+    //NGO projects dashboard
+    ongoing_upcoming_projects: "Ongoing/Upcoming Projects",
+    add_new_project: "ADD A NEW PROJECT",
 };
