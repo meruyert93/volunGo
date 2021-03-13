@@ -29,7 +29,7 @@ function NGOSignUpBasic() {
 
     return (
         <Segment size='large' padded='very' className="height100">
-            <Progress percent={33} attached='top' size='medium' color='blue'/>
+            <Progress percent={50} attached='top' size='medium' color='blue'/>
             <Grid stackable verticalAlign='middle' centered>
                 <Grid.Column width={16} textAlign="center">
                     <Header  as='h2' className="headingText"> 

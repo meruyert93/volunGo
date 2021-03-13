@@ -146,6 +146,11 @@ export const TRANSLATIONS_EN = {
     skill_requirements: "3. SKILL REQUIREMENTS",
     image_description: "4. IMAGE & DESCRIPTION",
     invite_volunteers_reg: "5. INVITE & VOLUNTEERS",
+
+    //NGO landing
+    match_volunteers:"We’ll match the best volunteers to your projects",
+    sub_text_match_volunteers: "We not only match volunteers to your opportunities, but bring more like-minded people to you.",
+    join_as_org: "JOIN AS ORGANIZATION"
     
     
 };

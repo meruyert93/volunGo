@@ -1,10 +1,12 @@
-import React from 'react'
+import React from 'react';
+import { Segment } from 'semantic-ui-react';
+import NGOHero from "../components/NGO/NGOHero";
 
 function LandingNGO() {
     return (
-        <div>
-            
-        </div>
+        <Segment.Group>
+            <NGOHero/>
+        </Segment.Group>
     )
 }
 
