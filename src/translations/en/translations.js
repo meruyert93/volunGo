@@ -164,4 +164,6 @@ export const TRANSLATIONS_EN = {
     //NGO projects dashboard
     ongoing_upcoming_projects: "Ongoing/Upcoming Projects",
     add_new_project: "ADD A NEW PROJECT",
+    empty_dashboard: "Your Dashboard is empty now",
+    sub_text_empty_dashboard:"Add you first project by clicking the button on the top right corner. We will guide you through the process.",
 };

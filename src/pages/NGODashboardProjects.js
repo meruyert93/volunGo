@@ -2,6 +2,7 @@ import React from 'react';
 import { Grid, Segment, Header, Button } from 'semantic-ui-react';
 import { useTranslation } from "react-i18next";
 import { useHistory } from "react-router-dom";
+import NGOEmptyDashboard from "../components/NGO/NGOEmptyDashboard";
 
 function NGODashboardProjects() {
 
@@ -10,8 +11,8 @@ function NGODashboardProjects() {
     const history = useHistory();
 
     return (
-        <Segment.Group>
-            <Segment basic size='large' padded='very'>
+        <Segment.Group className="height100">
+            <Segment basic size='large' padded='very' style={{height: '10%'}}>
                 <Grid padded='horizontally'>
                     <Grid.Column floated="left" width={10}>
                         <Header>{t('ongoing_upcoming_projects')}</Header>
@@ -21,6 +22,7 @@ function NGODashboardProjects() {
                     </Grid.Column>
                 </Grid>
             </Segment>
+            <NGOEmptyDashboard/>
         </Segment.Group>
     )
 }
