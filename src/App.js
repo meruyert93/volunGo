@@ -22,12 +22,8 @@ import DetailsSkillsTwo from "./components/DetailsSkillsTwo";
 import NGOSignUpBasic from "./components/NGO/NGOSignUpBasic";
 import NGOSignUpAdd from "./components/NGO/NGOSignUpAdd"; 
 import NGOProjects from "./components/NGO/NGOProjects";
-import NGOVolunteers from "./components/NGO/NGOVolunteers";
-import ProjectInfoBasic from "./components/projects/ProjectInfoBasic";
-import ProjectImage from "./components/projects/ProjectImgDescription";
-import ProjectDescription from "./components/projects/ProjectDescription";
-import ProjectRequirements from "./components/projects/ProjectRequirements";
 import NGOProjectRegistration from "./pages/NGOProjectRegistration";
+import NGODashboardProjects from "./pages/NGODashboardProjects";
 import LandingNGO from "./pages/LandingNGO";
 import { StateMachineProvider, createStore } from "little-state-machine";
 import '../src/styles/style.css';
@@ -119,6 +115,7 @@ function App() {
                                 {/* <Route path="/ngo-volunteers" component={NGOVolunteers}/> */}
                                 <Route path="/ngo-project-registration" component={NGOProjectRegistration}/>
                                 <Route path="/organization" component={LandingNGO}/>
+                                <Route path="/ngo-projects-dashboard" component={NGODashboardProjects}/>
                             </Switch>
                         </Sidebar.Pusher>
                     </Sidebar.Pushable>

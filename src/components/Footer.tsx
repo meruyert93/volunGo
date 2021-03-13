@@ -3,7 +3,7 @@ import { Grid, Segment, Header, Image, Divider } from 'semantic-ui-react';
 
 function Footer() {
     return (
-        <Segment size='large' padded='very' attached="bottom" className="backgroundDark">
+        <Segment size='large' padded='very' attached="bottom" inverted>
             <Grid textAlign='center' verticalAlign='middle' stackable>
                     <Grid.Column width={3}> 
                         <Grid.Row className="flexSpaceEvenly">
