@@ -18,7 +18,7 @@ function NGOHero() {
         <Grid container>
             <Grid.Row>
                 <Grid.Column mobile={16} tablet={8} computer={8} verticalAlign='middle'>
-                    <Header as='h1' className="headingText">
+                    <Header as='h1' className="NGOtextDark">
                     {t('match_volunteers')}
                     </Header>
                     <p>{t('sub_text_match_volunteers')}</p>

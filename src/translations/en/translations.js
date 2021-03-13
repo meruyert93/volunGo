@@ -147,10 +147,19 @@ export const TRANSLATIONS_EN = {
     image_description: "4. IMAGE & DESCRIPTION",
     invite_volunteers_reg: "5. INVITE & VOLUNTEERS",
 
-    //NGO landing
+    //NGO landing hero section
     match_volunteers:"We’ll match the best volunteers to your projects",
     sub_text_match_volunteers: "We not only match volunteers to your opportunities, but bring more like-minded people to you.",
-    join_as_org: "JOIN AS ORGANIZATION"
+    join_as_org: "JOIN AS ORGANIZATION",
+
+    //NGO landing main section
+    sub_text_ngo_why_volungo: "VolunGO helps organizations to find the best volunteers who match to the projects",
+    matching: "Match the best volunteers in the city",
+    sub_text_matching: "Fill the information about your organization and your projects. You receive only qualified volunteer matches based on their interests and abilities.",
+    recruiting: "Recruit volunteers for your opportunities",
+    sub_text_recruiting: "Don’t want to wait? Send an automatic invitation right away to volunteers that might match your opportunity, or bring the volunteers you already have.",
+    managing: "Manage all projects in one place",
+    sub_text_managing: "See all your projects and volunteers in one place. The best? You keep an organized database of projects and volunteers without any excel sheet.",
     
     
 };
