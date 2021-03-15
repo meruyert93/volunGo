@@ -19,6 +19,16 @@
   top: 66%;
   right: 3%; }
 
+#root .iconEye3 {
+  position: absolute;
+  top: 41%;
+  right: 3%; }
+
+#root .iconEye4 {
+  position: absolute;
+  top: 69%;
+  right: 3%; }
+
 #root .iconEye:hover {
   cursor: pointer; }
 

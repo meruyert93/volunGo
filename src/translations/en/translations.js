@@ -85,6 +85,9 @@ export const TRANSLATIONS_EN = {
     name_org: "Name of your organization",
     about_org: "About your organization",
     url_org: "Website URL (Homepage, Facebook, Instagram, etc)",
+
+    //NGO registration
+    sub_text_ngo_account: "Create account with your organization email address.",
     
     //NGO Adding New Project Basic Info
     about_project: "About the project",
@@ -126,8 +129,6 @@ export const TRANSLATIONS_EN = {
     sub_text_project_description: "Please answer when and where your project take place, and if there are any restrictions. Precise information helps users to join your project.",
     about_your_project: "About your project",
     tell_us_about_project: "Please tell us more about your project",
-
-
 
     //Project Requirements for Volunteers
     requirements_for_vol: "Requirements for volunteers",
