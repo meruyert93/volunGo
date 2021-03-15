@@ -18,7 +18,7 @@ export const TRANSLATIONS_EN = {
     about_us: "about us",
     sub_text_about_us: "We aim to bring like-minded people together to make humanitarian aid reach more populations",
     
-    //sign up first page
+    //sign up first page for Volunteers and NGO
     step1: "step 1/3",
     account: "Create Your Account",
     sub_text_account: "VolunGO is a platform for bringing volunteers and nonprofit organizations together.",
@@ -77,5 +77,95 @@ export const TRANSLATIONS_EN = {
     preferences: "SET PREFERENCES",
 
     //home page project section
-    recommended:"Recommended for you"
-   };
+    recommended:"Recommended for you",
+
+    //NGO Sign UP Additional info
+    register_org: "Register your organization",
+    sub_text_register_org: "This information will appear on your organization profile. Precise information helps users to find and join your opportunities.",
+    name_org: "Name of your organization",
+    about_org: "About your organization",
+    url_org: "Website URL (Homepage, Facebook, Instagram, etc)",
+
+    //NGO registration
+    sub_text_ngo_account: "Create account with your organization email address.",
+    
+    //NGO Adding New Project Basic Info
+    about_project: "About the project",
+    sub_text_about_project: "Let’s start with filling in  the overall information on the project.",
+    basic_info: "Basic Information",
+    project_title: "Project title",
+    contact_person: "Name of contact person",
+    contact_info: "Contact email",
+    number_of_volunteers: "Number of volunteers needed",
+    no_specify: "Don't specify",
+    location_info_project: "Location",
+    online_or_offline: "Is it going to be online or offline project?",
+    offline: "offline",
+    online:"online",
+
+     // Project Location
+    location_time_info: "Location & Time",
+    sub_text_location_time_info: "Fill in when and where your project takes place.",
+    address_1: "Street Address",
+    company_name: "Company name, C/O, ETC",
+    city_project:"City",
+    postalCode_project:"Postal Code",
+    location_project_placeholder: "add location",
+    time_info:"Time",
+    date_info:"date",
+    starting_date: "Start date",
+    ending_date:"End date",
+    starting_time: "Start time",
+    ending_time: "End time",
+    weekdays:"Weekdays (Optional)",
+
+    //uploading image and description
+    image_description_info: "Image & Description",
+    sub_text_image_description: "Upload an image that best represents the project. Describe more details about the project to give a better understanding to volunteers.",
+    attach_image: "Attach image",
+
+    //Project Description
+    project_description: "Project Description",
+    sub_text_project_description: "Please answer when and where your project take place, and if there are any restrictions. Precise information helps users to join your project.",
+    about_your_project: "About your project",
+    tell_us_about_project: "Please tell us more about your project",
+
+    //Project Requirements for Volunteers
+    requirements_for_vol: "Requirements for volunteers",
+    sub_text_requirements_for_vol:"Please specify the requirements for volunteers. Precise information helps us to match the best volunteers.",
+
+    //NGO Your projects components
+    ngo_your_projects:"Your Projects",
+
+    //NGO Invite Volunteers
+    invite_volunteers: "Invite Volunteers",
+    sub_text_invite_volunteers: "Lastly, invite volunteers who match to your new project. It helps you to reach out to the potential volunteers and accelerate your recruitment process.",
+    invite_complete_btn: "INVITE & COMPLETE",
+
+    //NGO Registration Steps
+    basic_information: "1. BASIC INFORMATION",
+    location_time: "2.LOCATION & TIME",
+    skill_requirements: "3. SKILL REQUIREMENTS",
+    image_description: "4. IMAGE & DESCRIPTION",
+    invite_volunteers_reg: "5. INVITE & VOLUNTEERS",
+
+    //NGO landing hero section
+    match_volunteers:"We’ll match the best volunteers to your projects",
+    sub_text_match_volunteers: "We not oly mnatch volunteers to your opportunities, but bring more like-minded people to you.",
+    join_as_org: "JOIN AS ORGANIZATION",
+
+    //NGO landing main section
+    sub_text_ngo_why_volungo: "VolunGO helps organizations to find the best volunteers who match to the projects",
+    matching: "Match the best volunteers in the city",
+    sub_text_matching: "Fill the information about your organization and your projects. You receive only qualified volunteer matches based on their interests and abilities.",
+    recruiting: "Recruit volunteers for your opportunities",
+    sub_text_recruiting: "Don’t want to wait? Send an automatic invitation right away to volunteers that might match your opportunity, or bring the volunteers you already have.",
+    managing: "Manage all projects in one place",
+    sub_text_managing: "See all your projects and volunteers in one place. The best? You keep an organized database of projects and volunteers without any excel sheet.",
+    
+    //NGO projects dashboard
+    ongoing_upcoming_projects: "Ongoing/Upcoming Projects",
+    add_new_project: "ADD A NEW PROJECT",
+    empty_dashboard: "Your Dashboard is empty now",
+    sub_text_empty_dashboard:"Add you first project by clicking the button on the top right corner. We will guide you through the process.",
+};

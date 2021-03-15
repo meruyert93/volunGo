@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Grid, Segment, Header, Icon, Button, Checkbox, Form, Image, Container, Placeholder, Rail  } from 'semantic-ui-react';
+import { Grid, Segment, Image, Container } from 'semantic-ui-react';
 
 function ItemSkill({id, name, image, toggleHandler}) {
     const [active, setActive] = useState();
