@@ -28,6 +28,9 @@
 #root .height80 {
   height: 80vh; }
 
+#root .height100 {
+  height: 100vh; }
+
 #root .itemDefault {
   background-color: #AAB6C5; }
 
