@@ -74,7 +74,6 @@ function ProjectLocation({activPicker}) {
                     <Grid.Column mobile={16} tablet={8} computer={5}>
                         <Form>
                             <Header>{t('location_info_project')}Skip</Header>
-                            <Header color="grey" as="h5">Skip location part if your project is online</Header>
                             <Form.Field>
                                 <label>{t('company_name')}</label>
                                 <input
