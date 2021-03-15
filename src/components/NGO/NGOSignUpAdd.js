@@ -16,14 +16,14 @@ function NGOSignUpAdd() {
     const history = useHistory();
 
     const RouteChangeBack = () => {
-        let path = `newpath`;
-        //history.push(path);
+        let path = `ngo-sign-up1`;
+        history.push(path);
     }
 
     const RouteChangeNext = (data) => {
         actions.updateNGOAction(data);
-        let path = `sign-up2`;
-        //history.push(path);
+        let path = `/ngo-projects-dashboard`;
+        history.push(path);
         //console.log(data)
     }
 
@@ -31,16 +31,25 @@ function NGOSignUpAdd() {
         <Segment size='large' padded='very' className="height100">
             <Progress percent={100} attached='top' size='medium' color='blue'/>
             <Grid stackable verticalAlign='middle' centered>
+            <Grid.Column width={16} textAlign="center">
+                    <Header as="h6" color="grey">
+                            {t('stepTwo')}
+                    </Header>
+                </Grid.Column>
                 <Grid.Column width={16} textAlign="center">
                     <Header  as='h2' className="headingText"> 
                         {t('register_org')}
                     </Header>
-                    <p> {t('sub_text_register_org')}</p>
+                </Grid.Column>
+                <Grid.Column width={16} textAlign="center">
+                    <Header as="h4" color="grey">
+                    {t('sub_text_register_org')}
+                    </Header>
                 </Grid.Column>
                 <Grid.Row>
                     <Grid.Column mobile={16} tablet={8} computer={5}>
                         <Form>
-                            <Form.Field>
+                            <Form.Field required>
                                 <label>{t('name_org')}</label>
                                 <input
                                     type="text" 
@@ -48,7 +57,7 @@ function NGOSignUpAdd() {
                                     ref={register({ required: true})} 
                                 />
                             </Form.Field>
-                            <Form.Field>
+                            <Form.Field required>
                                 <label>{t('about_org')}</label>
                                 <textarea
                                     type="text" 
@@ -56,7 +65,7 @@ function NGOSignUpAdd() {
                                     ref={register({ required: true})} 
                                 />
                             </Form.Field>
-                            <Form.Field>
+                            <Form.Field required>
                                 <label>{t('url_org')}</label>
                                 <input
                                     type="text" 

@@ -23,14 +23,13 @@ function NGOSignUpBasic() {
     const togglePasswordVisiblity = () => {
         setPasswordShown(!passwordShown);
         // console.log('toggling')
-      };
-
+    };
 
     const history = useHistory();
 
     const RouteChangeBack = () => {
-        let path = `newpath`;
-        //history.push(path);
+        let path = `organization`;
+        history.push(path);
     }
 
     const RouteChangeNext = (data) => {
