@@ -18,7 +18,7 @@ function Footer() {
                     <Grid.Column width={10}>
                         <Grid.Row className="flexCenter">
                             <Grid.Column>
-                                <Image src="./images/Logomark.svg" centered/>
+                                <Image src="./images/Logo.svg" centered/>
                             </Grid.Column>
                             <Grid.Column >
                                 <Header as="h2" className="textWhite">VolunGO</Header>
