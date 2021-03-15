@@ -26,6 +26,7 @@ import NGOProjectRegistration from "./pages/NGOProjectRegistration";
 import NGODashboardProjects from "./pages/NGODashboardProjects";
 import LandingNGO from "./pages/LandingNGO";
 import { StateMachineProvider, createStore } from "little-state-machine";
+import Temporary from "./components/Draft.js/Temporary";
 import '../src/styles/style.css';
 
 
@@ -116,6 +117,7 @@ function App() {
                                 <Route path="/ngo-project-registration" component={NGOProjectRegistration}/>
                                 <Route path="/organization" component={LandingNGO}/>
                                 <Route path="/ngo-projects-dashboard" component={NGODashboardProjects}/>
+                                <Route path="/temporary" component={Temporary}/>
                             </Switch>
                         </Sidebar.Pusher>
                     </Sidebar.Pushable>

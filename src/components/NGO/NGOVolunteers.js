@@ -20,8 +20,8 @@ function NGOVolunteers({activPicker}) {
 
     const RouteChangeNext = (data) => {
         console.log(data);
-        let path = ``;
-        //history.push(path);
+        let path = `temporary`;
+        history.push(path);
         //console.log(data)
     }
     
