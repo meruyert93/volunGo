@@ -32,6 +32,16 @@ body {
     top: 66%;
     right: 3%;
 }
+.iconEye3 {
+    position: absolute;
+    top: 41%;
+    right: 3%;
+}
+.iconEye4 {
+    position: absolute;
+    top: 69%;
+    right: 3%;
+}
 .iconEye:hover {
     cursor: pointer;
 }
@@ -48,6 +58,31 @@ body {
     height: 100vh;
 }
 
+.height180 {
+    height: 180vh;
+}
+.flexColumn {
+    display: flex;
+    flex-direction: column;
+}
+.flexJustifyContent {
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.timePicker {
+    width: 0;
+    cursor: pointer;
+    line-height: 1.21428571em;
+    padding: .67857143em 1em;
+    font-size: 1em;
+    height: 60px;
+    
+}
+.padding15rem {
+    padding-left: 15rem;
+    padding-right: 15rem;
+}
 }
 
 

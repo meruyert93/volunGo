@@ -1,11 +1,18 @@
 import React from 'react';
+import { useHistory } from "react-router-dom";
 import {
-
     Menu,
     Sidebar,
-  } from 'semantic-ui-react';
+} from 'semantic-ui-react';
+
 
 function SidebarMenu({visible, setVisible}) {
+    const history = useHistory();
+
+    const RouteChangeOrganization = () => {
+        let path = `/organization`;
+        history.push(path);
+    }
     
     return (
             <Sidebar
@@ -21,7 +28,7 @@ function SidebarMenu({visible, setVisible}) {
                 <Menu.Item as='a'>
                     Volunteers
                 </Menu.Item>
-                <Menu.Item as='a'>
+                <Menu.Item as='a' onClick={() => RouteChangeOrganization()}>
                     Organizations
                 </Menu.Item>
                 <Menu.Item as='a'>

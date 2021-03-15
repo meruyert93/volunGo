@@ -19,8 +19,16 @@ import DetailsActivities from './components/DetailsActivities';
 import DetailsActivities2 from './components/DetailsActivities2';
 import DetailsSkills from './components/DetailsSkills';
 import DetailsSkillsTwo from "./components/DetailsSkillsTwo";
+import NGOSignUpBasic from "./components/NGO/NGOSignUpBasic";
+import NGOSignUpAdd from "./components/NGO/NGOSignUpAdd"; 
+import NGOProjects from "./components/NGO/NGOProjects";
+import NGOProjectRegistration from "./pages/NGOProjectRegistration";
+import NGODashboardProjects from "./pages/NGODashboardProjects";
+import LandingNGO from "./pages/LandingNGO";
 import { StateMachineProvider, createStore } from "little-state-machine";
+import Temporary from "./components/Draft.js/Temporary";
 import '../src/styles/style.css';
+
 
 createStore({
     yourDetails: {
@@ -36,7 +44,14 @@ createStore({
         activities: [],
         skills: [],
     },
-    
+    ngoDetails:{
+        email: "",
+        password:"",
+        passwordConfirm: "",
+    },
+    projects:{
+        requirements: [],
+    }
     
 })
 
@@ -89,6 +104,20 @@ function App() {
                                 <Route path="/projects">
                                     <HomeProject/>
                                 </Route>
+                                <Route path="/ngo-sign-up1">
+                                    <NGOSignUpBasic/>
+                                </Route>
+                                <Route path="/ngo-sign-up2" component={NGOSignUpAdd}/>
+                                {/* <Route path="/ngo-project-info-basic" component={ProjectInfoBasic}/> */}
+                                {/* <Route path="/ngo-project-image" component={ProjectImage}/> */}
+                                {/* <Route path="/ngo-project-description" component={ProjectDescription}/> */}
+                                {/* <Route path="/ngo-project-requirements" component={ProjectRequirements}/> */}
+                                <Route path="/ngo-projects" component={NGOProjects}/>
+                                {/* <Route path="/ngo-volunteers" component={NGOVolunteers}/> */}
+                                <Route path="/ngo-project-registration" component={NGOProjectRegistration}/>
+                                <Route path="/organization" component={LandingNGO}/>
+                                <Route path="/ngo-projects-dashboard" component={NGODashboardProjects}/>
+                                <Route path="/temporary" component={Temporary}/>
                             </Switch>
                         </Sidebar.Pusher>
                     </Sidebar.Pushable>

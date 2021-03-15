@@ -16,7 +16,7 @@ function HeaderBar({onToggleMenu}) {
             <Grid container columns={3}>
                 <Grid.Row>
                     <Grid.Column floated='left' mobile={8} tablet={4} computer={3}>
-                        <Image src='./images/Logo.png' href='https://volungo.netlify.app/' />
+                        <Image src='./images/Logomark.svg' href='https://volungo.netlify.app/' />
                     </Grid.Column>
                     {/* <Grid.Column floated='left' width={11}>
                         <Header as='h1'>VolunGO</Header>
