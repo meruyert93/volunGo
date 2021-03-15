@@ -73,42 +73,43 @@ function ProjectLocation({activPicker}) {
                 <Grid.Row>
                     <Grid.Column mobile={16} tablet={8} computer={5}>
                         <Form>
-                            <Header>{t('location_info_project')}</Header>
-                            <Form.Field required>
+                            <Header>{t('location_info_project')}Skip</Header>
+                            <Header color="grey" as="h5">Skip location part if your project is online</Header>
+                            <Form.Field>
                                 <label>{t('company_name')}</label>
                                 <input
                                     type="text" 
                                     name="companyName"
                                     placeholder={t('location_project_placeholder')}
-                                    ref={register({ required: true})} 
+                                    ref={register} 
                                 />
                             </Form.Field>
-                            <Form.Field required>
+                            <Form.Field>
                                 <label>{t('address_1')}</label>
                                 <input
                                     type="text" 
                                     name="addressOne"
                                     placeholder={t('location_project_placeholder')}
-                                    ref={register({ required: true})} 
+                                    ref={register} 
                                 />
                             </Form.Field>
                             <Form.Group>
-                                <Form.Field required>
+                                <Form.Field>
                                     <label>{t('city_project')}</label>
                                     <input
                                         type="text" 
                                         name="city"
                                         placeholder={t('location_project_placeholder')}
-                                        ref={register({ required: true})} 
+                                        ref={register} 
                                     />
                                 </Form.Field>
-                                <Form.Field required>
+                                <Form.Field>
                                     <label>{t('postalCode_project')}</label>
                                     <input
                                         type="text" 
                                         name="postalCode"
                                         placeholder={t('location_project_placeholder')}
-                                        ref={register({ required: true})} 
+                                        ref={register} 
                                     />
                                 </Form.Field>
                             </Form.Group>
@@ -196,11 +197,10 @@ function ProjectLocation({activPicker}) {
                                 </Form.Field>
                             </Form.Group>
                             <Form.Field label={t('no_specify')} name='not_specified' control='input' type='checkbox' />
-                        
                             <Grid.Row>
                                 <Grid.Column>
                                     <Divider hidden/>
-                                    <Button color="blue" onClick={RouteChangeBack}>{t('back')}</Button>
+                                    <Button basic color="blue" onClick={RouteChangeBack}>{t('back')}</Button>
                                     <Button primary onClick={handleSubmit(RouteChangeNext)}>{t('next')}</Button>
                                 </Grid.Column>
                             </Grid.Row>

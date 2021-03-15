@@ -1,10 +1,19 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Grid, Segment, Image, Container, Card, Divider, Icon   } from 'semantic-ui-react';
 
 function ItemVolunteer({id, image, name, projects, skill1, skill2, skill3}) {
+    const [active, setActive] = useState();
+
+    const chosenHandler= (id) => {
+        setActive(id);
+        if (active) {
+            setActive();
+        }
+    }
+
     return (
         <Grid.Column>
-            <Card>
+            <Card onClick={() => chosenHandler(id)} className={active && 'ngoSecondaryBorder'}>
                 <Image src={image}/>
                 <Card.Content  textAlign="center">
                     <Card.Header>{name}</Card.Header>

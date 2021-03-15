@@ -50,7 +50,7 @@ function ProjectImgDescription({activPicker}) {
                     <Grid.Column mobile={16} tablet={8} computer={9}>
                         <Form>
                             <Form.Group>
-                                <Form.Field width={12}>
+                                <Form.Field width={12} required>
                                     <label>{t('attach_image')}</label>
                                     <input type="file" name='imageCover' ref={register} onChange={(e) => handleImagePreview(e)}/>
                                         <Grid.Row>
@@ -59,7 +59,7 @@ function ProjectImgDescription({activPicker}) {
                                         </Grid.Column>
                                         </Grid.Row>
                                 </Form.Field>
-                                <Form.Field  width={16}>
+                                <Form.Field  width={16} required>
                                     <label>{t('about_your_project')}</label>
                                     <textarea
                                         type="text" 
@@ -72,7 +72,7 @@ function ProjectImgDescription({activPicker}) {
                             <Grid.Row>
                                 <Grid.Column>
                                     <Divider hidden/>
-                                    <Button color="blue" onClick={RouteChangeBack}>{t('back')}</Button>
+                                    <Button color="blue" basic onClick={RouteChangeBack}>{t('back')}</Button>
                                     <Button primary onClick={handleSubmit(RouteChangeNext)}>{t('next')}</Button>
                                 </Grid.Column>
                             </Grid.Row>

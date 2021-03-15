@@ -140,6 +140,7 @@ export const TRANSLATIONS_EN = {
     //NGO Invite Volunteers
     invite_volunteers: "Invite Volunteers",
     sub_text_invite_volunteers: "Lastly, invite volunteers who match to your new project. It helps you to reach out to the potential volunteers and accelerate your recruitment process.",
+    invite_complete_btn: "INVITE & COMPLETE",
 
     //NGO Registration Steps
     basic_information: "1. BASIC INFORMATION",
@@ -150,7 +151,7 @@ export const TRANSLATIONS_EN = {
 
     //NGO landing hero section
     match_volunteers:"We’ll match the best volunteers to your projects",
-    sub_text_match_volunteers: "We not only match volunteers to your opportunities, but bring more like-minded people to you.",
+    sub_text_match_volunteers: "We not oly mnatch volunteers to your opportunities, but bring more like-minded people to you.",
     join_as_org: "JOIN AS ORGANIZATION",
 
     //NGO landing main section

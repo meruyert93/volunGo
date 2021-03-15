@@ -18,22 +18,20 @@ function ProjectInfoBasic({activPicker}) {
         defaultValues: state.projects
     });
 
+    const history = useHistory();
+
     const radioOnChange = () => {
         setRadio((radio === "offline" || radio === '') ? "online" : "offline");
         setValue("locationType", radio)}
 
     const RouteChangeBack = () => {
-        let path = `newpath`;
-        //history.push(path);
+        let path = `ngo-projects-dashboard`;
+        history.push(path);
     }
 
     const RouteChangeNext = (data) => {
         actions.UpdateProjectAction(data);
         activPicker(2)
-        
-        
-        //history.push(path);
-        //console.log(data)
     }
 
     return (
@@ -45,7 +43,7 @@ function ProjectInfoBasic({activPicker}) {
                     </Header>
                     <p> {t('sub_text_about_project')}</p>
                 </Grid.Column>
-                <Grid.Row>
+                <Grid.Row centered>
                     <Grid.Column mobile={16} tablet={8} computer={5}>
                         <Form>
                             <Header>{t('basic_info')}</Header>
@@ -86,7 +84,6 @@ function ProjectInfoBasic({activPicker}) {
                                 />                             
                             </Form.Field>
                             <Form.Field label={t('no_specify')} name='not_specified' control='input' type='checkbox' />
-                            
                             <Form.Group grouped>
                                 <label>{t('online_or_offline')}</label>
                                 <Controller
@@ -118,13 +115,13 @@ function ProjectInfoBasic({activPicker}) {
                                     }}
                                 />
                             </Form.Group>
-                            <Grid.Row>
+                            <Grid centered>
                                 <Grid.Column>
                                     <Divider hidden/>
-                                    <Button color="blue" onClick={RouteChangeBack}>{t('back')}</Button>
+                                    <Button basic color="blue" onClick={RouteChangeBack}>{t('back')}</Button>
                                     <Button primary onClick={handleSubmit(RouteChangeNext)}>{t('next')}</Button>
                                 </Grid.Column>
-                            </Grid.Row>
+                            </Grid>
                         </Form>  
                     </Grid.Column>
                 </Grid.Row>

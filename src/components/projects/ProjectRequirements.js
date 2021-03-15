@@ -71,7 +71,7 @@ function ProjectRequirements({activPicker}) {
                 <Grid centered>
                     <Grid.Row>
                         <Grid.Column>
-                                <Button color="blue" onClick={() => RouteChangeBack()}>{t('back')}</Button>
+                                <Button color="blue" basic onClick={() => RouteChangeBack()}>{t('back')}</Button>
                         </Grid.Column>
                         <Grid.Column>
                         </Grid.Column>

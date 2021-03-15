@@ -41,13 +41,13 @@ function NGOVolunteers({activPicker}) {
                         )
                     })}
                 </Grid>
-                <Grid.Row>
-                                <Grid.Column>
-                                    <Divider hidden/>
-                                    <Button color="blue" onClick={() => RouteChangeBack()}>{t('back')}</Button>
-                                    <Button primary onClick={() => RouteChangeNext()}>{t('next')}</Button>
-                                </Grid.Column>
-                            </Grid.Row>
+                <Grid.Row textAlign="center" centered>
+                    <Grid.Column className="flexJustifyContent">
+                        <Divider hidden/>
+                        <Button color="blue" basic onClick={() => RouteChangeBack()}>{t('back')}</Button>
+                        <Button primary onClick={() => RouteChangeNext()}>{t('invite_complete_btn')}</Button>
+                    </Grid.Column>
+                </Grid.Row>
             </Grid>
         </Segment>
     )

@@ -10,6 +10,12 @@ function NGODashboardProjects() {
 
     const history = useHistory();
 
+    const RouteChangeNext = () => {
+        let path = `ngo-project-registration`;
+        history.push(path);
+        //console.log(data)
+    }
+
     return (
         <Segment.Group className="height100">
             <Segment basic size='large' padded='very' style={{height: '10%'}}>
@@ -18,7 +24,7 @@ function NGODashboardProjects() {
                         <Header>{t('ongoing_upcoming_projects')}</Header>
                     </Grid.Column>
                     <Grid.Column floated='right' width={5}>
-                        <Button primary>{t('add_new_project')}</Button>
+                        <Button primary onClick={() => RouteChangeNext()}>{t('add_new_project')}</Button>
                     </Grid.Column>
                 </Grid>
             </Segment>
