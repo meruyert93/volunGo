@@ -5,6 +5,7 @@ import "../translations/i18n";
 import { useHistory } from "react-router-dom";
 import { useStateMachine } from "little-state-machine";
 import updateAction from "../adapters/updateAction";
+import { userSignUp } from "../adapters/userAPI";
 
 function SignUpFinish() {
     const { t } = useTranslation();
@@ -13,10 +14,14 @@ function SignUpFinish() {
 
     const history = useHistory();
 
-    const RouteChangeHome = () => {
+    const RouteChangeHome = async () => {
         let path = `home`;
-        history.push(path);
-        console.log(JSON.stringify(state, null, 2))
+        //history.push(path);
+        const TOKEN  = await userSignUp(JSON.stringify(state.yourDetails));
+        localStorage.setItem('token', TOKEN);
+        console.log(TOKEN);
+       // await userSignUp(JSON.stringify(state.yourDetails));
+        //console.log(JSON.stringify(state.yourDetails, null, 2))
     }
 
     const RouteChangeMoreInfo = () => {
