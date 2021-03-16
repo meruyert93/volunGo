@@ -5,6 +5,7 @@ import { useTranslation } from "react-i18next";
 import { useForm } from "react-hook-form";
 import { useStateMachine } from "little-state-machine";
 import updateNGOAction from "../../adapters/updateNGOAction";
+import { ngoSignUp } from "../../adapters/ngoAPI";
 
 function NGOSignUpAdd() {
     const { t } = useTranslation();
@@ -20,11 +21,18 @@ function NGOSignUpAdd() {
         history.push(path);
     }
 
-    const RouteChangeNext = (data) => {
+    const RouteChangeNext = async (data) => {
         actions.updateNGOAction(data);
         let path = `/ngo-projects-dashboard`;
-        history.push(path);
-        //console.log(data)
+
+        const response  = await ngoSignUp(JSON.stringify(state.ngoDetails));
+        if (response.status ===  'success') {
+            const TOKEN = response.token;
+            localStorage.setItem('token', TOKEN);
+            return history.push(path);
+        }
+        //TODO: "sorry there is smth wrong with server, try again"
+        //create component to handle if there is no available taken
     }
 
     return (
@@ -53,7 +61,7 @@ function NGOSignUpAdd() {
                                 <label>{t('name_org')}</label>
                                 <input
                                     type="text" 
-                                    name="name_org"
+                                    name="name"
                                     ref={register({ required: true})} 
                                 />
                             </Form.Field>
@@ -61,7 +69,7 @@ function NGOSignUpAdd() {
                                 <label>{t('about_org')}</label>
                                 <textarea
                                     type="text" 
-                                    name="about_org"
+                                    name="description"
                                     ref={register({ required: true})} 
                                 />
                             </Form.Field>
@@ -69,7 +77,7 @@ function NGOSignUpAdd() {
                                 <label>{t('url_org')}</label>
                                 <input
                                     type="text" 
-                                    name="url_org"
+                                    name="websiteUrl"
                                     ref={register({ required: true})}
                                     placeholder="https://" 
                                 />

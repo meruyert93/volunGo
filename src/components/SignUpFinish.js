@@ -16,12 +16,14 @@ function SignUpFinish() {
 
     const RouteChangeHome = async () => {
         let path = `home`;
-        //history.push(path);
-        const TOKEN  = await userSignUp(JSON.stringify(state.yourDetails));
-        localStorage.setItem('token', TOKEN);
-        console.log(TOKEN);
-       // await userSignUp(JSON.stringify(state.yourDetails));
-        //console.log(JSON.stringify(state.yourDetails, null, 2))
+        const response  = await userSignUp(JSON.stringify(state.yourDetails));
+        if (response.status ===  'success') {
+            const TOKEN = response.token;
+            localStorage.setItem('token', TOKEN);
+            return history.push(path);
+        }
+        //TODO: "sorry there is smth wrong with server, try again"
+        //create component to handle if there is no available taken
     }
 
     const RouteChangeMoreInfo = () => {

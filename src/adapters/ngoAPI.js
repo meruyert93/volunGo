@@ -1,7 +1,6 @@
-const URL = `https://volungoapi.herokuapp.com/api/v1/users/signup`;
-const SIGNUP = ``; 
+const URL = `https://volungoapi.herokuapp.com/api/v1/ngos/signup`;
 
-export const userSignUp  = async (data) => {
+export const ngoSignUp  = async (data) => {
     try {
         console.log(data);
         const response = await fetch(URL, {
