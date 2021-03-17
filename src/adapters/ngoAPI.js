@@ -15,6 +15,7 @@ export const ngoSignUp  = async (data) => {
         });
         // const signUp =  response.json();
         const responseData = await response.json();
+        console.log(responseData);
         return responseData;
         // if (responseData.status === 'success') {
         //     return responseData.token 
