@@ -87,7 +87,7 @@ function ProjectLocation({activPicker}) {
                                 <label>{t('address_1')}</label>
                                 <input
                                     type="text" 
-                                    name="addressOne"
+                                    name="streetAddress"
                                     placeholder={t('location_project_placeholder')}
                                     ref={register} 
                                 />

@@ -29,6 +29,11 @@
   top: 69%;
   right: 3%; }
 
+#root .iconEye5 {
+  position: absolute;
+  top: 53%;
+  right: 3%; }
+
 #root .iconEye:hover {
   cursor: pointer; }
 
@@ -41,10 +46,6 @@
 #root .height100 {
   height: 100vh; }
 
-<<<<<<< HEAD
-=======
-
->>>>>>> 29f2938226737088cdddaffcbd50d54a05dd8dc8
 #root .height180 {
   height: 180vh; }
 

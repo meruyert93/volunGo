@@ -13,6 +13,10 @@ function SidebarMenu({visible, setVisible}) {
         let path = `/organization`;
         history.push(path);
     }
+    const RouteChangeVolunteers = () => {
+        let path = `/volunteers`;
+        history.push(path);
+    }
     
     return (
             <Sidebar
@@ -25,7 +29,7 @@ function SidebarMenu({visible, setVisible}) {
                 direction='top'
                 width='thin'
             >
-                <Menu.Item as='a'>
+                <Menu.Item as='a'onClick={() => RouteChangeVolunteers()}>
                     Volunteers
                 </Menu.Item>
                 <Menu.Item as='a' onClick={() => RouteChangeOrganization()}>

@@ -22,7 +22,7 @@ function Forms() {
     const togglePasswordVisiblity = () => {
         setPasswordShown(!passwordShown);
         // console.log('toggling')
-      };
+    };
 
     const { t } = useTranslation();
 

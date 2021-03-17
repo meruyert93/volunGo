@@ -5,6 +5,7 @@ import { useTranslation } from "react-i18next";
 import { useForm } from "react-hook-form";
 import { useStateMachine } from "little-state-machine";
 import UpdateProjectAction from "../../adapters/updateProjectAction";
+import { createProject } from "../../adapters/projectAPI";
 
 function ProjectImgDescription({activPicker}) {
     const [selectedImage, setSelectedImage] = useState(null);   
@@ -28,9 +29,11 @@ function ProjectImgDescription({activPicker}) {
         //history.push(path);
     }
 
-    const RouteChangeNext = (data) => {
+    const RouteChangeNext = async (data) => {
         actions.UpdateProjectAction(data);
-        console.log(data);
+        //console.log(data);
+        const response = await createProject(JSON.stringify(state.projects))
+        console.log(response.body);
         activPicker(5)
         let path = ``;
         //history.push(path);

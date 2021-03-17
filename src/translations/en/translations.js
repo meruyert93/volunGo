@@ -79,6 +79,11 @@ export const TRANSLATIONS_EN = {
     //home page project section
     recommended:"Recommended for you",
 
+    //Volunteers Sign In
+    sign_in_as_volunteer: "Sign in as volunteer",
+    welcome_back_volunteer: "Welcome back! We help you to find the best volunteer opportunities in your city.",
+    sign_in_btn: "Sign In",
+
     //NGO Sign UP Additional info
     register_org: "Register your organization",
     sub_text_register_org: "This information will appear on your organization profile. Precise information helps users to find and join your opportunities.",
@@ -168,4 +173,7 @@ export const TRANSLATIONS_EN = {
     add_new_project: "ADD A NEW PROJECT",
     empty_dashboard: "Your Dashboard is empty now",
     sub_text_empty_dashboard:"Add you first project by clicking the button on the top right corner. We will guide you through the process.",
+
+
+
 };
