@@ -37,6 +37,9 @@
 #root .iconEye:hover {
   cursor: pointer; }
 
+#root .cursor:hover {
+  cursor: pointer; }
+
 #root .height70 {
   height: 70vh; }
 

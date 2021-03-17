@@ -26,7 +26,12 @@ function VolunteerSignIn() {
     const history = useHistory();
 
     const RouteChangeSignUp = () => {
-        let path = ``;
+        let path = `sign-up1`;
+        history.push(path);
+    }
+
+    const RouteChangeHome = () => {
+        let path = `projects`;
         history.push(path);
     }
 
@@ -50,7 +55,7 @@ function VolunteerSignIn() {
                             </Grid.Column>
                             <Grid.Row centered>
                                 <Grid.Column mobile={16} tablet={8} computer={8}>
-                                    <Form onSubmit={handleSubmit(RouteChangeSignUp)}>
+                                    <Form onSubmit={handleSubmit(RouteChangeHome)}>
                                     <Form.Field required>
                                         <label>{t('email')}</label>
                                         <input
@@ -77,9 +82,17 @@ function VolunteerSignIn() {
                                     </Form.Field>
                                     <Grid.Row centered>
                                         <Divider hidden/>
-                                        <Button color='pink' onClick={handleSubmit(RouteChangeSignUp)} type='submit'>{t('sign_in_btn')}</Button>
+                                        <Button color='pink' onClick={handleSubmit(RouteChangeHome)} type='submit'>{t('sign_in_btn')}</Button>
                                     </Grid.Row>
                                     </Form>
+                                </Grid.Column>
+                            </Grid.Row>
+                            <Grid.Row centered>
+                                <Grid.Column mobile={9} tablet={5} computer={5} textAlign='right'>
+                                    <Header color="grey" as="h6">{t('dont_have_account')}</Header>
+                                </Grid.Column>
+                                <Grid.Column mobile={7} tablet={5} computer={5} textAlign='left'>
+                                    <Header color="pink" as="h5" onClick={() => RouteChangeSignUp()} className='cursor'>{t('sign_up')}</Header>
                                 </Grid.Column>
                             </Grid.Row>
                         </Grid>

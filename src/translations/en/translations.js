@@ -83,6 +83,8 @@ export const TRANSLATIONS_EN = {
     sign_in_as_volunteer: "Sign in as volunteer",
     welcome_back_volunteer: "Welcome back! We help you to find the best volunteer opportunities in your city.",
     sign_in_btn: "Sign In",
+    dont_have_account: "Don’t have an accout?",
+    sign_up: "SIGN UP",
 
     //NGO Sign UP Additional info
     register_org: "Register your organization",
