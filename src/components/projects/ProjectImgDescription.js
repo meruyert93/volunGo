@@ -29,11 +29,11 @@ function ProjectImgDescription({activPicker}) {
         //history.push(path);
     }
 
-    const RouteChangeNext = async (data) => {
+    const RouteChangeNext =  async (data) => {
         actions.UpdateProjectAction(data);
-        //console.log(data);
+        //console.log(state.projects);
         const response = await createProject(JSON.stringify(state.projects))
-        console.log(response.body);
+        console.log(response.data);
         activPicker(5)
         let path = ``;
         //history.push(path);

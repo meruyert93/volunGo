@@ -75,8 +75,10 @@ function VolunteerSignIn() {
                                     />
                                     <i key={1} onClick={togglePasswordVisiblity} className="iconEye5 iconEye">{eye}</i>
                                     </Form.Field>
-                                    <Divider hidden/>
-                                    <Button color='pink' onClick={handleSubmit(RouteChangeSignUp)} type='submit'>{t('sign_in_btn')}</Button>
+                                    <Grid.Row centered>
+                                        <Divider hidden/>
+                                        <Button color='pink' onClick={handleSubmit(RouteChangeSignUp)} type='submit'>{t('sign_in_btn')}</Button>
+                                    </Grid.Row>
                                     </Form>
                                 </Grid.Column>
                             </Grid.Row>

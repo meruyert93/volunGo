@@ -113,7 +113,7 @@ function App() {
                                 {/* <Route path="/ngo-project-image" component={ProjectImage}/> */}
                                 {/* <Route path="/ngo-project-description" component={ProjectDescription}/> */}
                                 {/* <Route path="/ngo-project-requirements" component={ProjectRequirements}/> */}
-                                <Route path="/ngo-projects" component={NGOProjects}/>
+                                {/* <Route path="/ngo-projects" component={NGOProjects}/> */}
                                 {/* <Route path="/ngo-volunteers" component={NGOVolunteers}/> */}
                                 <Route path="/ngo-project-registration" component={NGOProjectRegistration}/>
                                 <Route path="/organization" component={LandingNGO}/>
