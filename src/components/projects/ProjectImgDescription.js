@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Grid, Segment, Header, Button, Form, Progress, Divider, Image} from 'semantic-ui-react';
+import { Grid, Segment, Header, Button, Form, Divider, Image} from 'semantic-ui-react';
 import { useHistory } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { useForm } from "react-hook-form";

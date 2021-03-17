@@ -146,6 +146,12 @@ export const TRANSLATIONS_EN = {
     requirements_for_vol: "Requirements for volunteers",
     sub_text_requirements_for_vol:"Please specify the requirements for volunteers. Precise information helps us to match the best volunteers.",
 
+    //NGO Project Create Loading
+    creating_project: "We are creating your new project!",
+
+    //NGO Invite Volunteers Loading
+    loading_volunteers: "We are searching the best volunteers for your opportunities!",
+
     //NGO Your projects components
     ngo_your_projects:"Your Projects",
 
