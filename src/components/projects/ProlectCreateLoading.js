@@ -5,7 +5,7 @@ import { useTranslation } from "react-i18next";
 
 function ProlectCreateLoading() {
     const { t } = useTranslation();
-
+    
     return (
         <Segment basic size='large' padded='very' className="height100">
             <Grid stackable verticalAlign='middle' centered>

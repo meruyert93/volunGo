@@ -73,10 +73,10 @@ function ProjectImgDescription({activPicker}) {
                                 </Form.Field>
                             </Form.Group>
                             <Grid.Row>
-                                <Grid.Column>
+                                <Grid.Column className="flexJustifyContent">
                                     <Divider hidden/>
                                     <Button color="blue" basic onClick={RouteChangeBack}>{t('back')}</Button>
-                                    <Button primary onClick={handleSubmit(RouteChangeNext)}>{t('next')}</Button>
+                                    <Button primary onClick={handleSubmit(RouteChangeNext)}>{t('create_project_btn')}</Button>
                                 </Grid.Column>
                             </Grid.Row>
                         </Form>

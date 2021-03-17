@@ -70,13 +70,9 @@ function ProjectRequirements({activPicker}) {
                 </Grid>
                 <Grid centered>
                     <Grid.Row>
-                        <Grid.Column>
+                        <Grid.Column className="flexJustifyContent">
                                 <Button color="blue" basic onClick={() => RouteChangeBack()}>{t('back')}</Button>
-                        </Grid.Column>
-                        <Grid.Column>
-                        </Grid.Column>
-                        <Grid.Column>
-                            <Button primary onClick={() => RouteChangeNext()}>{t('next')}</Button>
+                                <Button primary onClick={() => RouteChangeNext()}>{t('next')}</Button>
                         </Grid.Column>
                     </Grid.Row>
                 </Grid>

@@ -116,7 +116,7 @@ function ProjectInfoBasic({activPicker}) {
                                 />
                             </Form.Group>
                             <Grid centered>
-                                <Grid.Column>
+                                <Grid.Column className="flexJustifyContent">
                                     <Divider hidden/>
                                     <Button basic color="blue" onClick={RouteChangeBack}>{t('back')}</Button>
                                     <Button primary onClick={handleSubmit(RouteChangeNext)}>{t('next')}</Button>

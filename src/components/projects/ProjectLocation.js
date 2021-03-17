@@ -197,7 +197,7 @@ function ProjectLocation({activPicker}) {
                             </Form.Group>
                             <Form.Field label={t('no_specify')} name='not_specified' control='input' type='checkbox' />
                             <Grid.Row>
-                                <Grid.Column>
+                                <Grid.Column className="flexJustifyContent">
                                     <Divider hidden/>
                                     <Button basic color="blue" onClick={RouteChangeBack}>{t('back')}</Button>
                                     <Button primary onClick={handleSubmit(RouteChangeNext)}>{t('next')}</Button>
