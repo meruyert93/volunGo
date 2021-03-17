@@ -86,6 +86,11 @@ export const TRANSLATIONS_EN = {
     dont_have_account: "Don’t have an accout?",
     sign_up: "SIGN UP",
 
+    //NGO Sign In
+    sign_in_as_ngo: "Sign in as organization",
+    welcome_back_ngo: "Welcome back! We match the best volunteers in the city to your projects.",
+
+
     //NGO Sign UP Additional info
     register_org: "Register your organization",
     sub_text_register_org: "This information will appear on your organization profile. Precise information helps users to find and join your opportunities.",

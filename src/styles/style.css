@@ -34,6 +34,11 @@
   top: 53%;
   right: 3%; }
 
+#root .iconEye6 {
+  position: absolute;
+  top: 53%;
+  right: 3%; }
+
 #root .iconEye:hover {
   cursor: pointer; }
 

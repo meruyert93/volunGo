@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Grid, Segment, Header, Button, Form, Progress, Divider, Image} from 'semantic-ui-react';
+import { Grid, Segment, Header, Button, Form, Divider, Image} from 'semantic-ui-react';
 import { useHistory } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { useForm } from "react-hook-form";
@@ -42,8 +42,6 @@ function VolunteerSignIn() {
                     <Grid.Column mobile={16} tablet={8} computer={8} verticalAlign='middle'>
                         <Grid>
                             <Grid.Column width={16} textAlign="center">
-                            </Grid.Column>
-                            <Grid.Column width={16} textAlign="center">
                                 <Header  as='h2' className="headingText"> 
                                     {t('sign_in_as_volunteer')}
                                 </Header>
@@ -82,7 +80,7 @@ function VolunteerSignIn() {
                                     </Form.Field>
                                     <Grid.Row centered>
                                         <Divider hidden/>
-                                        <Button color='pink' onClick={handleSubmit(RouteChangeHome)} type='submit'>{t('sign_in_btn')}</Button>
+                                        <Button fluid color='pink' onClick={handleSubmit(RouteChangeHome)} type='submit'>{t('sign_in_btn')}</Button>
                                     </Grid.Row>
                                     </Form>
                                 </Grid.Column>
