@@ -74,7 +74,7 @@ function DetailsSkillsTwo() {
                 </Grid.Column> */}
             </Grid>
 
-            <Grid columns={2}>
+            <Grid columns={2} container centered>
                 {dataSkills.map((item) =>{
                     return(
                         <ItemSkillTwo key={item.id} {...item} toggleHandler={toggleHandler}/>
@@ -82,10 +82,10 @@ function DetailsSkillsTwo() {
                 })}
             </Grid>
             <Divider hidden/>
-            <Button.Group widths='2'>
+            <Grid.Column className="flexJustifyContent">
                 <Button basic color='pink' as='a' onClick={() => RouteChangeBack()}>{t('back')}</Button>
                 <Button color="pink" type='submit'  onClick={() => RouteChangeHome()}>{t('next')}</Button>
-            </Button.Group>
+            </Grid.Column>
         </Segment>
     )
 }

@@ -78,12 +78,6 @@
   padding-left: 15rem;
   padding-right: 15rem; }
 
-#root .itemDefault {
-  background-color: #AAB6C5; }
-
-#root .itemPicker {
-  background-color: #F94877; }
-
 #root .red {
   color: red; }
 
@@ -121,6 +115,9 @@
 
 #root .NGOtextDark {
   color: #364F6B; }
+
+#root .VolunteerSecondaryColor {
+  color: #6F30FE; }
 
 #root .headingText {
   color: #090088; }
@@ -193,12 +190,21 @@
 #root .iconSkillsSelected {
   fill: #2BCDC1; }
 
+#root .iconSkillsVolunteersSelected {
+  fill: #6F30FE; }
+
 #root .ngoSecondaryColorPicker {
   color: #2BCDC1; }
 
 #root .ngoSecondaryBorder {
   border-style: solid;
   border-color: #2BCDC1;
+  border-radius: 12px;
+  border-width: 3px; }
+
+#root .VolunteerSecondaryBorder {
+  border-style: solid;
+  border-color: #6F30FE;
   border-radius: 12px;
   border-width: 3px; }
 

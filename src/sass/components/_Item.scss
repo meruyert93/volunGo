@@ -65,12 +65,21 @@
     .iconSkillsSelected{
         fill: $color-ngo-secondary;
     }
+    .iconSkillsVolunteersSelected{
+        fill: $color-volunteer-secondary;
+    }
     .ngoSecondaryColorPicker {
         color: $color-ngo-secondary;
     }
     .ngoSecondaryBorder {
         border-style: solid;
         border-color: $color-ngo-secondary;
+        border-radius: 12px;
+        border-width: 3px;
+    }
+    .VolunteerSecondaryBorder {
+        border-style: solid;
+        border-color: $color-volunteer-secondary;
         border-radius: 12px;
         border-width: 3px;
     }

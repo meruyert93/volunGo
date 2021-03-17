@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Grid, Segment, Image, Container, Card   } from 'semantic-ui-react';
+import { Grid, Segment, Image, Icon, Header } from 'semantic-ui-react';
 
 function ItemSkillTwo ({id, name, image, toggleHandler}) {
     const [active, setActive] = useState();
@@ -14,18 +14,13 @@ function ItemSkillTwo ({id, name, image, toggleHandler}) {
 
     return (
         <Grid.Column mobile={8} tablet={5} computer={2} stretched>
-            <Segment inverted onClick={() => chosenHandler(id)} className={active ? 'itemPicker' : 'itemDefault'}>
-                <Grid columns={2} >
-                    <Grid.Row>
-                        <Grid.Column floated='right'>
-                            <Image src={image} floated='right'/>
-                        </Grid.Column>
-                    </Grid.Row>
-                    <Grid.Row>
-                        <Container>
-                            <p>{name}</p>
-                        </Container>
-                    </Grid.Row>
+            <Segment onClick={() => chosenHandler(id)} className={active ? 'VolunteerSecondaryBorder heightCard' : ' heightCard'}>
+                <svg className={active ? 'iconSkillsVolunteersSelected iconSkills' : 'iconSkills'}>
+                    <use  xlinkHref={image}></use>
+                </svg>
+                <Icon name="check circle" size="big" className={active ? "iconSelect VolunteerSecondaryColor" : "iconSelect whiteChecker"}/>
+                <Grid className="textCardNGO">
+                    <Header as="h6" textAlign="center" className={active ? 'VolunteerSecondaryColor' : 'grey60'}>{name}</Header>
                 </Grid>
             </Segment>
         </Grid.Column>

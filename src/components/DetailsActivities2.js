@@ -71,11 +71,11 @@ function DetailsActivities () {
                 })}
                 </Grid>
                 <Divider hidden/>
-                <Grid columns={4} centered>
-                <Button.Group widths='2' compact>
-                                <Button basic color='pink' as='a' onClick={() => RouteChangeBack()}>{t('back')}</Button>
-                                <Button color='pink' type='submit' onClick={() => RouteChangeMoreInfo()}>{t('next')}</Button>
-                </Button.Group>
+                <Grid columns={2} centered>
+                <Grid.Column className="flexJustifyContent">
+                    <Button basic color='pink' as='a' onClick={() => RouteChangeBack()}>{t('back')}</Button>
+                    <Button color='pink' type='submit' onClick={() => RouteChangeMoreInfo()}>{t('next')}</Button>
+                </Grid.Column>
                 <Divider hidden/>
                 </Grid>
         </Segment>
