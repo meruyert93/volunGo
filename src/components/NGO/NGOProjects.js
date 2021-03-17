@@ -2,11 +2,9 @@ import React from 'react';
 import { Grid, Segment, Header, Button, Progress } from 'semantic-ui-react';
 import { useHistory } from "react-router-dom";
 import { useTranslation } from "react-i18next";
-import dataProjects from "../../data/dataProjects";
 import ItemProject from "../../containers/ItemProject";
 
-
-function NGOProjects() {
+function NGOProjects({dataProjects}) {
 
     const { t } = useTranslation();
 

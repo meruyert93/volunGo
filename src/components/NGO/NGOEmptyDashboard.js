@@ -6,7 +6,7 @@ function NGOEmptyDashboard() {
     const { t } = useTranslation();
 
     return (
-        <Segment basic style={{height: '90%'}}>
+        <Segment basic className="height100">
             <Grid container verticalAlign='middle'>
                 <Grid.Column textAlign='center'>
                     <Divider/>

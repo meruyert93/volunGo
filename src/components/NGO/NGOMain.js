@@ -14,8 +14,8 @@ function NGOMain() {
             <Header as='h2' className="textWhite">
                 {t('sub_text_ngo_why_volungo')}
             </Header>
-            <Grid stackable  container columns={2} padded divided>
-                <Grid.Row centered padded>
+            <Grid stackable  container columns={2} divided>
+                <Grid.Row centered>
                     <Grid.Column  mobile={16} tablet={8} computer={8}>
                         <Divider hidden/>
                         <Image src="./images/heroSection/NGOmockup.jpg" fluid/>

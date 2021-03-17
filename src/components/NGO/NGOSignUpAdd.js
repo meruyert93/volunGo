@@ -26,6 +26,7 @@ function NGOSignUpAdd() {
         let path = `/ngo-projects-dashboard`;
 
         const response  = await ngoSignUp(JSON.stringify(state.ngoDetails));
+        console.log(JSON.stringify(state.ngoDetails, null, 2))
         if (response.status ===  'success') {
             const TOKEN = response.token;
             localStorage.setItem('token', TOKEN);
