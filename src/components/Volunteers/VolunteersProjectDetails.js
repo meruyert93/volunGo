@@ -1,6 +1,7 @@
 import React from 'react';
 import { Segment } from 'semantic-ui-react';
 import VolProjectDetailUpperPart from "../Volunteers/Components/VolProjectDetailUpperPart";
+import VolProjectDetailLowerPart from "../Volunteers/Components/VolProjectDetailLowerPart";
 import dataProject from "../../data/dataProjects";
 
 function VolunteersProjectDetails() {
@@ -8,6 +9,7 @@ function VolunteersProjectDetails() {
     return (
         <Segment.Group>
             <VolProjectDetailUpperPart {...el}/>
+            <VolProjectDetailLowerPart {...el}/>
         </Segment.Group>
     )
 }

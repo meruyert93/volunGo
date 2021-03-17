@@ -79,6 +79,14 @@ export const TRANSLATIONS_EN = {
     //home page project section
     recommended:"Recommended for you",
 
+    //volunteer project details
+    date: "Date",
+    project_location:"Project Location",
+    number_of_vol:"Number of Volunteers",
+    skill_requirements_vol: "Skill Requirements",
+    contact_info_vol: "Contact Information",
+    join_project:"JOIN THE PROJECT",
+
     //Volunteers Sign In
     sign_in_as_volunteer: "Sign in as volunteer",
     welcome_back_volunteer: "Welcome back! We help you to find the best volunteer opportunities in your city.",

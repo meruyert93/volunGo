@@ -5,10 +5,14 @@ const projects = [
     name:"Support exchange students in Munich as a host family",
     organization: 'Partnership International E.V',
     duration: "Mar 01 - May 31",
-    days:"",
-    time:"",
+    days:"Mon, Wed, Fri",
+    time:"17:00 - 18:00",
     place:"Naumannstr. 4/5, 93442 Melle",
     content: "The exchange students are an integral part of the family for the duration of their stay and should be actively involved in family life, including all the responsibilities that go with it. The student will therefore be a new part of your everyday life.",
+    volunteers:"8/15",
+    skills:"Language, Conversational Skill, Physical Work",
+    contact_person: "Ulla Burchardt",
+    contact_email: "ulla.burchardt@partnership.org",
     },
     {
     id: 2,
@@ -20,6 +24,8 @@ const projects = [
     time:"17:00 - 19:00",
     place:"chreibergasse 1/0, 52630 Dessau",
     content: "The exchange students are an integral part of the family for the duration of their stay and should be actively involved in family life, including all the responsibilities that go with it. The student will therefore be a new part of your everyday life.",
+    volunteers:"8/15",
+    skills:"Language, Conversational Skill, Physical Work",
     },
     {
     id: 3,
@@ -31,6 +37,8 @@ const projects = [
     time:"",
     place:"Bernard-Heß-Weg 07, 01899 Cottbus",
     content: "The exchange students are an integral part of the family for the duration of their stay and should be actively involved in family life, including all the responsibilities that go with it. The student will therefore be a new part of your everyday life.",
+    volunteers:"8/15",
+    skills:"Language, Conversational Skill, Physical Work",
     },
     {
     id: 4,
@@ -42,6 +50,8 @@ const projects = [
     time:"17:00 - 18:00",
     place:"Remote Volunteering",
     content: "The exchange students are an integral part of the family for the duration of their stay and should be actively involved in family life, including all the responsibilities that go with it. The student will therefore be a new part of your everyday life.",
+    volunteers:"8/15",
+    skills:"Language, Conversational Skill, Physical Work",
     },
     {
     id: 5,
@@ -53,6 +63,8 @@ const projects = [
     time:"18:00 - 20:00",
     place:"Kriegergasse 58, 01262 Hildburghausen",
     content: "The exchange students are an integral part of the family for the duration of their stay and should be actively involved in family life, including all the responsibilities that go with it. The student will therefore be a new part of your everyday life.",
+    volunteers:"8/15",
+    skills:"Language, Conversational Skill, Physical Work",
     },
     {
     id: 6,
@@ -64,6 +76,8 @@ const projects = [
     time:"11:00 - 13:00",
     place:"Melanie-Beck-Weg 6, 67046 Bergzabern",
     content: "The exchange students are an integral part of the family for the duration of their stay and should be actively involved in family life, including all the responsibilities that go with it. The student will therefore be a new part of your everyday life.",
+    volunteers:"8/15",
+    skills:"Language, Conversational Skill, Physical Work",
     },
 ];
 

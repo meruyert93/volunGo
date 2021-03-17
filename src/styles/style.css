@@ -119,6 +119,9 @@
 #root .VolunteerSecondaryColor {
   color: #6F30FE; }
 
+#root .backgroundLightGrey {
+  background-color: #F7F8F9; }
+
 #root .headingText {
   color: #090088; }
 
