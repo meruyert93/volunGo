@@ -22,6 +22,7 @@ import DetailsSkillsTwo from "./components/DetailsSkillsTwo";
 import NGOSignUpBasic from "./components/NGO/NGOSignUpBasic";
 import NGOSignUpAdd from "./components/NGO/NGOSignUpAdd"; 
 import VolunteerSignIn from "./components/Volunteers/VolunteerSignIn";
+import VolunteersProjectDetails from "./components/Volunteers/VolunteersProjectDetails";
 import NGOSignIn from "./components/NGO/NGOSignIn";
 import NGOProjectRegistration from "./pages/NGOProjectRegistration";
 import NGODashboardProjects from "./pages/NGODashboardProjects";
@@ -122,6 +123,7 @@ function App() {
                                 <Route path="/volunteers-sign-in" component={VolunteerSignIn}/>
                                 <Route path="/volunteers" component={Landing}/>
                                 <Route path="/ngo-sign-in" component={NGOSignIn}/>
+                                <Route path="/volunteer-project-details" component={VolunteersProjectDetails}/>
                             </Switch>
                         </Sidebar.Pusher>
                     </Sidebar.Pushable>
