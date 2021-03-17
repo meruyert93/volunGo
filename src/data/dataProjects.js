@@ -26,6 +26,8 @@ const projects = [
     content: "The exchange students are an integral part of the family for the duration of their stay and should be actively involved in family life, including all the responsibilities that go with it. The student will therefore be a new part of your everyday life.",
     volunteers:"8/15",
     skills:"Language, Conversational Skill, Physical Work",
+    contact_person: "Ulla Burchardt",
+    contact_email: "ulla.burchardt@partnership.org",
     },
     {
     id: 3,
@@ -39,6 +41,8 @@ const projects = [
     content: "The exchange students are an integral part of the family for the duration of their stay and should be actively involved in family life, including all the responsibilities that go with it. The student will therefore be a new part of your everyday life.",
     volunteers:"8/15",
     skills:"Language, Conversational Skill, Physical Work",
+    contact_person: "Ulla Burchardt",
+    contact_email: "ulla.burchardt@partnership.org",
     },
     {
     id: 4,
@@ -52,6 +56,8 @@ const projects = [
     content: "The exchange students are an integral part of the family for the duration of their stay and should be actively involved in family life, including all the responsibilities that go with it. The student will therefore be a new part of your everyday life.",
     volunteers:"8/15",
     skills:"Language, Conversational Skill, Physical Work",
+    contact_person: "Ulla Burchardt",
+    contact_email: "ulla.burchardt@partnership.org",
     },
     {
     id: 5,
@@ -65,6 +71,8 @@ const projects = [
     content: "The exchange students are an integral part of the family for the duration of their stay and should be actively involved in family life, including all the responsibilities that go with it. The student will therefore be a new part of your everyday life.",
     volunteers:"8/15",
     skills:"Language, Conversational Skill, Physical Work",
+    contact_person: "Ulla Burchardt",
+    contact_email: "ulla.burchardt@partnership.org",
     },
     {
     id: 6,
@@ -78,6 +86,8 @@ const projects = [
     content: "The exchange students are an integral part of the family for the duration of their stay and should be actively involved in family life, including all the responsibilities that go with it. The student will therefore be a new part of your everyday life.",
     volunteers:"8/15",
     skills:"Language, Conversational Skill, Physical Work",
+    contact_person: "Ulla Burchardt",
+    contact_email: "ulla.burchardt@partnership.org",
     },
 ];
 
