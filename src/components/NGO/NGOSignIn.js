@@ -1,10 +1,11 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Grid, Segment, Header, Button, Form, Divider, Image} from 'semantic-ui-react';
 import { useHistory } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { useForm } from "react-hook-form";
 import { useStateMachine } from "little-state-machine";
 import updateNGOAction from '../../adapters/updateNGOAction';
+import { ngoSignIn } from '../../adapters/ngoAPI';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEye } from "@fortawesome/free-solid-svg-icons";
 const eye = <FontAwesomeIcon icon={faEye} />;
@@ -18,14 +19,29 @@ function NGOSignIn() {
         defaultValues: state.ngoDetails
     });
 
+    const ngoSignInFromApi = async (data) => {
+        const responseSignIn = await ngoSignIn(data);
+        return responseSignIn
+    }
+
     const togglePasswordVisiblity = () => {
         setPasswordShown(!passwordShown);
         // console.log('toggling')
     };
 
-    const RouteChangeHome = () => {
+    const RouteChangeHome = async (data) => {
         let path = `ngo-projects-dashboard`;
-        history.push(path);
+        actions.updateNGOAction(data);
+        Object.assign(state.ngoDetails, data);
+        const response = await ngoSignInFromApi(JSON.stringify(state.ngoDetails));
+        console.log(response);
+        if (response.status ===  'success') {
+            const TOKEN = response.token;
+            localStorage.setItem('token', TOKEN);
+            return history.push(path);
+        }
+         //TODO: "sorry there is smth wrong with server, try again"
+        //create component to handle if there is no available taken
     }
 
     const RouteChangeSignUp = () => {

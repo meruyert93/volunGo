@@ -10,7 +10,7 @@ import { ngoSignUp } from "../../adapters/ngoAPI";
 function NGOSignUpAdd() {
     const { t } = useTranslation();
     const { state, actions } =  useStateMachine({ updateNGOAction });
-    const { handleSubmit, errors, register, watch } = useForm({
+    const { handleSubmit, register } = useForm({
         defaultValues: state.ngoDetails
     });
 
@@ -26,7 +26,7 @@ function NGOSignUpAdd() {
         let path = `/ngo-projects-dashboard`;
 
         const response  = await ngoSignUp(JSON.stringify(state.ngoDetails));
-        console.log(JSON.stringify(state.ngoDetails, null, 2))
+        //console.log(JSON.stringify(state.ngoDetails, null, 2))
         if (response.status ===  'success') {
             const TOKEN = response.token;
             localStorage.setItem('token', TOKEN);
