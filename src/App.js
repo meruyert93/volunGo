@@ -49,7 +49,6 @@ createStore({
     ngoDetails:{
         email: "",
         password:"",
-        passwordConfirm: "",
     },
     projects:{
         requirements: [],

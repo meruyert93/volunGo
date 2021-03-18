@@ -31,6 +31,7 @@ function ProjectImgDescription({activPicker}) {
 
     const RouteChangeNext =  async (data) => {
         actions.UpdateProjectAction(data);
+        Object.assign(state.projects, data);
         //console.log(state.projects);
         const response = await createProject(JSON.stringify(state.projects))
         console.log(response.data);
