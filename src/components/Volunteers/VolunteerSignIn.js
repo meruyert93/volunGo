@@ -5,6 +5,7 @@ import { useTranslation } from "react-i18next";
 import { useForm } from "react-hook-form";
 import { useStateMachine } from "little-state-machine";
 import updateAction from "../../adapters/updateAction";
+import { userSignIn } from '../../adapters/userAPI';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEye } from "@fortawesome/free-solid-svg-icons";
 const eye = <FontAwesomeIcon icon={faEye} />;
@@ -15,6 +16,11 @@ function VolunteerSignIn() {
     const { handleSubmit, errors, register, watch } = useForm({
         defaultValues: state.yourDetails
     });
+
+    const userSignInFromApi = async (data) => {
+        const responseSignIn = await userSignIn(data);
+        return responseSignIn
+    }
 
     const togglePasswordVisiblity = () => {
         setPasswordShown(!passwordShown);
@@ -30,8 +36,20 @@ function VolunteerSignIn() {
         history.push(path);
     }
 
-    const RouteChangeHome = () => {
+    const RouteChangeHome = async (data) => {
         let path = `projects`;
+        actions.updateAction(data);
+        Object.assign(state.yourDetails, data);
+        const response = await userSignInFromApi(JSON.stringify(state.ngoDetails));
+        console.log(response);
+        
+        if (response.status ===  'success') {
+            const TOKEN = response.token;
+            localStorage.setItem('token', TOKEN);
+            return history.push(path);
+        }
+         //TODO: "sorry there is smth wrong with server, try again"
+        //create component to handle if there is no available taken
         history.push(path);
     }
 
