@@ -17,6 +17,12 @@ function SidebarMenu({visible, setVisible}) {
         let path = `/volunteers`;
         history.push(path);
     }
+
+    const RouteChangeHome = () => {
+        let path = `/`;
+        localStorage.removeItem('token')
+        history.push(path);
+    }
     
     return (
             <Sidebar
@@ -37,6 +43,9 @@ function SidebarMenu({visible, setVisible}) {
                 </Menu.Item>
                 <Menu.Item as='a'>
                     Sign in
+                </Menu.Item>
+                <Menu.Item as='a' onClick={() => RouteChangeHome()}>
+                    Sign out
                 </Menu.Item>
             </Sidebar>
     )
