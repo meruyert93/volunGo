@@ -4,7 +4,7 @@ import { useHistory } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import ItemProject from "../../containers/ItemProject";
 
-function NGOProjects({dataProjects}) {
+function NGOProjects({projects}) {
 
     const { t } = useTranslation();
 
@@ -19,9 +19,9 @@ function NGOProjects({dataProjects}) {
                     </Header>
                 </Grid.Column>
                 <Grid centered>
-                {dataProjects.map((project) => {
+                {projects.map((project) => {
                     return (
-                    <ItemProject key={project.id} {...project}/>
+                    <ItemProject key={project._id} {...project}/>
                     )
                     })}
                 </Grid>

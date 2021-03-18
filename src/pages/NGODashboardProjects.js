@@ -3,18 +3,35 @@ import { Grid, Segment, Header, Button } from 'semantic-ui-react';
 import { useTranslation } from "react-i18next";
 import { useHistory } from "react-router-dom";
 import NGOEmptyDashboard from "../components/NGO/NGOEmptyDashboard";
-import  { getAllProjects } from "../adapters/projectAPI";
+import  { getAllProjects, getAllMyProjects } from "../adapters/projectAPI";
+import  { getMe } from "../adapters/ngoAPI";
 import NGOProjects from "../components/NGO/NGOProjects";
 import dataProjects from "../data/dataProjects";
 
 function NGODashboardProjects() {
     const [projects, setProjects] = useState([]);
 
-    const projectsFromAPI =  getAllProjects();
+    
+    const projectsFromAPI = async () => {
+        const allProjects = await getAllProjects();
+        console.log(allProjects.data.doc);
+        // setProjects(allProjects.data.doc)
+    } 
+
+    // const getMeFromAPI = async () => {
+    //     const getNGOProjects = await getMe();
+    //     console.log(getNGOProjects);
+    // }
+
+    const getAllMyProjectsFromAPI = async () => {
+        const getNGOProjects = await getAllMyProjects();
+        console.log(getNGOProjects.data.doc.projects);
+        setProjects(getNGOProjects.data.doc.projects);
+    }
 
     useEffect(() => {
-        console.log(projectsFromAPI.data)
-        
+        // projectsFromAPI();
+        getAllMyProjectsFromAPI();
         // setProjects(projectsFromAPI)
         // return () => {
         //     cleanup
@@ -35,7 +52,7 @@ function NGODashboardProjects() {
     if (projects.length === 0) {
         projectComponents = <NGOEmptyDashboard/>
     } else {
-       projectComponents = <NGOProjects dataProjects={dataProjects}/>
+       projectComponents = <NGOProjects dataProjects={dataProjects} projects={projects}/>
     }
 
     return (

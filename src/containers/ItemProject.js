@@ -2,7 +2,8 @@ import React, { useState } from 'react';
 import { Grid, Image, Card, Icon } from 'semantic-ui-react';
 import "../translations/i18n";
 
-function ItemProject({id, image, name, organization, duration, days, time, place}) {
+function ItemProject({id, images, title, companyName, endDate, startDate, duration, weekdays, endTime, startTime, city, streetAddress, postalCode}) {
+    
     const [active, setActive] = useState();
 
     const chosenHandler= (id) => {
@@ -14,23 +15,23 @@ function ItemProject({id, image, name, organization, duration, days, time, place
     return (
         <Grid.Column mobile={16} tablet={5} computer={5} stretched>
             <Card  onDoubleClick={() => chosenHandler(id)} className="projectCard">
-                <Image src={image} wrapped ui={false} className="imageCard"/>
+                <Image src={images} wrapped ui={false} className="imageCard"/>
                 <Icon name="heart" size="big" className={active ? "pinkChecker iconSelect" : "whiteChecker iconSelect"} onClick={() => chosenHandler(id)}/>
                 <Card.Content>
-                    <Card.Header className="cardHeadingText">{name}</Card.Header>
-                    <p className="textPrimary smallText">{organization}</p>
+                    <Card.Header className="cardHeadingText">{title}</Card.Header>
+                    <p className="textPrimary smallText">{companyName}</p>
                 </Card.Content>
                 <Card.Content>
                     <Card.Meta>
                         <p className="smallText">
                         <Icon name="calendar alternate outline" color="grey" />
-                            {duration && "|" + duration } {days && "|" + days }  {time && "|" + time}
+                            {duration && "|" + duration } {weekdays && "|" + weekdays }  {(endTime && startTime) && "|" + endTime + '-' + startTime}
                         </p>
                     </Card.Meta>
                     <Card.Meta>
                         <p className="smallText">
                         <Icon name="map marker alternate" color="grey" />
-                            {place}
+                            {streetAddress + ', ' + postalCode + '' + city} 
                         </p>
                     </Card.Meta>
                 </Card.Content>

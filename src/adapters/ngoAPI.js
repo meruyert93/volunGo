@@ -1,9 +1,11 @@
-const URL = `https://volungoapi.herokuapp.com/api/v1/ngos/signup`;
+const BASEURL = `https://volungoapi.herokuapp.com/api/v1/ngos`;
+const SIGNUP = BASEURL + `/signup`;
+const GETME = BASEURL + '/me'
 
 export const ngoSignUp  = async (data) => {
     try {
         console.log(data);
-        const response = await fetch(URL, {
+        const response = await fetch(SIGNUP, {
             method: 'POST', 
             // credentials: 'include',
             headers: {
@@ -21,6 +23,27 @@ export const ngoSignUp  = async (data) => {
         //     return responseData.token 
         // } 
     } catch (error) {
+        console.log(error);
+    }
+}
+
+export const getMe = async () => {
+    const TOKEN = localStorage.getItem('token');
+    console.log(TOKEN);
+    try {
+        const response = await fetch(GETME, {
+            method: 'GET', 
+            // credentials: 'include',
+            headers: {
+                'Access-Control-Allow-Origin' : '*',
+                'Content-Type': 'application/json',
+                'Authorization' : `Bearer ${TOKEN}`,
+            }
+        })
+        const responseData = await response.json();
+        console.log(responseData);
+        return responseData;
+    } catch(error) {
         console.log(error);
     }
 }
