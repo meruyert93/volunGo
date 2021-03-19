@@ -1,21 +1,29 @@
-#root {
-//     *,
-// *::after,
-// *::before {
-//     margin: 0;
-//     padding: 0;
-//     box-sizing: inherit;
-// }
+// Google Font (Manrope)
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;700&display=swap');
 
 html {
     /*62.5% is 10 px*/
     //this defines what 1rem is
-    font-size: 62.5%; 
+    // font-size: 62.5% !important; 
 }
 
 body {
     box-sizing: border-box;
 }
+
+#root {
+    
+    /* 
+    *,
+    *::after,
+    *::before {
+        margin: 0;
+        padding: 0;
+        box-sizing: inherit;
+    } 
+    */
+
+    font-family: $font-primary;
 
 .inputPassword {
     position: relative;

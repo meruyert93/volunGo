@@ -1,73 +1,67 @@
-#root html {
-  /*62.5% is 10 px*/
-  font-size: 62.5%; }
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@400;700&display=swap");
+html {
+  /*62.5% is 10 px*/ }
 
-#root body {
+body {
   box-sizing: border-box; }
 
-#root .inputPassword {
-  position: relative;
-  display: flex; }
-
-#root .iconEye1 {
-  position: absolute;
-  top: 39%;
-  right: 3%; }
-
-#root .iconEye2 {
-  position: absolute;
-  top: 66%;
-  right: 3%; }
-
-#root .iconEye3 {
-  position: absolute;
-  top: 41%;
-  right: 3%; }
-
-#root .iconEye4 {
-  position: absolute;
-  top: 69%;
-  right: 3%; }
-
-#root .iconEye:hover {
-  cursor: pointer; }
-
-#root .height70 {
-  height: 70vh; }
-
-#root .height80 {
-  height: 80vh; }
-
-#root .height100 {
-  height: 100vh; }
-
-<<<<<<< HEAD
-=======
-
->>>>>>> 29f2938226737088cdddaffcbd50d54a05dd8dc8
-#root .height180 {
-  height: 180vh; }
-
-#root .flexColumn {
-  display: flex;
-  flex-direction: column; }
-
-#root .flexJustifyContent {
-  display: flex;
-  flex-direction: row;
-  justify-content: center; }
-
-#root .timePicker {
-  width: 0;
-  cursor: pointer;
-  line-height: 1.21428571em;
-  padding: .67857143em 1em;
-  font-size: 1em;
-  height: 60px; }
-
-#root .padding15rem {
-  padding-left: 15rem;
-  padding-right: 15rem; }
+#root {
+  /* 
+    *,
+    *::after,
+    *::before {
+        margin: 0;
+        padding: 0;
+        box-sizing: inherit;
+    } 
+    */
+  font-family: "Manrope", san-serif; }
+  #root .inputPassword {
+    position: relative;
+    display: flex; }
+  #root .iconEye1 {
+    position: absolute;
+    top: 39%;
+    right: 3%; }
+  #root .iconEye2 {
+    position: absolute;
+    top: 66%;
+    right: 3%; }
+  #root .iconEye3 {
+    position: absolute;
+    top: 41%;
+    right: 3%; }
+  #root .iconEye4 {
+    position: absolute;
+    top: 69%;
+    right: 3%; }
+  #root .iconEye:hover {
+    cursor: pointer; }
+  #root .height70 {
+    height: 70vh; }
+  #root .height80 {
+    height: 80vh; }
+  #root .height100 {
+    height: 100vh; }
+  #root .height180 {
+    height: 180vh; }
+  #root .flexColumn {
+    display: flex;
+    flex-direction: column; }
+  #root .flexJustifyContent {
+    display: flex;
+    flex-direction: row;
+    justify-content: center; }
+  #root .timePicker {
+    width: 0;
+    cursor: pointer;
+    line-height: 1.21428571em;
+    padding: .67857143em 1em;
+    font-size: 1em;
+    height: 60px; }
+  #root .padding15rem {
+    padding-left: 15rem;
+    padding-right: 15rem; }
 
 #root .itemDefault {
   background-color: #AAB6C5; }
@@ -83,6 +77,9 @@
 
 #root .cardHeadingText {
   font-size: 1.2rem; }
+
+#root .headingText {
+  color: #090088; }
 
 #root .backgroundDark {
   background-color: #090088; }
@@ -113,11 +110,56 @@
 #root .NGOtextDark {
   color: #364F6B; }
 
-#root .headingText {
-  color: #090088; }
+#root .btn {
+  font-family: "Manrope", san-serif;
+  /* Mobile/Interactions/Button 16px */
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 24px;
+  color: white;
+  /* identical to box height, or 150% */
+  display: flex;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  border-radius: 12px;
+  padding: 12px 40px; }
+
+#root .btn-primary {
+  background: #F94877; }
 
 #root .heroHome {
   background: linear-gradient(274deg, #090088 -30.65%, #f94877 117.82%); }
+
+#root .hero-title {
+  /* Desktop/Display/Regular 60px */
+  font-family: Manrope;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 54px;
+  line-height: 1.2;
+  /* grey-dark-1 */
+  color: #090088; }
+
+#root .hero-subtitle {
+  max-width: 500px;
+  margin-top: 30px;
+  /* Desktop/Body/XL/Regular 20px */
+  font-family: Manrope;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 1.5;
+  /* Text/Gray 60 */
+  color: #666666; }
+
+#root .hero-image {
+  margin: auto;
+  max-width: 480px;
+  object-fit: cover;
+  border-radius: 40px; }
 
 #root .imageCard {
   position: relative;
