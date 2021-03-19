@@ -23,11 +23,11 @@ function ProjectsSection() {
     }
 
     //console.log(openedProject)
-
+    
     return (
         <Segment size='large' padded='very' className="backgroundProject">
             <Header as="h2" className="headingText">
-                    {t('recommended')}
+                {t('recommended')}
             </Header>
             <Grid centered>
                 {dataProjects.map((project) => {

@@ -23,9 +23,11 @@ import NGOSignUpBasic from "./components/NGO/NGOSignUpBasic";
 import NGOSignUpAdd from "./components/NGO/NGOSignUpAdd"; 
 import VolunteerSignIn from "./components/Volunteers/VolunteerSignIn";
 import VolunteersProjectDetails from "./components/Volunteers/VolunteersProjectDetails";
+import VolJoinedProject from './components/Volunteers/Components/VolJoinedProject';
 import NGOSignIn from "./components/NGO/NGOSignIn";
 import NGOProjectRegistration from "./pages/NGOProjectRegistration";
 import NGODashboardProjects from "./pages/NGODashboardProjects";
+import Error from './pages/Error';
 import LandingNGO from "./pages/LandingNGO";
 import { StateMachineProvider, createStore } from "little-state-machine";
 import Temporary from "./components/Draft.js/Temporary";
@@ -122,7 +124,9 @@ function App() {
                                 <Route path="/volunteers-sign-in" component={VolunteerSignIn}/>
                                 <Route path="/volunteers" component={Landing}/>
                                 <Route path="/ngo-sign-in" component={NGOSignIn}/>
-                                <Route path="/volunteer-project-details" component={VolunteersProjectDetails}/>
+                                {/* <Route path="/volunteer-project-details" component={VolunteersProjectDetails}/> */}
+                                <Route path="/volunteer-request-sent" component={VolJoinedProject}/>
+                                <Route path="/error" component={Error}/>
                             </Switch>
                         </Sidebar.Pusher>
                     </Sidebar.Pushable>

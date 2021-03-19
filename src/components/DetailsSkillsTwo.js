@@ -6,6 +6,7 @@ import ItemSkillTwo from "../containers/ItemSkills2";
 import { useHistory } from "react-router-dom";
 import { useStateMachine } from "little-state-machine";
 import updateAction from "../adapters/updateAction";
+import { userUpdate } from '../adapters/userAPI';
 
     let collectedItems = [];
 
@@ -13,6 +14,13 @@ function DetailsSkillsTwo() {
     const { state, actions } =  useStateMachine({ updateAction });
 
     // const [collect, setCollect] = useState(collectedItems);
+
+    const postData  = async (data) => {
+        const responseUserUpdate = await userUpdate(data);
+        return responseUserUpdate;
+        //console.log(JSON.stringify(state.yourDetails, null, 2))
+        // console.log(state)
+    }
 
     const { t } = useTranslation();
 
@@ -41,16 +49,17 @@ function DetailsSkillsTwo() {
         history.push(path);
     }
 
-    const RouteChangeHome = () => {
-        
+    const RouteChangeHome = async () => {
+        const dataForUpdate = {'activities': state.yourDetails.activities, 'skills': state.yourDetails.skills}
+        const postMoreData = await postData(JSON.stringify(dataForUpdate));
+        console.log(dataForUpdate);
         let path = `projects`;
+        if (postMoreData.status ===  'success') {
+            return history.push(path);
+        }
+         //TODO: "sorry there is smth wrong with server, try again"
+        //create component to handle if there is no available taken
         history.push(path);
-        FetchData()
-    }
-
-    const FetchData  = () => {
-        console.log(JSON.stringify(state, null, 2))
-        // console.log(state)
     }
 
     return (

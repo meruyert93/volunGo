@@ -14,9 +14,7 @@ function SignUpFinish() {
 
     const history = useHistory();
 
-    const RouteChangeHome = async () => {
-        let path = `home`;
-        
+    const responseData = async (path) => {
         const response  = await userSignUp(JSON.stringify(state.yourDetails));
         if (response.status ===  'success') {
             const TOKEN = response.token;
@@ -27,9 +25,14 @@ function SignUpFinish() {
         //create component to handle if there is no available taken
     }
 
+    const RouteChangeHome = () => {
+        let path = `home`;
+        responseData(path);
+    }
+
     const RouteChangeMoreInfo = () => {
         let path = `details-activities2`;
-        history.push(path);
+        responseData(path);
     }
 
     return (
