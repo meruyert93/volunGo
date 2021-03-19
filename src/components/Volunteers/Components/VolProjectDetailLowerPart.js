@@ -1,10 +1,10 @@
 import React from 'react';
-import { Segment, Grid, Image, Header, Icon, Button } from 'semantic-ui-react';
+import { Segment, Grid, Header, Icon, Button } from 'semantic-ui-react';
 import { useTranslation } from "react-i18next";
 
-function VolProjectDetailLowerPart({id, image, name, organization, duration, days, time, place, volunteers, skills, contact_person, contact_email}) {
+function VolProjectDetailLowerPart({ duration, days, time, place, volunteers, skills, contact_person, contact_email }) {
     const { t } = useTranslation();
-
+    // const  { duration, days, time, place, volunteers, skills, contact_person, contact_email } = openedProject;
     return (
         <Segment  basic size='large'>
             <Grid container centered stretched>

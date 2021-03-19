@@ -16,6 +16,7 @@ function SignUpFinish() {
 
     const RouteChangeHome = async () => {
         let path = `home`;
+        
         const response  = await userSignUp(JSON.stringify(state.yourDetails));
         if (response.status ===  'success') {
             const TOKEN = response.token;

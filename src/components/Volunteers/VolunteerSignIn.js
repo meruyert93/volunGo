@@ -13,7 +13,7 @@ const eye = <FontAwesomeIcon icon={faEye} />;
 function VolunteerSignIn() {
     const [passwordShown, setPasswordShown] = useState(false);
     const { state, actions } =  useStateMachine({ updateAction });
-    const { handleSubmit, errors, register, watch } = useForm({
+    const { handleSubmit, register, } = useForm({
         defaultValues: state.yourDetails
     });
 

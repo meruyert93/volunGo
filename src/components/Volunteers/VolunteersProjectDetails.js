@@ -4,12 +4,12 @@ import VolProjectDetailUpperPart from "../Volunteers/Components/VolProjectDetail
 import VolProjectDetailLowerPart from "../Volunteers/Components/VolProjectDetailLowerPart";
 import dataProject from "../../data/dataProjects";
 
-function VolunteersProjectDetails() {
+function VolunteersProjectDetails({clickedProject}) {
     const el = dataProject[0];
     return (
         <Segment.Group>
-            <VolProjectDetailUpperPart {...el}/>
-            <VolProjectDetailLowerPart {...el}/>
+            <VolProjectDetailUpperPart  {...clickedProject}/>
+            <VolProjectDetailLowerPart  {...clickedProject}/>
         </Segment.Group>
     )
 }
