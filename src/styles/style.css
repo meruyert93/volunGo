@@ -81,8 +81,42 @@ body {
 #root .headingText {
   color: #090088; }
 
+#root .session-name {
+  /* All Caps/Regular 16px */
+  font-family: "Manrope", san-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 24px;
+  /* identical to box height, or 150% */
+  text-align: center;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  /* Text/White */
+  color: #FFFFFF;
+  opacity: 0.8; }
+
+#root .session-title {
+  /* Desktop/Headings/H2/Bold 32px */
+  margin: auto;
+  max-width: 640px;
+  font-family: "Manrope", san-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 28px;
+  line-height: 40px;
+  /* or 125% */
+  text-align: center; }
+  #root .session-title-light {
+    /* Text/White */
+    color: #FFFFFF; }
+  #root .session-title-dark-volunteer {
+    color: #090088; }
+  #root .session-title-dark-ngo {
+    color: #37488A; }
+
 #root .backgroundDark {
-  background-color: #090088; }
+  background-color: #2F1893; }
 
 #root .backgroundWhite {
   background-color: white; }
@@ -161,6 +195,36 @@ body {
   object-fit: cover;
   border-radius: 40px; }
 
+#root .sub-session-icon {
+  width: 40px;
+  height: 40px;
+  opacity: 0.9; }
+
+#root .sub-session-title {
+  /* Desktop/Headings/H4/Bold 20px */
+  font-family: "Manrope", san-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 28px;
+  /* identical to box height, or 140% */
+  text-align: center;
+  /* Text/White */
+  color: #FFFFFF; }
+
+#root .sub-session-text {
+  /* Desktop/Body/MD/Regular 16px */
+  font-family: "Manrope", san-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 24px;
+  /* or 150% */
+  text-align: center;
+  /* Text/White */
+  color: #FFFFFF;
+  opacity: 0.8; }
+
 #root .imageCard {
   position: relative;
   display: flex; }
@@ -236,4 +300,35 @@ body {
   border-width: 3px; }
 
 #root .grey60 {
+  color: #666666; }
+
+#root .profile-image {
+  display: block;
+  width: 120px;
+  height: 120px; }
+
+#root .profile-name {
+  margin-bottom: 0;
+  /* Desktop/Headings/H4/Bold 20px */
+  font-family: "Manrope", san-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 28px;
+  /* identical to box height, or 140% */
+  text-align: center;
+  /* UI/Gray 80 */
+  color: #333333; }
+
+#root .profile-position {
+  margin-top: 0;
+  /* Desktop/Body/MD/Regular 16px */
+  font-family: "Manrope", san-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 24px;
+  /* identical to box height, or 150% */
+  text-align: center;
+  /* UI/Gray 60 */
   color: #666666; }

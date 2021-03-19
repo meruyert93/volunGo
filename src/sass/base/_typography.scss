@@ -17,4 +17,49 @@
     .headingText {
         color: $color-heading-volunteer
    }
+   .session {
+        &-name {
+            /* All Caps/Regular 16px */
+            font-family: $font-primary;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 14px;
+            line-height: 24px;
+            /* identical to box height, or 150% */
+
+            text-align: center;
+            letter-spacing: 0.07em;
+            text-transform: uppercase;
+
+            /* Text/White */
+
+            color: #FFFFFF;
+
+            opacity: 0.8;
+        }
+
+        &-title {
+            /* Desktop/Headings/H2/Bold 32px */
+            margin: auto;
+            max-width: 640px;
+            font-family: $font-primary;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 28px;
+            line-height: 40px;
+            /* or 125% */
+
+            text-align: center;
+
+            &-light {
+                /* Text/White */
+                color: #FFFFFF;
+            }
+
+            &-dark {
+                &-volunteer { color: $color-heading-volunteer; }
+                &-ngo { color: $color-heading-ngo; }
+            }
+        }
+    }
 }
