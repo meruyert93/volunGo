@@ -34,5 +34,10 @@
     .backgroundLightGrey {
         background-color: $color-light-grey;
     }
+    .mobileHide {
+        @media (max-width: 480px) {
+        display:none;
+        }
+        }
     
 }

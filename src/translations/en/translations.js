@@ -94,6 +94,12 @@ export const TRANSLATIONS_EN = {
     dont_have_account: "Don’t have an accout?",
     sign_up: "SIGN UP",
 
+    //Volunteers adding new project, sending request
+    your_request: "Your request was sent",
+    sub_text_your_request: "Thank you for your participation! The organization will get back to you once they review your profile. ",
+    location: 'Location',
+    back_home_btn:'BACK HOME',
+
     //NGO Sign In
     sign_in_as_ngo: "Sign in as organization",
     welcome_back_ngo: "Welcome back! We match the best volunteers in the city to your projects.",
