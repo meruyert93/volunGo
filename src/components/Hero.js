@@ -37,7 +37,7 @@ function Hero() {
             <p className="hero-subtitle">{t('sub_text_find')}</p>
             <Divider hidden />
             <Button
-              className="btn btn-primary"
+              className="btn btn-primary-volunteer"
               onClick={() => {
                 RouteChangeSignUp();
               }}

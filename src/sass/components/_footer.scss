@@ -1,0 +1,35 @@
+#root {
+  .footer {
+    &-item-text {
+      /* Desktop/Body/MD/Regular 16px */
+      font-family: $font-primary;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 14px;
+      line-height: 20px;
+      /* identical to box height, or 150% */
+
+      /* Text/White */
+      color: #FFFFFF;
+    }
+
+    &-copyright {
+      /* Desktop/Body/MD/Regular 16px */
+      margin-top: 0;
+      font-family: $font-primary;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 14px;
+      line-height: 20px;
+      /* identical to box height, or 150% */
+
+      text-align: center;
+
+      /* Text/White */
+
+      color: #FFFFFF;
+
+      opacity: 0.9;
+    }
+  }
+}

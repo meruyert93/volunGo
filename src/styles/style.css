@@ -21,11 +21,11 @@ body {
     display: flex; }
   #root .iconEye1 {
     position: absolute;
-    top: 39%;
+    top: 50%;
     right: 3%; }
   #root .iconEye2 {
     position: absolute;
-    top: 66%;
+    top: 50%;
     right: 3%; }
   #root .iconEye3 {
     position: absolute;
@@ -81,6 +81,48 @@ body {
 #root .headingText {
   color: #090088; }
 
+#root .caption {
+  /* Desktop/Body/SM/Regular 14px */
+  font-family: "Manrope", san-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 20px;
+  /* Text/Gray 40 */
+  color: #999999; }
+
+#root .home-hero-title {
+  /* Desktop/Headings/H2/Bold 32px */
+  font-family: "Manrope", san-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 30px;
+  line-height: 40px;
+  /* identical to box height, or 125% */
+  /* Text/White */
+  color: #FFFFFF; }
+
+#root .home-hero-text {
+  /* Desktop/Body/XL/Regular 20px */
+  font-family: "Manrope", san-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 32px;
+  /* identical to box height, or 160% */
+  /* Text/White */
+  color: #FFFFFF;
+  opacity: 0.9; }
+
+#root .home-section-title {
+  margin-bottom: 30px;
+  /* Desktop/Headings/H3/Bold 26px */
+  font-family: "Manrope", san-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 32px; }
+
 #root .session-name {
   /* All Caps/Regular 16px */
   font-family: "Manrope", san-serif;
@@ -115,6 +157,36 @@ body {
   #root .session-title-dark-ngo {
     color: #37488A; }
 
+#root .form-step {
+  /* All Caps/Regular 16px */
+  font-family: "Manrope", san-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  /* Text/Gray 40 */
+  color: #999999; }
+
+#root .form-title {
+  /* Desktop/Headings/H2/Bold 32px */
+  font-family: "Manrope", san-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 32px;
+  line-height: 40px; }
+
+#root .form-subtitle {
+  /* Desktop/Body/MD/Regular 16px */
+  font-family: "Manrope", san-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 24px;
+  /* Text/Gray 60 */
+  color: #666666; }
+
 #root .backgroundDark {
   background-color: #2F1893; }
 
@@ -144,6 +216,9 @@ body {
 #root .NGOtextDark {
   color: #364F6B; }
 
+#root .btn-group {
+  margin-top: 20px; }
+
 #root .btn {
   font-family: "Manrope", san-serif;
   /* Mobile/Interactions/Button 16px */
@@ -154,6 +229,7 @@ body {
   color: white;
   /* identical to box height, or 150% */
   display: flex;
+  justify-content: center;
   align-items: center;
   text-align: center;
   letter-spacing: 0.05em;
@@ -161,8 +237,21 @@ body {
   border-radius: 12px;
   padding: 12px 40px; }
 
-#root .btn-primary {
+#root .btn-longtext {
+  font-size: 15px; }
+
+#root .btn-primary-volunteer {
   background: #F94877; }
+
+#root .btn-primary-ngo {
+  background: #00AFF0; }
+
+#root .btn-secondary {
+  background: white; }
+  #root .btn-secondary-volunteer {
+    color: #F94877; }
+  #root .btn-secondary-ngo {
+    color: #00AFF0; }
 
 #root .heroHome {
   background: linear-gradient(274deg, #090088 -30.65%, #f94877 117.82%); }
@@ -227,7 +316,11 @@ body {
 
 #root .imageCard {
   position: relative;
-  display: flex; }
+  display: flex;
+  width: 100%;
+  object-fit: cover; }
+  #root .imageCard > * {
+    height: 100%; }
 
 #root .imageSelect {
   border-style: solid;
@@ -332,3 +425,28 @@ body {
   text-align: center;
   /* UI/Gray 60 */
   color: #666666; }
+
+#root .footer-item-text {
+  /* Desktop/Body/MD/Regular 16px */
+  font-family: "Manrope", san-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 20px;
+  /* identical to box height, or 150% */
+  /* Text/White */
+  color: #FFFFFF; }
+
+#root .footer-copyright {
+  /* Desktop/Body/MD/Regular 16px */
+  margin-top: 0;
+  font-family: "Manrope", san-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 20px;
+  /* identical to box height, or 150% */
+  text-align: center;
+  /* Text/White */
+  color: #FFFFFF;
+  opacity: 0.9; }

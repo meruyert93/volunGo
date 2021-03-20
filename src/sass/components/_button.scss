@@ -1,4 +1,8 @@
 #root {
+  .btn-group {
+    margin-top: 20px;
+  }
+
   .btn {
     font-family: $font-primary;
     /* Mobile/Interactions/Button 16px */
@@ -10,6 +14,7 @@
     /* identical to box height, or 150% */
 
     display: flex;
+    justify-content: center;
     align-items: center;
     text-align: center;
     letter-spacing: 0.05em;
@@ -19,7 +24,27 @@
     padding: 12px 40px;
   }
 
+  .btn-longtext {
+    font-size: 15px;
+  }
+
   .btn-primary {
-    background: $color-volunteer-primary;
+    &-volunteer { background: $color-volunteer-primary; }
+    &-ngo { background: $color-ngo-primary; }
+  }
+
+  .btn-secondary {
+    background: white;
+    // border-width: 1px;
+    // border-style: solid;
+
+    &-volunteer { 
+      color: $color-volunteer-primary;
+      // border-color: $color-volunteer-primary;
+    }
+    &-ngo { 
+      color: $color-ngo-primary;
+      // border-color: $color-ngo-primary;
+    }
   }
 }

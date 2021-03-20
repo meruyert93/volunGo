@@ -15,8 +15,62 @@
         font-size: 1.2rem;
     }
     .headingText {
-        color: $color-heading-volunteer
+        color: $color-heading-volunteer;
    }
+   .caption {
+       /* Desktop/Body/SM/Regular 14px */
+        font-family: $font-primary;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 20px;
+
+        /* Text/Gray 40 */
+        color: $color-gray-40;
+   }
+
+   .home-hero {
+        &-title {
+            /* Desktop/Headings/H2/Bold 32px */
+            font-family: $font-primary;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 30px;
+            line-height: 40px;
+            /* identical to box height, or 125% */
+
+            /* Text/White */
+            color: #FFFFFF;
+        }
+
+        &-text {
+        /* Desktop/Body/XL/Regular 20px */
+        font-family: $font-primary;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 18px;
+        line-height: 32px;
+        /* identical to box height, or 160% */
+        /* Text/White */
+
+        color: #FFFFFF;
+
+        opacity: 0.9;
+        }
+   }
+
+   
+   .home-section-title {
+       margin-bottom: 30px;
+        /* Desktop/Headings/H3/Bold 26px */
+
+        font-family: $font-primary;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 24px;
+        line-height: 32px;
+   }
+
    .session {
         &-name {
             /* All Caps/Regular 16px */
@@ -60,6 +114,43 @@
                 &-volunteer { color: $color-heading-volunteer; }
                 &-ngo { color: $color-heading-ngo; }
             }
+        }
+    }
+    
+    .form {
+        &-step {
+        /* All Caps/Regular 16px */
+        font-family: $font-primary;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 20px;
+        letter-spacing: 0.07em;
+        text-transform: uppercase;
+
+        /* Text/Gray 40 */
+        color: $color-gray-40;
+        }
+
+        &-title {
+        /* Desktop/Headings/H2/Bold 32px */
+        font-family: $font-primary;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 32px;
+        line-height: 40px;
+        }
+
+        &-subtitle {
+        /* Desktop/Body/MD/Regular 16px */
+        font-family: $font-primary;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 24px;
+
+        /* Text/Gray 60 */
+        color: $color-gray-60;
         }
     }
 }
