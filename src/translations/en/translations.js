@@ -3,7 +3,7 @@ export const TRANSLATIONS_EN = {
   find: 'Find the best volunteer opportunities',
   sub_text_find:
     'We help volunteers to find volunteer opportunities and nonprofit organizations in their city quickly and easily.',
-  get_started: 'JOIN US VOLUNTEER',
+  get_started: 'JOIN AS VOLUNTEER',
 
   //main section
   why: 'Why VolunGO?',
@@ -140,19 +140,19 @@ export const TRANSLATIONS_EN = {
   image_description_info: 'Image & Description',
   sub_text_image_description:
     'Upload an image that best represents the project. Describe more details about the project to give a better understanding to volunteers.',
-  attach_image: 'Attach image',
+  attach_image: 'Project Image',
 
   //Project Description
   project_description: 'Project Description',
   sub_text_project_description:
     'Please answer when and where your project take place, and if there are any restrictions. Precise information helps users to join your project.',
-  about_your_project: 'About your project',
+  about_your_project: 'Project Description',
   tell_us_about_project: 'Please tell us more about your project',
 
   //Project Requirements for Volunteers
   requirements_for_vol: 'Requirements for volunteers',
   sub_text_requirements_for_vol:
-    'Please specify the requirements for volunteers. Precise information helps us to match the best volunteers.',
+    'Specify the skill requirements for volunteers. We match the potential volunteers who have those skills.',
 
   //NGO Your projects components
   ngo_your_projects: 'Your Projects',
@@ -173,7 +173,7 @@ export const TRANSLATIONS_EN = {
   //NGO landing hero section
   match_volunteers: 'We’ll match the best volunteers to your projects',
   sub_text_match_volunteers:
-    'We not oly mnatch volunteers to your opportunities, but bring more like-minded people to you.',
+    'We not only match volunteers to your opportunities, but bring more like-minded people to you.',
   join_as_org: 'JOIN AS ORGANIZATION',
 
   //NGO landing main section

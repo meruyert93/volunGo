@@ -9,11 +9,8 @@
             font-family: Manrope;
             font-style: normal;
             font-weight: bold;
-            font-size: 54px;
+            font-size: 52px;
             line-height: 1.2;
-
-            /* grey-dark-1 */
-            color: $color-heading-volunteer;
         }
         
         &-subtitle {
@@ -36,6 +33,10 @@
             max-width: 480px;
             object-fit: cover;
             border-radius: 40px;
+
+            &-ngo {
+                transform: scale(1.2);
+            }
         }
     }
 }

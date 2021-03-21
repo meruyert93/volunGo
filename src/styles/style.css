@@ -29,11 +29,11 @@ body {
     right: 3%; }
   #root .iconEye3 {
     position: absolute;
-    top: 41%;
+    top: 50%;
     right: 3%; }
   #root .iconEye4 {
     position: absolute;
-    top: 69%;
+    top: 50%;
     right: 3%; }
   #root .iconEye:hover {
     cursor: pointer; }
@@ -147,6 +147,7 @@ body {
   font-weight: bold;
   font-size: 28px;
   line-height: 40px;
+  color: #333333;
   /* or 125% */
   text-align: center; }
   #root .session-title-light {
@@ -187,6 +188,48 @@ body {
   /* Text/Gray 60 */
   color: #666666; }
 
+#root .form-subsection-title {
+  /* Desktop/Headings/H4/Regular 20px */
+  font-family: "Manrope", san-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 28px;
+  /* identical to box height, or 140% */
+  /* Text/Gray 40 */
+  color: #999999; }
+
+#root .card-title {
+  /* Desktop/Headings/H6/Bold 16px */
+  font-family: "Manrope", san-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 1.4;
+  /* Text/Gray 80 */
+  color: #333333; }
+
+#root .card-organization {
+  /* Desktop/Body/SM/Regular 14px */
+  margin-top: 4px;
+  font-family: "Manrope", san-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 18px;
+  /* identical to box height, or 143% */ }
+
+#root .card-info {
+  /* Desktop/Body/SM/Regular 14px */
+  font-family: "Manrope", san-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 20px;
+  /* identical to box height, or 143% */
+  /* Text/Gray 60 */
+  color: #666666; }
+
 #root .backgroundDark {
   background-color: #2F1893; }
 
@@ -214,10 +257,13 @@ body {
   background-color: #364F6B; }
 
 #root .NGOtextDark {
-  color: #364F6B; }
+  color: #37488A; }
+
+#root .text-left {
+  text-align: left !important; }
 
 #root .btn-group {
-  margin-top: 20px; }
+  margin: 40px 0 20px 0; }
 
 #root .btn {
   font-family: "Manrope", san-serif;
@@ -261,10 +307,8 @@ body {
   font-family: Manrope;
   font-style: normal;
   font-weight: bold;
-  font-size: 54px;
-  line-height: 1.2;
-  /* grey-dark-1 */
-  color: #090088; }
+  font-size: 52px;
+  line-height: 1.2; }
 
 #root .hero-subtitle {
   max-width: 500px;
@@ -283,6 +327,8 @@ body {
   max-width: 480px;
   object-fit: cover;
   border-radius: 40px; }
+  #root .hero-image-ngo {
+    transform: scale(1.2); }
 
 #root .sub-session-icon {
   width: 40px;
@@ -450,3 +496,60 @@ body {
   /* Text/White */
   color: #FFFFFF;
   opacity: 0.9; }
+
+#root .steps-title {
+  font-family: "Manrope", san-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 13px;
+  line-height: 18px;
+  /* identical to box height, or 143% */
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.07em;
+  text-transform: uppercase; }
+
+#root .card-name {
+  /* Desktop/Headings/H6/Bold 16px */
+  font-family: "Manrope", san-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 24px;
+  /* identical to box height, or 150% */
+  text-align: center;
+  /* Text/Gray 80 */
+  color: #333333; }
+
+#root .card-project-number {
+  font-family: "Manrope", san-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 22px;
+  /* identical to box height, or 137% */
+  /* Brand/Organization/Secondary */
+  color: #2BCDC1; }
+
+#root .card-project-text {
+  /* Desktop/Body/SM/Regular 14px */
+  font-family: "Manrope", san-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 20px;
+  /* identical to box height, or 143% */
+  text-align: center;
+  /* Text/Gray 60 */
+  color: #666666; }
+
+#root .card-skill {
+  /* Desktop/Body/SM/Regular 14px */
+  font-family: "Manrope", san-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 20px;
+  /* identical to box height, or 143% */
+  /* Text/Gray 60 */
+  color: #666666; }

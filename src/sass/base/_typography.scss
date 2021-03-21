@@ -101,6 +101,7 @@
             font-weight: bold;
             font-size: 28px;
             line-height: 40px;
+            color: $color-gray-80;
             /* or 125% */
 
             text-align: center;
@@ -151,6 +152,62 @@
 
         /* Text/Gray 60 */
         color: $color-gray-60;
+        }
+
+        &-subsection-title {
+            /* Desktop/Headings/H4/Regular 20px */
+
+            font-family: $font-primary;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 18px;
+            line-height: 28px;
+            /* identical to box height, or 140% */
+
+            /* Text/Gray 40 */
+
+            color: $color-gray-40;
+        }
+    }
+
+    .card {
+        &-title {
+            /* Desktop/Headings/H6/Bold 16px */
+            font-family: $font-primary;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 16px;
+            line-height: 1.4;
+
+            /* Text/Gray 80 */
+            color: $color-gray-80;
+        }
+
+        &-organization {
+            /* Desktop/Body/SM/Regular 14px */
+            margin-top: 4px;
+            font-family: $font-primary;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 12px;
+            line-height: 18px;
+            /* identical to box height, or 143% */
+        }
+
+        &-info {
+            /* Desktop/Body/SM/Regular 14px */
+
+            font-family: $font-primary;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 12px;
+            line-height: 20px;
+            /* identical to box height, or 143% */
+
+
+            /* Text/Gray 60 */
+
+            color:$color-gray-60;
         }
     }
 }

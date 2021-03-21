@@ -23,7 +23,7 @@ function Hero() {
 
   return (
     <Segment size="large" padded="very" raised>
-      <Grid container>
+      <Grid verticalAlign="middle" container>
         <Grid.Row>
           <Grid.Column
             mobile={16}
