@@ -4,7 +4,6 @@ const URL = `https://volungoapi.herokuapp.com/api/v1/projects`;
 
 export const createProject = async (data) => {
     const TOKEN = localStorage.getItem('token');
-    console.log(TOKEN);
     try {
         const response = await fetch(URL, {
             method: 'POST', 
@@ -17,7 +16,6 @@ export const createProject = async (data) => {
             body: data
         })
         const responseData = await response.json();
-        console.log(responseData);
         return responseData;
     } catch (error) {
         console.log(error);

@@ -60,7 +60,7 @@ export const userUpdate = async (body) => {
             body: body
         });
         const responseData = await response.json();
-        console.log(responseData);
+        //console.log(responseData);
         return responseData;
     } catch (error) {
         console.log(error);

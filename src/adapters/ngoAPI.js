@@ -18,7 +18,6 @@ export const ngoSignUp  = async (data) => {
         });
         // const signUp =  response.json();
         const responseData = await response.json();
-        console.log(responseData);
         return responseData;
         // if (responseData.status === 'success') {
         //     return responseData.token 
@@ -40,7 +39,6 @@ export const ngoSignIn = async (data) => {
             body: data
         });
         const responseData = await response.json();
-        console.log(responseData);
         return responseData;
     } catch (error) {
         console.log(error);
@@ -61,7 +59,6 @@ export const getMe = async () => {
             }
         })
         const responseData = await response.json();
-        console.log(responseData);
         return responseData;
     } catch(error) {
         console.log(error);

@@ -52,7 +52,7 @@ function DetailsSkillsTwo() {
     const RouteChangeHome = async () => {
         const dataForUpdate = {'activities': state.yourDetails.activities, 'skills': state.yourDetails.skills}
         const postMoreData = await postData(JSON.stringify(dataForUpdate));
-        console.log(dataForUpdate);
+        //console.log(dataForUpdate);
         let path = `projects`;
         if (postMoreData.status ===  'success') {
             return history.push(path);

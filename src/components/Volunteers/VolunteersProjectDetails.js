@@ -9,7 +9,6 @@ import dataProjects from "../../data/dataProjects";
 
 function VolunteersProjectDetails() {
     let { id } = useParams();
-    console.log(id);
     const el = dataProjects[id-1];
     return (
         <Segment.Group>

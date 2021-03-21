@@ -27,7 +27,7 @@ function VolProjectDetailLowerPart({el}) {
         }
         actions.updateYourProjects(arrYourProjects);
         Object.assign(state.yourProjects.projects, arrYourProjects);
-        console.log(state.yourProjects.projects)
+        //console.log(state.yourProjects.projects)
         history.push(`/projects/${id}/notify`);
     }
 
