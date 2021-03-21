@@ -1,13 +1,12 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { Segment, Grid, Header } from 'semantic-ui-react';
 import ItemProjectForUsers from "../containers/ItemProjectForUsers";
 import dataProjects from "../data/dataProjects";
 import { useTranslation } from "react-i18next";
 import VolunteerYourProjects from '../components/Volunteers/VolunteerYourProjects';
-import { useHistory, Link } from "react-router-dom";
+import { useHistory } from "react-router-dom";
 
 function ProjectsSection() {
-    const [yourProjects, setYourProjects] = useState([]);
     const { t } = useTranslation();
 
     const history = useHistory();

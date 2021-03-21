@@ -122,8 +122,12 @@
 #root .backgroundLightGrey {
   background-color: #F7F8F9; }
 
-@media (max-width: 480px) {
+@media (max-width: 520px) {
   #root .mobileHide {
+    display: none; } }
+
+@media (min-width: 520px) {
+  #root .largeScreenHide {
     display: none; } }
 
 #root .headingText {

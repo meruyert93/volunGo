@@ -1,11 +1,11 @@
 import React from 'react';
 import { useParams } from "react-router-dom";
-import { Grid, Segment, Header, Button, Form, Divider, Image, Icon} from 'semantic-ui-react';
+import { Grid, Segment, Header, Button, Image } from 'semantic-ui-react';
 import { useHistory } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import dataProjects from '../../../data/dataProjects';
 
-function VolJoinedProject({}) {
+function VolJoinedProject() {
     let { id } = useParams();
     
     const el = dataProjects[id-1];
@@ -21,7 +21,7 @@ function VolJoinedProject({}) {
 
     return (
         <Segment size='large' padded='very'>
-            <Grid stackable>
+            <Grid stackable container>
                 <Grid.Row>
                     <Grid.Column mobile={16} tablet={8} computer={10} verticalAlign='middle'>
                         <Grid>

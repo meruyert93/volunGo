@@ -20,7 +20,7 @@ function HeroHome() {
 
     return (
         <Segment size='large' padded='very' className="heroHome">
-            <Grid>
+            <Grid container>
                 <Grid.Row>
                     <Grid.Column width={16}>
                         <Header as='h1'className="textWhite">

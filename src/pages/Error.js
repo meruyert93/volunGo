@@ -10,6 +10,7 @@ function Error() {
 
     const backHome = () => {
         const path = '/';
+        localStorage.removeItem('token')
         history.push(path);
     }
     return (
