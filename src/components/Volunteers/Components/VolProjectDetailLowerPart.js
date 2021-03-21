@@ -1,10 +1,36 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Segment, Grid, Header, Icon, Button } from 'semantic-ui-react';
 import { useTranslation } from "react-i18next";
+import { useHistory } from "react-router-dom";
+import dataProjects from '../../../data/dataProjects';
+import updateYourProjects from '../../../adapters/updateYourProjects';
+import { useStateMachine } from "little-state-machine";
 
-function VolProjectDetailLowerPart({ duration, days, time, place, volunteers, skills, contact_person, contact_email }) {
+let arrYourProjects = [];
+function VolProjectDetailLowerPart({el}) {
+    const { id, name, organization, duration, days, time, place, volunteers, skills, contact_person, contact_email } = el;
+    const { state, actions } = useStateMachine({ updateYourProjects });
     const { t } = useTranslation();
-    // const  { duration, days, time, place, volunteers, skills, contact_person, contact_email } = openedProject;
+    const history = useHistory();
+
+    const backHome = () => {
+        const path = `/projects`
+        history.push(path);
+    }
+
+    const joinProject = (id) => {
+        const chosenProject = dataProjects.find((project) => project.id === id);
+        if(arrYourProjects.includes(chosenProject)) {
+            arrYourProjects = arrYourProjects.filter(el => el !== chosenProject)
+        } else {
+            arrYourProjects.push(chosenProject)
+        }
+        actions.updateYourProjects(arrYourProjects);
+        Object.assign(state.yourProjects.projects, arrYourProjects);
+        console.log(state.yourProjects.projects)
+        history.push(`/projects/${id}/notify`);
+    }
+
     return (
         <Segment  basic size='large'>
             <Grid container centered stretched>
@@ -52,7 +78,10 @@ function VolProjectDetailLowerPart({ duration, days, time, place, volunteers, sk
                 </Grid.Row>
                 <Grid.Row>
                     <Grid.Column mobile={14} tablet={14} computer={3}>
-                        <Button color="pink">{t('join_project')}</Button>
+                        <Button basic color="pink" onClick={() => backHome()}>{t('back_home_btn')}</Button>
+                    </Grid.Column>
+                    <Grid.Column mobile={14} tablet={14} computer={3}>
+                        <Button color="pink" onClick={() => joinProject(id)}>{t('join_project')}</Button>
                     </Grid.Column>
                 </Grid.Row>
             </Grid>

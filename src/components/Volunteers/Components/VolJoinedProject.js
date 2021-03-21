@@ -1,19 +1,27 @@
 import React from 'react';
+import { useParams } from "react-router-dom";
 import { Grid, Segment, Header, Button, Form, Divider, Image, Icon} from 'semantic-ui-react';
 import { useHistory } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import dataProjects from '../../../data/dataProjects';
 
-function VolJoinedProject() {
-    const el = dataProjects[0];
+function VolJoinedProject({}) {
+    let { id } = useParams();
+    
+    const el = dataProjects[id-1];
+    const { name, organization, duration, days, time, place, contact_person, contact_email} = el;
     const { t } = useTranslation();
 
     const history = useHistory();
 
-    const {id, name, organization, duration, days, time, place, contact_person, contact_email} = el;
+    const backHome = () => {
+        const path = `/projects`
+        history.push(path);
+    }
+
     return (
         <Segment size='large' padded='very'>
-            <Grid reversed stackable>
+            <Grid stackable>
                 <Grid.Row>
                     <Grid.Column mobile={16} tablet={8} computer={10} verticalAlign='middle'>
                         <Grid>
@@ -34,7 +42,7 @@ function VolJoinedProject() {
                             <Grid.Row>
                                     <Grid.Column>
                                         <Header as='h5'>
-                                            <Image src="./images/icons/calendar.svg" className='mobileHide'/>
+                                            <Image src="/./images/icons/calendar.svg" className='mobileHide'/>
                                             <Header.Content>
                                                 {t('date')}
                                                 <Header.Subheader>
@@ -43,7 +51,7 @@ function VolJoinedProject() {
                                             </Header.Content>
                                         </Header>
                                         <Header as='h5'>
-                                            <Image src="./images/icons/location.svg" className='mobileHide'/>
+                                            <Image src="/./images/icons/location.svg" className='mobileHide'/>
                                             <Header.Content>
                                                 {t('location')}
                                                 <Header.Subheader>
@@ -52,7 +60,7 @@ function VolJoinedProject() {
                                             </Header.Content>
                                         </Header>
                                         <Header as='h5'>
-                                            <Image src="./images/icons/contact.svg" className='mobileHide'/>
+                                            <Image src="/./images/icons/contact.svg" className='mobileHide'/>
                                             <Header.Content>
                                                 {t('contact_info_vol')}
                                                 <Header.Subheader>
@@ -63,14 +71,14 @@ function VolJoinedProject() {
                                     </Grid.Column>
                             </Grid.Row>
                             <Grid.Column mobile={16} tablet={8} computer={8}>
-                                <Button color='pink' fluid>
+                                <Button color='pink' fluid onClick={() => backHome()}>
                                     {t('back_home_btn')}
                                 </Button>
                             </Grid.Column>
                         </Grid>
                     </Grid.Column>
                     <Grid.Column mobile={16} tablet={8} computer={6} verticalAlign='middle'>
-                        <Image src="./images/VolunteersRequestSent.png" size="large" rounded/>
+                        <Image src="/./images/VolunteersRequestSent.png" size="large" rounded/>
                     </Grid.Column>
                 </Grid.Row>
             </Grid>

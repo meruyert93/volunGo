@@ -1,8 +1,8 @@
 import React from 'react';
 import { Segment, Grid, Image, Header } from 'semantic-ui-react';
 
-function VolProjectDetailUpperPart({id, image, name, organization, content}) {
-    // const {id, image, name, organization, content} = openedProject;
+function VolProjectDetailUpperPart({el}) {
+    const {id, image, name, organization, content} = el;
     return (
         <Segment size='large' padded='very'>
             <Grid centered >
