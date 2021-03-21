@@ -7,6 +7,7 @@ function HomeProject() {
         <Segment.Group>
             <ProjectsSection/>
         </Segment.Group>
+        
     )
 }
 

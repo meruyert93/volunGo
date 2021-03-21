@@ -13,16 +13,13 @@ function NGOVolunteers({activPicker}) {
 
     
     const RouteChangeBack = () => {
-        let path = `newpath`;
         activPicker(4)
-        //history.push(path);
     }
 
     const RouteChangeNext = (data) => {
         console.log(data);
-        let path = `temporary`;
+        let path = `ngo-projects-dashboard`;
         history.push(path);
-        //console.log(data)
     }
     
     return (

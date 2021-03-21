@@ -6,6 +6,7 @@ import { useHistory } from "react-router-dom";
 import { useStateMachine } from "little-state-machine";
 import updateAction from "../adapters/updateAction";
 import { userSignUp } from "../adapters/userAPI";
+import Error from '../pages/Error';
 
 function SignUpFinish() {
     const { t } = useTranslation();
@@ -21,8 +22,7 @@ function SignUpFinish() {
             localStorage.setItem('token', TOKEN);
             return history.push(path);
         }
-        //TODO: "sorry there is smth wrong with server, try again"
-        //create component to handle if there is no available taken
+        return history.push('error');
     }
 
     const RouteChangeHome = () => {

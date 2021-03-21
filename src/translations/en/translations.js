@@ -87,6 +87,10 @@ export const TRANSLATIONS_EN = {
     contact_info_vol: "Contact Information",
     join_project:"JOIN THE PROJECT",
 
+    //Volunteer Your Project
+    your_projects: "Your projects",
+    pending_btn: "pending",
+
     //Volunteers Sign In
     sign_in_as_volunteer: "Sign in as volunteer",
     welcome_back_volunteer: "Welcome back! We help you to find the best volunteer opportunities in your city.",

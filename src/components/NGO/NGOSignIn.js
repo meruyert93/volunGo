@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { Grid, Segment, Header, Button, Form, Divider, Image} from 'semantic-ui-react';
 import { useHistory } from "react-router-dom";
 import { useTranslation } from "react-i18next";
@@ -15,7 +15,7 @@ function NGOSignIn() {
     const { t } = useTranslation();
     const history = useHistory();
     const { state, actions } =  useStateMachine({ updateNGOAction });
-    const { handleSubmit, errors, register, watch } = useForm({
+    const { handleSubmit, register} = useForm({
         defaultValues: state.ngoDetails
     });
 
@@ -34,14 +34,12 @@ function NGOSignIn() {
         actions.updateNGOAction(data);
         Object.assign(state.ngoDetails, data);
         const response = await ngoSignInFromApi(JSON.stringify(state.ngoDetails));
-        console.log(response);
         if (response.status ===  'success') {
             const TOKEN = response.token;
             localStorage.setItem('token', TOKEN);
             return history.push(path);
         }
-         //TODO: "sorry there is smth wrong with server, try again"
-        //create component to handle if there is no available taken
+        history.push('error');
     }
 
     const RouteChangeSignUp = () => {

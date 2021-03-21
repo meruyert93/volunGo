@@ -13,7 +13,7 @@ function ProjectImgDescription({activPicker}) {
 
     const { state, actions } =  useStateMachine({ UpdateProjectAction });
 
-    const { handleSubmit, errors, register, watch, control, setValue } = useForm({
+    const { handleSubmit, register } = useForm({
         //defaultValues: state.projects
     });
 
@@ -24,9 +24,7 @@ function ProjectImgDescription({activPicker}) {
     }
 
     const RouteChangeBack = () => {
-        let path = `newpath`;
         activPicker(3)
-        //history.push(path);
     }
 
     const RouteChangeNext =  async (data) => {
@@ -34,11 +32,10 @@ function ProjectImgDescription({activPicker}) {
         Object.assign(state.projects, data);
         //console.log(state.projects);
         const response = await createProject(JSON.stringify(state.projects))
-        console.log(response.data);
-        activPicker(5)
-        let path = ``;
-        //history.push(path);
-        //console.log(data)
+        if (response.status === 'success') {
+            activPicker(5)
+        }
+        history.push('error');
     }
 
     return (

@@ -32,8 +32,7 @@ function NGOSignUpAdd() {
             localStorage.setItem('token', TOKEN);
             return history.push(path);
         }
-        //TODO: "sorry there is smth wrong with server, try again"
-        //create component to handle if there is no available taken
+        return history.push('error');
     }
 
     return (

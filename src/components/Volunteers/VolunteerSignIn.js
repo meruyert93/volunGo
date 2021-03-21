@@ -41,16 +41,13 @@ function VolunteerSignIn() {
         actions.updateAction(data);
         Object.assign(state.yourDetails, data);
         const response = await userSignInFromApi(JSON.stringify(state.ngoDetails));
-        console.log(response);
         
         if (response.status ===  'success') {
             const TOKEN = response.token;
             localStorage.setItem('token', TOKEN);
             return history.push(path);
         }
-         //TODO: "sorry there is smth wrong with server, try again"
-        //create component to handle if there is no available taken
-        history.push(path);
+        history.push('error');
     }
 
     return (

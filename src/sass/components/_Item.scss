@@ -40,6 +40,9 @@
         // filter: drop-shadow(0px 4px 12px rgba(0, 0, 0, 0.15));
         filter: brightness(30%);
     }
+    .projectCard{
+        width: 100%;
+    }
     .projectCard:hover {
         transform: translateY(-0.5rem) scale(1.01);
     }

@@ -13,7 +13,7 @@ function ItemProject({id, images, title, companyName, endDate, startDate, durati
         }
     }
     return (
-        <Grid.Column mobile={16} tablet={5} computer={5} stretched>
+        <Grid.Column mobile={16} tablet={16} computer={16} stretched>
             <Card  onDoubleClick={() => chosenHandler(id)} className="projectCard">
                 <Image src={images} wrapped ui={false} className="imageCard"/>
                 <Icon name="heart" size="big" className={active ? "pinkChecker iconSelect" : "whiteChecker iconSelect"} onClick={() => chosenHandler(id)}/>

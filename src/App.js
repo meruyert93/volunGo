@@ -54,6 +54,9 @@ createStore({
     },
     projects:{
         requirements: [],
+    },
+    yourProjects:{
+        projects:[]
     }
     
 })
@@ -104,9 +107,11 @@ function App() {
                                 <Route path="/home">
                                     <Home/>
                                 </Route>
-                                <Route path="/projects">
+                                <Route exact path="/projects">
                                     <HomeProject/>
                                 </Route>
+                                <Route exact path="/projects/:id" component={VolunteersProjectDetails}/>
+                                <Route path='/projects/:id/notify' component={VolJoinedProject}/>
                                 <Route path="/ngo-sign-up1">
                                     <NGOSignUpBasic/>
                                 </Route>
@@ -124,7 +129,7 @@ function App() {
                                 <Route path="/volunteers-sign-in" component={VolunteerSignIn}/>
                                 <Route path="/volunteers" component={Landing}/>
                                 <Route path="/ngo-sign-in" component={NGOSignIn}/>
-                                {/* <Route path="/volunteer-project-details" component={VolunteersProjectDetails}/> */}
+                                <Route path="/volunteer-project-details" component={VolunteersProjectDetails}/>
                                 <Route path="/volunteer-request-sent" component={VolJoinedProject}/>
                                 <Route path="/error" component={Error}/>
                             </Switch>

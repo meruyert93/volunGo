@@ -35,16 +35,10 @@ function ProjectRequirements({activPicker}) {
 
     const RouteChangeBack = () => {
         activPicker(2);
-        console.log('clicked')
-        let path = `newpath`;
-        //history.push(path);
     }
 
     const RouteChangeNext = () => {
         activPicker(4);
-        let path = ``;
-        //history.push(path);
-        //console.log(data)
     }
 
     return (

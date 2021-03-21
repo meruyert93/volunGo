@@ -172,6 +172,9 @@
   opacity: 0.8;
   filter: brightness(30%); }
 
+#root .projectCard {
+  width: 100%; }
+
 #root .projectCard:hover {
   transform: translateY(-0.5rem) scale(1.01); }
 

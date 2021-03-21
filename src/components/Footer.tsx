@@ -18,7 +18,7 @@ function Footer() {
                     <Grid.Column width={10}>
                         <Grid.Row className="flexCenter">
                             <Grid.Column>
-                                <Image src="./images/Logo.svg" centered/>
+                                <Image src="/./images/Logo.svg" centered/>
                             </Grid.Column>
                             <Grid.Column >
                                 <Header as="h2" className="textWhite">VolunGO</Header>
@@ -34,10 +34,10 @@ function Footer() {
                     <Grid.Column width={3}>
                         <Grid.Row className="flexSpaceEvenly">
                             <Grid.Column>
-                                <Image src="./images/footer/Email.svg" centered/>
+                                <Image src="/./images/footer/Email.svg" centered/>
                             </Grid.Column>
                             <Grid.Column>
-                                <Image src="./images/footer/Instagram.svg" centered/>
+                                <Image src="/./images/footer/Instagram.svg" centered/>
                             </Grid.Column>
                         </Grid.Row>
                     </Grid.Column>

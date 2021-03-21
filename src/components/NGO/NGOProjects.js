@@ -1,14 +1,11 @@
 import React from 'react';
-import { Grid, Segment, Header, Button, Progress } from 'semantic-ui-react';
-import { useHistory } from "react-router-dom";
+import { Grid, Segment, Header } from 'semantic-ui-react';
 import { useTranslation } from "react-i18next";
 import ItemProject from "../../containers/ItemProject";
 
 function NGOProjects({projects}) {
 
     const { t } = useTranslation();
-
-    const history = useHistory();
 
     return (
         <Segment size='large' padded='very'>
@@ -18,7 +15,7 @@ function NGOProjects({projects}) {
                         {t('ngo_your_projects')}
                     </Header>
                 </Grid.Column>
-                <Grid centered>
+                <Grid>
                 {projects.map((project) => {
                     return (
                     <ItemProject key={project._id} {...project}/>

@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { Grid, Segment, Header, Button, Divider, Progress  } from 'semantic-ui-react';
 import { useTranslation } from "react-i18next";
 import dataSkills from "../data/dataSkills";
@@ -57,9 +57,7 @@ function DetailsSkillsTwo() {
         if (postMoreData.status ===  'success') {
             return history.push(path);
         }
-         //TODO: "sorry there is smth wrong with server, try again"
-        //create component to handle if there is no available taken
-        history.push(path);
+        history.push('error');
     }
 
     return (
@@ -76,13 +74,7 @@ function DetailsSkillsTwo() {
                         {t('put_your_skills')}
                     </Header>
                 </Grid.Column>
-                {/* <Grid.Column width={16} textAlign="center">
-                    <Header as="h6" color="grey">
-                    {t('sub_text_select')}
-                    </Header>
-                </Grid.Column> */}
             </Grid>
-
             <Grid columns={2} container centered>
                 {dataSkills.map((item) =>{
                     return(
