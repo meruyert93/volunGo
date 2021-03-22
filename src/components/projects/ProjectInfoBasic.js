@@ -45,7 +45,7 @@ function ProjectInfoBasic({activPicker}) {
                 </Grid.Column>
                 <Grid.Row centered>
                     <Grid.Column mobile={16} tablet={8} computer={5}>
-                        <Form>
+                        <Form enctype="multipart/form-data">
                             <Header>{t('basic_info')}</Header>
                             <Form.Field required>
                                 <label>{t('project_title')}</label>

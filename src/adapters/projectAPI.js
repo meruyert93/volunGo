@@ -10,11 +10,12 @@ export const createProject = async (data) => {
             // credentials: 'include',
             headers: {
                 'Access-Control-Allow-Origin' : '*',
-                'Content-Type': 'application/json',
+                'Content-Type': 'multipart/form-data; boundary=<calculated when request is sent>',
                 'Authorization' : `Bearer ${TOKEN}`,
             },
             body: data
         })
+        console.log(response);
         const responseData = await response.json();
         console.log(responseData);
         return responseData;

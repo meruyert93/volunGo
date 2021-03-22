@@ -30,12 +30,13 @@ function ProjectImgDescription({activPicker}) {
     const RouteChangeNext =  async (data) => {
         actions.UpdateProjectAction(data);
         Object.assign(state.projects, data);
-        console.log(state.projects);
-        console.log(JSON.stringify(state.projects));
         const formData = new FormData();
         formData.append('images', state.projects.images);
-        formData.append('title', state.projects.title);
-        const response = await createProject(JSON.stringify(state.projects))
+        formData.append('title', 'AlexAlex');
+        console.log(formData.keys());
+        console.log(formData.getAll('images'));
+        console.log(formData.getAll('title'));
+        const response = await createProject(JSON.stringify(state.projects.images));
         console.log(response);
         if (response.status === 'success') {
             return activPicker(5)
@@ -54,7 +55,7 @@ function ProjectImgDescription({activPicker}) {
                 </Grid.Column>
                 <Grid.Row>
                     <Grid.Column mobile={16} tablet={8} computer={9}>
-                        <Form>
+                        <Form enctype="multipart/form-data">
                             <Form.Group>
                                 <Form.Field width={12} required>
                                     <label>{t('attach_image')}</label>
