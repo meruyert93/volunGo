@@ -55,10 +55,9 @@ function VolunteerSignIn() {
             localStorage.setItem('token', TOKEN);
             return history.push(path);
         }
-        history.push('error');
+        return history.push('error');
+        
     }
-    history.push('error');
-
 
   return (
     <Segment size="large" padded="very">

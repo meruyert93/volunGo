@@ -68,7 +68,7 @@ function ProjectImgDescription({ activPicker }) {
         formData.append('locationType', locationType);
         formData.append('numberOfVolunteers', numberOfVolunteers);
         formData.append('postalCode', postalCode);
-        formData.append('requirements', requirements);
+        // formData.append('requirements', requirements);
         formData.append('startDate', startDate);
         formData.append('startTime', startTime);
         formData.append('streetAddress', streetAddress);
