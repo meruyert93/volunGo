@@ -548,6 +548,13 @@ body {
   #root .btn-secondary-ngo {
     color: #00AFF0; }
 
+#root .tag {
+  border-radius: 100px;
+  font-family: Manrope, san-serif;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 1px; }
+
 #root .heroHome {
   background: linear-gradient(274deg, #090088 -30.65%, #f94877 117.82%); }
 
@@ -652,6 +659,8 @@ body {
   filter: brightness(60%); }
 
 #root .projectCard {
+  border-radius: 10px;
+  overflow: hidden;
   width: 100%; }
 
 #root .projectCard:hover {
