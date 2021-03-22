@@ -54,6 +54,7 @@ function HeaderBar({ onToggleMenu }) {
           as="a"
           onClick={() => RouteChangeVolunteers()}
           active={active === 'volunteers'}
+          className="navbar-item"
         >
           Volunteers
         </Menu.Item>
@@ -61,11 +62,17 @@ function HeaderBar({ onToggleMenu }) {
           as="a"
           onClick={() => RouteChangeOrganization()}
           active={active === 'organization'}
+          className="navbar-item"
         >
           Organizations
         </Menu.Item>
         <Menu.Item as="a" onClick={() => RouteSignIn()}>
-          <Button basic color={active === 'volunteers' ? 'pink' : 'blue'}>
+          <Button
+            basic
+            className={`navBtn navBtn-${
+              active === 'volunteers' ? 'volunteer' : 'ngo'
+            }`}
+          >
             Sign in
           </Button>
         </Menu.Item>
@@ -85,7 +92,7 @@ function HeaderBar({ onToggleMenu }) {
               fluid
             />
           </Grid.Column>
-          <Grid.Column floated="right" mobile={1} tablet={4} computer={5}>
+          <Grid.Column floated="right" mobile={1} tablet={4} computer={7}>
             {MenuComponent}
           </Grid.Column>
           <Grid.Column

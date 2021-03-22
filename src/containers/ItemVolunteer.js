@@ -24,6 +24,7 @@ function ItemVolunteer({ id, image, name, projects, skill1, skill2, skill3 }) {
       <Card
         onClick={() => chosenHandler(id)}
         className={active && 'ngoSecondaryBorder'}
+        style={{ borderRadius: '10px', overflow: 'hidden' }}
       >
         <Image src={image} />
         <Card.Content textAlign="center">

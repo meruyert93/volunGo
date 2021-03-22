@@ -138,6 +138,8 @@
         }
 
         &-subtitle {
+            margin: auto;
+        max-width: 640px;
         /* Desktop/Body/MD/Regular 16px */
         font-family: $font-primary;
         font-style: normal;
@@ -184,7 +186,7 @@
             font-family: $font-primary;
             font-style: normal;
             font-weight: normal;
-            font-size: 12px;
+            font-size: 13px;
             line-height: 18px;
             /* identical to box height, or 143% */
         }
@@ -195,7 +197,7 @@
             font-family: $font-primary;
             font-style: normal;
             font-weight: normal;
-            font-size: 12px;
+            font-size: 13px;
             line-height: 20px;
             /* identical to box height, or 143% */
 
