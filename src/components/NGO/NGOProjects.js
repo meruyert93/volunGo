@@ -8,14 +8,14 @@ function NGOProjects({projects}) {
     const { t } = useTranslation();
 
     return (
-        <Segment size='large' padded='very'>
-            <Grid stackable verticalAlign='middle' centered>
+        <Segment basic size='large' padded='very'>
+            {/* <Grid stackable verticalAlign='middle' centered>
                 <Grid.Column width={16} textAlign="center">
                     <Header  as='h2' className="headingText"> 
                         {t('ngo_your_projects')}
                     </Header>
                 </Grid.Column>
-            </Grid>
+            </Grid> */}
                 <Grid>
                 {projects.map((project) => {
                     return (
