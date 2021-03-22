@@ -10,7 +10,6 @@ export const createProject = async (data) => {
             // credentials: 'include',
             headers: {
                 'Access-Control-Allow-Origin' : '*',
-                'Content-Type': 'multipart/form-data; boundary=<calculated when request is sent>',
                 'Authorization' : `Bearer ${TOKEN}`,
             },
             body: data
