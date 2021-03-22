@@ -20,47 +20,47 @@ function NGOVolunteers({ activPicker }) {
         history.push(path);
     }
     
-  return (
+return (
     <Segment basic size="large" padded="very" className="height100">
-      <Grid stackable verticalAlign="middle" centered>
-        <Grid.Column width={16} textAlign="center">
-          <Header as="h2" className="NGOtextDark form-title">
-            {t('invite_volunteers')}
-          </Header>
-          <p className="form-subtitle">{t('sub_text_invite_volunteers')}</p>
-        </Grid.Column>
-        <Grid
-          centered
-          doubling
-          stackable
-          container
-          padded="horizontally"
-          columns={4}
-        >
-          {dataVolunteers.map((item) => {
-            return <ItemVolunteer key={item.id} {...item} />;
-          })}
+        <Grid stackable verticalAlign="middle" centered>
+            <Grid.Column width={16} textAlign="center">
+            <Header as="h2" className="NGOtextDark form-title">
+                {t('invite_volunteers')}
+            </Header>
+            <p className="form-subtitle">{t('sub_text_invite_volunteers')}</p>
+            </Grid.Column>
+            <Grid
+            centered
+            doubling
+            stackable
+            container
+            padded="horizontally"
+            columns={4}
+            >
+            {dataVolunteers.map((item) => {
+                return <ItemVolunteer key={item.id} {...item} />;
+            })}
+            </Grid>
+            <Grid.Row textAlign="center" centered>
+            <Grid.Column className="flexJustifyContent">
+                <Divider hidden />
+                <Button
+                className="btn btn-secondary btn-secondary-ngo"
+                onClick={() => RouteChangeBack()}
+                >
+                {t('back')}
+                </Button>
+                <Button
+                className="btn btn-primary-ngo"
+                onClick={() => RouteChangeNext()}
+                >
+                {t('invite_complete_btn')}
+                </Button>
+            </Grid.Column>
+            </Grid.Row>
         </Grid>
-        <Grid.Row textAlign="center" centered>
-          <Grid.Column className="flexJustifyContent">
-            <Divider hidden />
-            <Button
-              className="btn btn-secondary btn-secondary-ngo"
-              onClick={() => RouteChangeBack()}
-            >
-              {t('back')}
-            </Button>
-            <Button
-              className="btn btn-primary-ngo"
-              onClick={() => RouteChangeNext()}
-            >
-              {t('invite_complete_btn')}
-            </Button>
-          </Grid.Column>
-        </Grid.Row>
-      </Grid>
     </Segment>
-  );
+);
 
 }
 

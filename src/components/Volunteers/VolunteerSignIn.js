@@ -44,16 +44,18 @@ function VolunteerSignIn() {
     history.push(path);
   };
 
-  const RouteChangeHome = async (data) => {
-    let path = `projects`;
-    actions.updateAction(data);
-    Object.assign(state.yourDetails, data);
-    const response = await userSignInFromApi(JSON.stringify(state.ngoDetails));
-
-    if (response.status === 'success') {
-      const TOKEN = response.token;
-      localStorage.setItem('token', TOKEN);
-      return history.push(path);
+    const RouteChangeHome = async (data) => {
+        let path = `projects`;
+        actions.updateAction(data);
+        Object.assign(state.yourDetails, data);
+        const response = await userSignInFromApi(JSON.stringify(state.yourDetails));
+        
+        if (response.status ===  'success') {
+            const TOKEN = response.token;
+            localStorage.setItem('token', TOKEN);
+            return history.push(path);
+        }
+        history.push('error');
     }
     history.push('error');
   };
