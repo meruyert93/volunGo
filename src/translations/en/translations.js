@@ -2,7 +2,7 @@ export const TRANSLATIONS_EN = {
     //hero section
     find: 'Find the best volunteer opportunities',
     sub_text_find: 'We help volunteers to find volunteer opportunities and nonprofit organizations in their city quickly and easily.',
-    get_started: 'JOIN US VOLUNTEER',
+    get_started: 'JOIN US AS A VOLUNTEER',
 
     //main section
     why:"Why VolunGO?",

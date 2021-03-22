@@ -15,6 +15,7 @@ function NGOProjects({projects}) {
                         {t('ngo_your_projects')}
                     </Header>
                 </Grid.Column>
+            </Grid>
                 <Grid>
                 {projects.map((project) => {
                     return (
@@ -22,7 +23,6 @@ function NGOProjects({projects}) {
                     )
                     })}
                 </Grid>
-            </Grid>
         </Segment>
     )
 }

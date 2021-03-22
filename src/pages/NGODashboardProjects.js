@@ -3,20 +3,18 @@ import { Grid, Segment, Header, Button } from 'semantic-ui-react';
 import { useTranslation } from "react-i18next";
 import { useHistory } from "react-router-dom";
 import NGOEmptyDashboard from "../components/NGO/NGOEmptyDashboard";
-import  { getAllProjects, getAllMyProjects } from "../adapters/projectAPI";
-import  { getMe } from "../adapters/ngoAPI";
+import  { getAllMyProjects } from "../adapters/projectAPI";
 import NGOProjects from "../components/NGO/NGOProjects";
-import dataProjects from "../data/dataProjects";
 
 function NGODashboardProjects() {
     const [projects, setProjects] = useState([]);
 
     
-    const projectsFromAPI = async () => {
-        const allProjects = await getAllProjects();
-        console.log(allProjects.data.doc);
-        // setProjects(allProjects.data.doc)
-    } 
+    // const projectsFromAPI = async () => {
+    //     const allProjects = await getAllProjects();
+    //     console.log(allProjects.data.doc);
+    //     // setProjects(allProjects.data.doc)
+    // } 
 
     // const getMeFromAPI = async () => {
     //     const getNGOProjects = await getMe();
@@ -59,7 +57,7 @@ function NGODashboardProjects() {
     if (projects.length === 0) {
         projectComponents = <NGOEmptyDashboard/>
     } else {
-       projectComponents = <NGOProjects dataProjects={dataProjects} projects={projects}/>
+       projectComponents = <NGOProjects projects={projects}/>
     }
 
     return (

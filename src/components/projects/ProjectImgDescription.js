@@ -14,7 +14,7 @@ function ProjectImgDescription({activPicker}) {
     const { state, actions } =  useStateMachine({ UpdateProjectAction });
 
     const { handleSubmit, register } = useForm({
-        //defaultValues: state.projects
+        // defaultValues: state.projects
     });
 
     const history = useHistory();
@@ -30,10 +30,15 @@ function ProjectImgDescription({activPicker}) {
     const RouteChangeNext =  async (data) => {
         actions.UpdateProjectAction(data);
         Object.assign(state.projects, data);
-        //console.log(state.projects);
+        console.log(state.projects);
+        console.log(JSON.stringify(state.projects));
+        const formData = new FormData();
+        formData.append('images', state.projects.images);
+        formData.append('title', state.projects.title);
         const response = await createProject(JSON.stringify(state.projects))
+        console.log(response);
         if (response.status === 'success') {
-            activPicker(5)
+            return activPicker(5)
         }
         history.push('error');
     }
@@ -53,7 +58,7 @@ function ProjectImgDescription({activPicker}) {
                             <Form.Group>
                                 <Form.Field width={12} required>
                                     <label>{t('attach_image')}</label>
-                                    <input type="file" name='imageCover' ref={register} onChange={(e) => handleImagePreview(e)}/>
+                                    <input type="file" name='images' ref={register} onChange={(e) => handleImagePreview(e)}/>
                                         <Grid.Row>
                                         <Grid.Column>
                                             <Image src={selectedImage} size='large'/>

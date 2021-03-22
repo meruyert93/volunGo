@@ -5,11 +5,15 @@ import dataProjects from "../data/dataProjects";
 import { useTranslation } from "react-i18next";
 import VolunteerYourProjects from '../components/Volunteers/VolunteerYourProjects';
 import { useHistory } from "react-router-dom";
+import { useStateMachine } from "little-state-machine";
+import updateYourProjects from '../adapters/updateYourProjects';
 
 function ProjectsSection() {
     const { t } = useTranslation();
 
     const history = useHistory();
+
+    const { state } = useStateMachine({ updateYourProjects });
 
     const displayDetailedProject = (id) => {
         // const chosenProject = dataProjects.find((project) => project.id === id);
@@ -21,7 +25,7 @@ function ProjectsSection() {
     
     return (
         <>
-            <VolunteerYourProjects/>
+            {state.yourProjects.projects.length !== 0 && <VolunteerYourProjects/>}
             <Segment size='large' padded='very' className="backgroundProject">
             <Grid container>
                 <Header as="h1" className="headingText">

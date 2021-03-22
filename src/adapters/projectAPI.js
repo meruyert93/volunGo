@@ -16,6 +16,7 @@ export const createProject = async (data) => {
             body: data
         })
         const responseData = await response.json();
+        console.log(responseData);
         return responseData;
     } catch (error) {
         console.log(error);
@@ -46,7 +47,7 @@ export const getAllProjects = async () => {
 export const getAllMyProjects = async () => {
     try {
         const response = await getMe();
-        console.log(response);
+        //console.log(response);
         return response
     } catch (error) {
         console.log(error);
