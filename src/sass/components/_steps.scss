@@ -1,0 +1,18 @@
+#root {
+  .steps {
+    &-title {
+      font-family: $font-primary;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 13px;
+      line-height: 18px;
+      /* identical to box height, or 143% */
+  
+      display: flex;
+      align-items: center;
+      letter-spacing: 0.07em;
+      text-transform: uppercase;
+  
+    }
+  }
+}

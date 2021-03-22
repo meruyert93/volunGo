@@ -1,23 +1,36 @@
 import React from 'react';
 import { Grid, Segment, Header, Divider } from 'semantic-ui-react';
-import { useTranslation } from "react-i18next";
+import { useTranslation } from 'react-i18next';
 
 function NGOEmptyDashboard() {
-    const { t } = useTranslation();
+  const { t } = useTranslation();
 
-    return (
-        <Segment basic style={{height: '90%'}}>
-            <Grid container verticalAlign='middle'>
-                <Grid.Column textAlign='center'>
-                    <Divider/>
-                    <Divider hidden/>
-                    <Divider hidden/>
-                    <Header>{t('empty_dashboard')}</Header>
-                    <p>{t('sub_text_empty_dashboard')}</p>
-                </Grid.Column>
-            </Grid>
-        </Segment>
-    )
+  return (
+    <Segment basic style={{ height: '60vh' }}>
+      <div
+        style={{
+          width: '100%',
+          height: '100%',
+          display: 'flex',
+          flexDirection: 'column',
+          justifyContent: 'center',
+          alignItems: 'center',
+        }}
+      >
+        <Header
+          style={{
+            fontFamily: 'Manrope',
+            fontWeight: 'bold',
+            fontSize: '20px',
+            color: '#333333',
+          }}
+        >
+          {t('empty_dashboard')}
+        </Header>
+        <p>{t('sub_text_empty_dashboard')}</p>
+      </div>
+    </Segment>
+  );
 }
 
-export default NGOEmptyDashboard
+export default NGOEmptyDashboard;

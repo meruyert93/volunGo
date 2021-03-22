@@ -1,73 +1,67 @@
-#root html {
-  /*62.5% is 10 px*/
-  font-size: 62.5%; }
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@400;700&display=swap");
+html {
+  /*62.5% is 10 px*/ }
 
-#root body {
+body {
   box-sizing: border-box; }
 
-#root .inputPassword {
-  position: relative;
-  display: flex; }
-
-#root .iconEye1 {
-  position: absolute;
-  top: 39%;
-  right: 3%; }
-
-#root .iconEye2 {
-  position: absolute;
-  top: 66%;
-  right: 3%; }
-
-#root .iconEye3 {
-  position: absolute;
-  top: 41%;
-  right: 3%; }
-
-#root .iconEye4 {
-  position: absolute;
-  top: 69%;
-  right: 3%; }
-
-#root .iconEye:hover {
-  cursor: pointer; }
-
-#root .height70 {
-  height: 70vh; }
-
-#root .height80 {
-  height: 80vh; }
-
-#root .height100 {
-  height: 100vh; }
-
-<<<<<<< HEAD
-=======
-
->>>>>>> 29f2938226737088cdddaffcbd50d54a05dd8dc8
-#root .height180 {
-  height: 180vh; }
-
-#root .flexColumn {
-  display: flex;
-  flex-direction: column; }
-
-#root .flexJustifyContent {
-  display: flex;
-  flex-direction: row;
-  justify-content: center; }
-
-#root .timePicker {
-  width: 0;
-  cursor: pointer;
-  line-height: 1.21428571em;
-  padding: .67857143em 1em;
-  font-size: 1em;
-  height: 60px; }
-
-#root .padding15rem {
-  padding-left: 15rem;
-  padding-right: 15rem; }
+#root {
+  /* 
+    *,
+    *::after,
+    *::before {
+        margin: 0;
+        padding: 0;
+        box-sizing: inherit;
+    } 
+    */
+  font-family: "Manrope", san-serif; }
+  #root .inputPassword {
+    position: relative;
+    display: flex; }
+  #root .iconEye1 {
+    position: absolute;
+    top: 50%;
+    right: 3%; }
+  #root .iconEye2 {
+    position: absolute;
+    top: 50%;
+    right: 3%; }
+  #root .iconEye3 {
+    position: absolute;
+    top: 50%;
+    right: 3%; }
+  #root .iconEye4 {
+    position: absolute;
+    top: 50%;
+    right: 3%; }
+  #root .iconEye:hover {
+    cursor: pointer; }
+  #root .height70 {
+    height: 70vh; }
+  #root .height80 {
+    height: 80vh; }
+  #root .height100 {
+    height: 100vh; }
+  #root .height180 {
+    height: 180vh; }
+  #root .flexColumn {
+    display: flex;
+    flex-direction: column; }
+  #root .flexJustifyContent {
+    display: flex;
+    flex-direction: row;
+    justify-content: center; }
+  #root .timePicker {
+    width: 0;
+    cursor: pointer;
+    line-height: 1.21428571em;
+    padding: .67857143em 1em;
+    font-size: 1em;
+    height: 60px; }
+  #root .padding15rem {
+    padding-left: 15rem;
+    padding-right: 15rem; }
 
 #root .itemDefault {
   background-color: #AAB6C5; }
@@ -84,8 +78,160 @@
 #root .cardHeadingText {
   font-size: 1.2rem; }
 
+#root .headingText {
+  color: #090088; }
+
+#root .caption {
+  /* Desktop/Body/SM/Regular 14px */
+  font-family: "Manrope", san-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 20px;
+  /* Text/Gray 40 */
+  color: #999999; }
+
+#root .home-hero-title {
+  /* Desktop/Headings/H2/Bold 32px */
+  font-family: "Manrope", san-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 30px;
+  line-height: 40px;
+  /* identical to box height, or 125% */
+  /* Text/White */
+  color: #FFFFFF; }
+
+#root .home-hero-text {
+  /* Desktop/Body/XL/Regular 20px */
+  font-family: "Manrope", san-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 32px;
+  /* identical to box height, or 160% */
+  /* Text/White */
+  color: #FFFFFF;
+  opacity: 0.9; }
+
+#root .home-section-title {
+  margin-bottom: 30px;
+  /* Desktop/Headings/H3/Bold 26px */
+  font-family: "Manrope", san-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 32px; }
+
+#root .session-name {
+  /* All Caps/Regular 16px */
+  font-family: "Manrope", san-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 24px;
+  /* identical to box height, or 150% */
+  text-align: center;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  /* Text/White */
+  color: #FFFFFF;
+  opacity: 0.8; }
+
+#root .session-title {
+  /* Desktop/Headings/H2/Bold 32px */
+  margin: auto;
+  max-width: 640px;
+  font-family: "Manrope", san-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 28px;
+  line-height: 40px;
+  color: #333333;
+  /* or 125% */
+  text-align: center; }
+  #root .session-title-light {
+    /* Text/White */
+    color: #FFFFFF; }
+  #root .session-title-dark-volunteer {
+    color: #090088; }
+  #root .session-title-dark-ngo {
+    color: #37488A; }
+
+#root .form-step {
+  /* All Caps/Regular 16px */
+  font-family: "Manrope", san-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  /* Text/Gray 40 */
+  color: #999999; }
+
+#root .form-title {
+  /* Desktop/Headings/H2/Bold 32px */
+  font-family: "Manrope", san-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 32px;
+  line-height: 40px; }
+
+#root .form-subtitle {
+  /* Desktop/Body/MD/Regular 16px */
+  font-family: "Manrope", san-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 24px;
+  /* Text/Gray 60 */
+  color: #666666; }
+
+#root .form-subsection-title {
+  /* Desktop/Headings/H4/Regular 20px */
+  font-family: "Manrope", san-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 28px;
+  /* identical to box height, or 140% */
+  /* Text/Gray 40 */
+  color: #999999; }
+
+#root .card-title {
+  /* Desktop/Headings/H6/Bold 16px */
+  font-family: "Manrope", san-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 1.4;
+  /* Text/Gray 80 */
+  color: #333333; }
+
+#root .card-organization {
+  /* Desktop/Body/SM/Regular 14px */
+  margin-top: 4px;
+  font-family: "Manrope", san-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 18px;
+  /* identical to box height, or 143% */ }
+
+#root .card-info {
+  /* Desktop/Body/SM/Regular 14px */
+  font-family: "Manrope", san-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 20px;
+  /* identical to box height, or 143% */
+  /* Text/Gray 60 */
+  color: #666666; }
+
 #root .backgroundDark {
-  background-color: #090088; }
+  background-color: #2F1893; }
 
 #root .backgroundWhite {
   background-color: white; }
@@ -111,17 +257,116 @@
   background-color: #364F6B; }
 
 #root .NGOtextDark {
-  color: #364F6B; }
+  color: #37488A; }
 
-#root .headingText {
-  color: #090088; }
+#root .text-left {
+  text-align: left !important; }
+
+#root .btn-group {
+  margin: 40px 0 20px 0; }
+
+#root .btn {
+  font-family: "Manrope", san-serif;
+  /* Mobile/Interactions/Button 16px */
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 24px;
+  color: white;
+  /* identical to box height, or 150% */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  border-radius: 12px;
+  padding: 12px 40px; }
+
+#root .btn-longtext {
+  font-size: 15px; }
+
+#root .btn-primary-volunteer {
+  background: #F94877; }
+
+#root .btn-primary-ngo {
+  background: #00AFF0; }
+
+#root .btn-secondary {
+  background: white; }
+  #root .btn-secondary-volunteer {
+    color: #F94877; }
+  #root .btn-secondary-ngo {
+    color: #00AFF0; }
 
 #root .heroHome {
   background: linear-gradient(274deg, #090088 -30.65%, #f94877 117.82%); }
 
+#root .hero-title {
+  /* Desktop/Display/Regular 60px */
+  font-family: Manrope;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 52px;
+  line-height: 1.2; }
+
+#root .hero-subtitle {
+  max-width: 500px;
+  margin-top: 30px;
+  /* Desktop/Body/XL/Regular 20px */
+  font-family: Manrope;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 1.5;
+  /* Text/Gray 60 */
+  color: #666666; }
+
+#root .hero-image {
+  margin: auto;
+  max-width: 480px;
+  object-fit: cover;
+  border-radius: 40px; }
+  #root .hero-image-ngo {
+    transform: scale(1.2); }
+
+#root .sub-session-icon {
+  width: 40px;
+  height: 40px;
+  opacity: 0.9; }
+
+#root .sub-session-title {
+  /* Desktop/Headings/H4/Bold 20px */
+  font-family: "Manrope", san-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 28px;
+  /* identical to box height, or 140% */
+  text-align: center;
+  /* Text/White */
+  color: #FFFFFF; }
+
+#root .sub-session-text {
+  /* Desktop/Body/MD/Regular 16px */
+  font-family: "Manrope", san-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 24px;
+  /* or 150% */
+  text-align: center;
+  /* Text/White */
+  color: #FFFFFF;
+  opacity: 0.8; }
+
 #root .imageCard {
   position: relative;
-  display: flex; }
+  display: flex;
+  width: 100%;
+  object-fit: cover; }
+  #root .imageCard > * {
+    height: 100%; }
 
 #root .imageSelect {
   border-style: solid;
@@ -194,4 +439,117 @@
   border-width: 3px; }
 
 #root .grey60 {
+  color: #666666; }
+
+#root .profile-image {
+  display: block;
+  width: 120px;
+  height: 120px; }
+
+#root .profile-name {
+  margin-bottom: 0;
+  /* Desktop/Headings/H4/Bold 20px */
+  font-family: "Manrope", san-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 28px;
+  /* identical to box height, or 140% */
+  text-align: center;
+  /* UI/Gray 80 */
+  color: #333333; }
+
+#root .profile-position {
+  margin-top: 0;
+  /* Desktop/Body/MD/Regular 16px */
+  font-family: "Manrope", san-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 24px;
+  /* identical to box height, or 150% */
+  text-align: center;
+  /* UI/Gray 60 */
+  color: #666666; }
+
+#root .footer-item-text {
+  /* Desktop/Body/MD/Regular 16px */
+  font-family: "Manrope", san-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 20px;
+  /* identical to box height, or 150% */
+  /* Text/White */
+  color: #FFFFFF; }
+
+#root .footer-copyright {
+  /* Desktop/Body/MD/Regular 16px */
+  margin-top: 0;
+  font-family: "Manrope", san-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 20px;
+  /* identical to box height, or 150% */
+  text-align: center;
+  /* Text/White */
+  color: #FFFFFF;
+  opacity: 0.9; }
+
+#root .steps-title {
+  font-family: "Manrope", san-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 13px;
+  line-height: 18px;
+  /* identical to box height, or 143% */
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.07em;
+  text-transform: uppercase; }
+
+#root .card-name {
+  /* Desktop/Headings/H6/Bold 16px */
+  font-family: "Manrope", san-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 24px;
+  /* identical to box height, or 150% */
+  text-align: center;
+  /* Text/Gray 80 */
+  color: #333333; }
+
+#root .card-project-number {
+  font-family: "Manrope", san-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 22px;
+  /* identical to box height, or 137% */
+  /* Brand/Organization/Secondary */
+  color: #2BCDC1; }
+
+#root .card-project-text {
+  /* Desktop/Body/SM/Regular 14px */
+  font-family: "Manrope", san-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 20px;
+  /* identical to box height, or 143% */
+  text-align: center;
+  /* Text/Gray 60 */
+  color: #666666; }
+
+#root .card-skill {
+  /* Desktop/Body/SM/Regular 14px */
+  font-family: "Manrope", san-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 20px;
+  /* identical to box height, or 143% */
+  /* Text/Gray 60 */
   color: #666666; }

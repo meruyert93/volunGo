@@ -5,4 +5,47 @@
     // .textWhite {
     //     color:white
     // }
+    .sub-session {
+        &-icon {
+            width: 40px;
+            height: 40px;
+            opacity: 0.9;
+        }
+
+        &-title {
+            /* Desktop/Headings/H4/Bold 20px */
+
+            font-family: $font-primary;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 20px;
+            line-height: 28px;
+            /* identical to box height, or 140% */
+
+            text-align: center;
+
+            /* Text/White */
+
+            color: #FFFFFF;
+        }
+
+        &-text {
+            /* Desktop/Body/MD/Regular 16px */
+
+            font-family: $font-primary;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 16px;
+            line-height: 24px;
+            /* or 150% */
+
+            text-align: center;
+
+            /* Text/White */
+
+            color: #FFFFFF;
+
+            opacity: 0.8;
+        }
+    }
 }

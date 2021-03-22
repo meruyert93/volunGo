@@ -1,0 +1,43 @@
+#root {
+  .profile {
+    &-image {
+      display: block;
+      width: 120px;
+      height: 120px;
+    }
+
+    &-name {
+      margin-bottom: 0;
+      /* Desktop/Headings/H4/Bold 20px */
+      font-family: $font-primary;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 18px;
+      line-height: 28px;
+      /* identical to box height, or 140% */
+
+      text-align: center;
+
+      /* UI/Gray 80 */
+
+      color: $color-gray-80;
+    }
+
+    &-position {
+      margin-top: 0;
+      /* Desktop/Body/MD/Regular 16px */
+      font-family: $font-primary;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 16px;
+      line-height: 24px;
+      /* identical to box height, or 150% */
+
+      text-align: center;
+
+      /* UI/Gray 60 */
+
+      color: $color-gray-60;
+    }
+  }
+}
