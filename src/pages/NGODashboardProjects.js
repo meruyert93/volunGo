@@ -43,6 +43,7 @@ function NGODashboardProjects() {
         // }
     }, [])
 
+    const { t } = useTranslation();
 
   const history = useHistory();
 
@@ -51,12 +52,6 @@ function NGODashboardProjects() {
     history.push(path);
     //console.log(data)
   };
-
-    const RouteChangeNext = () => {
-        let path = `ngo-project-registration`;
-        history.push(path);
-        //console.log(data)
-    }
 
     let projectComponents;
     if (projects.length === 0) {

@@ -10,12 +10,6 @@ function NGOVolunteers({ activPicker }) {
 
   const history = useHistory();
 
-  const RouteChangeBack = () => {
-    let path = `newpath`;
-    activPicker(4);
-    //history.push(path);
-  };
-
     const RouteChangeBack = () => {
         activPicker(4)
     }

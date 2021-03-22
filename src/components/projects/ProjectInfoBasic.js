@@ -41,15 +41,6 @@ function ProjectInfoBasic({ activPicker }) {
     activPicker(2);
   };
 
-    const RouteChangeBack = () => {
-        let path = `ngo-projects-dashboard`;
-        history.push(path);
-    }
-
-    const RouteChangeNext = (data) => {
-        actions.UpdateProjectAction(data);
-        activPicker(2)
-    }
 
     return (
         <Segment basic size='large' padded='very'>
