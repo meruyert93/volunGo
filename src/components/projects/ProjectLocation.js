@@ -1,74 +1,88 @@
-import React, { useState } from 'react'
-import { Grid, Segment, Header, Button, Form, Progress, Divider} from 'semantic-ui-react';
-import { useHistory } from "react-router-dom";
-import { useTranslation } from "react-i18next";
-import { useForm, Controller } from "react-hook-form";
-import { useStateMachine } from "little-state-machine";
-import UpdateProjectAction from "../../adapters/updateProjectAction";
-import DatePicker from "react-datepicker";
-import "react-datepicker/dist/react-datepicker.css";
+import React, { useState } from 'react';
+import {
+  Grid,
+  Segment,
+  Header,
+  Button,
+  Form,
+  Progress,
+  Divider,
+} from 'semantic-ui-react';
+import { useHistory } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
+import { useForm, Controller } from 'react-hook-form';
+import { useStateMachine } from 'little-state-machine';
+import UpdateProjectAction from '../../adapters/updateProjectAction';
+import DatePicker from 'react-datepicker';
+import 'react-datepicker/dist/react-datepicker.css';
 
-function ProjectLocation({activPicker}) {
-    const [radio, setRadio] = useState('');
-    const { t } = useTranslation();
-    const { state, actions } =  useStateMachine({ UpdateProjectAction });
-    const { handleSubmit, errors, register, watch, control, setValue } = useForm({
-        defaultValues: state.projects
-    });
+function ProjectLocation({ activPicker }) {
+  const [radio, setRadio] = useState('');
+  const { t } = useTranslation();
+  const { state, actions } = useStateMachine({ UpdateProjectAction });
+  const { handleSubmit, errors, register, watch, control, setValue } = useForm({
+    defaultValues: state.projects,
+  });
 
-    const weekOptions = [
-        { key: 'mon', text: 'Mon', value: 'Mon' },
-        { key: 'tue', text: 'Tue', value: 'Tue' },
-        { key: 'wed', text: 'Wed', value: 'Wed' },
-        { key: 'thu', text: 'Thu', value: 'Thu' },
-        { key: 'fri', text: 'Fri', value: 'Fri' },
-        { key: 'sat', text: 'Sat', value: 'Sat' },
-        { key: 'sun', text: 'Sun', value: 'Sun' },
-    ]
+  const weekOptions = [
+    { key: 'mon', text: 'Mon', value: 'Mon' },
+    { key: 'tue', text: 'Tue', value: 'Tue' },
+    { key: 'wed', text: 'Wed', value: 'Wed' },
+    { key: 'thu', text: 'Thu', value: 'Thu' },
+    { key: 'fri', text: 'Fri', value: 'Fri' },
+    { key: 'sat', text: 'Sat', value: 'Sat' },
+    { key: 'sun', text: 'Sun', value: 'Sun' },
+  ];
 
-    const timeOptions = [
-        { key: '7', text: '', value: '' },
-        { key: '8', text: '8:00', value: '8:00' },
-        { key: '9', text: '9:00', value: '9:00' },
-        { key: '10', text: '10:00', value: '11:00'},
-        { key: '11', text: '11:00', value: '11:00' },
-        { key: '12', text: '12:00', value: '12:00' },
-        { key: '13', text: '13:00', value: '13:00' },
-        { key: '14', text: '14:00', value: '14:00' },
-        { key: '15', text: '15:00', value: '15:00' },
-        { key: '16', text: '16:00', value: '16:00' },
-        { key: '17', text: '17:00', value: '17:00' },
-        { key: '18', text: '18:00', value: '18:00' },
-        { key: '19', text: '19:00', value: '19:00' },
-        { key: '20', text: '20:00', value: '20:00' },
-    ]
+  const timeOptions = [
+    { key: '7', text: '', value: '' },
+    { key: '8', text: '8:00', value: '8:00' },
+    { key: '9', text: '9:00', value: '9:00' },
+    { key: '10', text: '10:00', value: '11:00' },
+    { key: '11', text: '11:00', value: '11:00' },
+    { key: '12', text: '12:00', value: '12:00' },
+    { key: '13', text: '13:00', value: '13:00' },
+    { key: '14', text: '14:00', value: '14:00' },
+    { key: '15', text: '15:00', value: '15:00' },
+    { key: '16', text: '16:00', value: '16:00' },
+    { key: '17', text: '17:00', value: '17:00' },
+    { key: '18', text: '18:00', value: '18:00' },
+    { key: '19', text: '19:00', value: '19:00' },
+    { key: '20', text: '20:00', value: '20:00' },
+  ];
 
-    const handleOnChange = (e, data) => { setValue("weekdays", data.value); }
-    const startTimeOnChange = (e, data) => { setValue("startTime", data.value); }
-    const endTimeOnChange = (e, data) => { setValue("endTime", data.value); }
+  const handleOnChange = (e, data) => {
+    setValue('weekdays', data.value);
+  };
+  const startTimeOnChange = (e, data) => {
+    setValue('startTime', data.value);
+  };
+  const endTimeOnChange = (e, data) => {
+    setValue('endTime', data.value);
+  };
 
-    const RouteChangeBack = () => {
-        activPicker(1);
-        //let path = `newpath`;
-        //history.push(path);
-    }
+  const RouteChangeBack = () => {
+    activPicker(1);
+    //let path = `newpath`;
+    //history.push(path);
+  };
 
-    const RouteChangeNext = (data) => {
-        actions.UpdateProjectAction(data);
-        activPicker(3);
-        //let path = ``;
-        //history.push(path);
-        //console.log(data)
-    }
+  const RouteChangeNext = (data) => {
+    actions.UpdateProjectAction(data);
+    activPicker(3);
+    //let path = ``;
+    //history.push(path);
+    //console.log(data)
+  };
 
     return (
         <Segment basic size="large" padded="very">
             <Grid stackable verticalAlign='middle' centered>
                 <Grid.Column width={16} textAlign="center">
-                    <Header  as='h2' className="headingText"> 
+                    <Header  as='h2' className="NGOtextDark form-title"> 
                         {t('location_time_info')}
                     </Header>
-                    <p> {t('sub_text_location_time_info')}</p>
+                    <p className="form-subtitle"> {t('sub_text_location_time_info')}</p>
                 </Grid.Column>
                 <Grid.Row>
                     <Grid.Column mobile={16} tablet={8} computer={5}>
@@ -196,13 +210,23 @@ function ProjectLocation({activPicker}) {
                                 </Form.Field>
                             </Form.Group>
                             <Form.Field label={t('no_specify')} name='not_specified' control='input' type='checkbox' />
-                            <Grid.Row>
-                                <Grid.Column className="flexJustifyContent">
-                                    <Divider hidden/>
-                                    <Button basic color="blue" onClick={RouteChangeBack}>{t('back')}</Button>
-                                    <Button primary onClick={handleSubmit(RouteChangeNext)}>{t('next')}</Button>
-                                </Grid.Column>
-                            </Grid.Row>
+                                    <Grid.Row>
+                <Button.Group widths="2" className="btn-group">
+                  <Divider hidden />
+                  <Button
+                    className="btn btn-secondary btn-secondary-ngo"
+                    onClick={RouteChangeBack}
+                  >
+                    {t('back')}
+                  </Button>
+                  <Button
+                    className="btn btn-primary-ngo"
+                    onClick={handleSubmit(RouteChangeNext)}
+                  >
+                    {t('next')}
+                  </Button>
+                </Button.Group>
+              </Grid.Row>
                         </Form>  
                     </Grid.Column>
                 </Grid.Row>
@@ -211,4 +235,4 @@ function ProjectLocation({activPicker}) {
     )
 }
 
-export default ProjectLocation
+export default ProjectLocation;

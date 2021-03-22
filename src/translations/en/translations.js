@@ -2,7 +2,7 @@ export const TRANSLATIONS_EN = {
     //hero section
     find: 'Find the best volunteer opportunities',
     sub_text_find: 'We help volunteers to find volunteer opportunities and nonprofit organizations in their city quickly and easily.',
-    get_started: 'JOIN US AS A VOLUNTEER',
+    get_started: 'JOIN AS VOLUNTEER',
 
     //main section
     why:"Why VolunGO?",
@@ -61,15 +61,18 @@ export const TRANSLATIONS_EN = {
     postal_code_placeholder:"e.g. 87671",
     terms_conditions: "By continuing, you confirm that you've read and agree to our Terms and Conditions and Privacy Policy.",
 
-    //details-activities
-    stepOne: "step1/2",
-    select: "Select Types of Volunteer Opportunities",
-    sub_text_select: "Select the type of work that you want to do and we'll tailor your feed to your selections.",
-    make_difference: 'Which way do you want to make a difference?',
+   //details-activities
+  stepOne: 'step 1/2',
+  select: 'Select Types of Volunteer Opportunities',
+  sub_text_select:
+    "Select the types of work that you want to do and we'll tailor your feed to your selections.",
+  make_difference: 'Which way do you want to make a difference?',
 
-    //details-skills
-    stepTwo:"step2/2",
-    put_your_skills: 'What skills/abilities do you want to put to good use?',
+  //details-skills
+  stepTwo: 'step 2/2',
+  put_your_skills: 'Select skills to use',
+  sub_text_skills:
+    "Select the skills that you have and want to use for good. We'll tailor your feed to your selections.",
 
     //home page hero section
     welcome: 'Welcome, ', 
@@ -209,3 +212,4 @@ export const TRANSLATIONS_EN = {
 
 
 };
+

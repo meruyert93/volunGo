@@ -43,9 +43,14 @@ function NGODashboardProjects() {
         // }
     }, [])
 
-    const { t } = useTranslation();
 
-    const history = useHistory();
+  const history = useHistory();
+
+  const RouteChangeNext = () => {
+    let path = `ngo-project-registration`;
+    history.push(path);
+    //console.log(data)
+  };
 
     const RouteChangeNext = () => {
         let path = `ngo-project-registration`;
@@ -65,11 +70,16 @@ function NGODashboardProjects() {
             <Segment basic size='large' padded='very' style={{height: '10%'}}>
                 <Grid padded='horizontally'>
                     <Grid.Column floated="left" width={10}>
-                        <Header>{t('ongoing_upcoming_projects')}</Header>
+                        <Header className="NGOtextDark home-section-title">{t('ongoing_upcoming_projects')}</Header>
                     </Grid.Column>
-                    <Grid.Column floated='right' width={5}>
-                        <Button primary onClick={() => RouteChangeNext()}>{t('add_new_project')}</Button>
-                    </Grid.Column>
+                      <Grid.Column floated="right" width={5}>
+            <Button
+              className="btn btn-primary-ngo"
+              onClick={() => RouteChangeNext()}
+            >
+              {t('add_new_project')}
+            </Button>
+          </Grid.Column>
                 </Grid>
             </Segment>
             {/* <NGOEmptyDashboard/>
@@ -77,6 +87,7 @@ function NGODashboardProjects() {
             {projectComponents}
         </Segment.Group>
     )
+
 }
 
-export default NGODashboardProjects
+export default NGODashboardProjects;

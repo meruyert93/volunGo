@@ -1,0 +1,65 @@
+#root {
+  .card {
+    &-name {
+      /* Desktop/Headings/H6/Bold 16px */
+    font-family: $font-primary;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 24px;
+    /* identical to box height, or 150% */
+
+    text-align: center;
+
+    /* Text/Gray 80 */
+
+    color: $color-gray-80;
+    }
+
+    &-project-number {
+      font-family: $font-primary;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 16px;
+      line-height: 22px;
+      /* identical to box height, or 137% */
+      /* Brand/Organization/Secondary */
+
+      color: $color-ngo-secondary;
+    }
+
+    &-project-text {
+      /* Desktop/Body/SM/Regular 14px */
+
+font-family: $font-primary;
+font-style: normal;
+font-weight: normal;
+font-size: 14px;
+line-height: 20px;
+/* identical to box height, or 143% */
+
+text-align: center;
+
+/* Text/Gray 60 */
+
+color: $color-gray-60;
+
+    }
+
+    &-skill {
+      /* Desktop/Body/SM/Regular 14px */
+
+      font-family: $font-primary;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 14px;
+      line-height: 20px;
+      /* identical to box height, or 143% */
+
+
+      /* Text/Gray 60 */
+
+      color: $color-gray-60;
+    }
+  }
+}

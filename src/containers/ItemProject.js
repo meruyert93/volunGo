@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Grid, Image, Card, Icon } from 'semantic-ui-react';
-import "../translations/i18n";
+import '../translations/i18n';
 
 function ItemProject({id, images, title, companyName, endDate, startDate, duration, weekdays, endTime, startTime, city, streetAddress, postalCode}) {
     
@@ -19,20 +19,20 @@ function ItemProject({id, images, title, companyName, endDate, startDate, durati
         <Grid.Column mobile={16} tablet={5} computer={5} stretched>
             <Card  onDoubleClick={() => chosenHandler(id)} className="projectCard">
                 <Image src={images} wrapped ui={false} className="imageCard"/>
-                <Icon name="heart" size="big" className={active ? "pinkChecker iconSelect" : "whiteChecker iconSelect"} onClick={() => chosenHandler(id)}/>
+                <Icon name="heart" size="large" className={active ? "pinkChecker iconSelect" : "whiteChecker iconSelect"} onClick={() => chosenHandler(id)}/>
                 <Card.Content>
-                    <Card.Header className="cardHeadingText">{title}</Card.Header>
-                    <p className="textPrimary smallText">{companyName}</p>
+                    <Card.Header className="cardHeadingText card-title">{title}</Card.Header>
+                    <p className="textPrimary smallText card-organization">{companyName}</p>
                 </Card.Content>
                 <Card.Content>
                     <Card.Meta>
-                        <p className="smallText">
+                        <p className="smallText card-info">
                         <Icon name="calendar alternate outline" color="grey" />
                             {duration && "|" + duration } {weekdays && "|" + weekdays }  {(endTime && startTime) && "|" + endTime + '-' + startTime}
                         </p>
                     </Card.Meta>
                     <Card.Meta>
-                        <p className="smallText">
+                        <p className="smallText card-info">
                         <Icon name="map marker alternate" color="grey" />
                             {streetAddress + ', ' + postalCode + '' + city} 
                         </p>
@@ -43,4 +43,4 @@ function ItemProject({id, images, title, companyName, endDate, startDate, durati
     )
 }
 
-export default ItemProject
+export default ItemProject;

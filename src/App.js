@@ -1,14 +1,11 @@
-import React, {useState} from 'react';
-import { BrowserRouter, Route, Switch } from "react-router-dom";
-import Landing from "./pages/Landing";
-import Home from "./pages/Home";
-import HomeProject from "./pages/HomeProject";
-import {
-    Segment,
-    Sidebar,
-} from 'semantic-ui-react';
-import FormsBasic from "./components/FormsBasic";
-import FormsAdd from "./components/FormsAdd"
+import React, { useState } from 'react';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import Landing from './pages/Landing';
+import Home from './pages/Home';
+import HomeProject from './pages/HomeProject';
+import { Segment, Sidebar } from 'semantic-ui-react';
+import FormsBasic from './components/FormsBasic';
+import FormsAdd from './components/FormsAdd';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import './styles/style.css';
@@ -32,7 +29,6 @@ import LandingNGO from "./pages/LandingNGO";
 import { StateMachineProvider, createStore } from "little-state-machine";
 import Temporary from "./components/Draft.js/Temporary";
 import '../src/styles/style.css';
-
 
 createStore({
     yourDetails: {
@@ -60,13 +56,12 @@ createStore({
     }
     
 })
-
 function App() {
-    const [visible, setVisible] = useState(false); 
+  const [visible, setVisible] = useState(false);
 
-    const onToggleMenu = () => {
-        setVisible(!visible);
-    }
+  const onToggleMenu = () => {
+    setVisible(!visible);
+  };
 
     return (
         <StateMachineProvider>

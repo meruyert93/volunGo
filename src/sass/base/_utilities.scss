@@ -1,6 +1,6 @@
 #root {
     .backgroundDark {
-        background-color: $color-dark;
+        background-color: $color-background-volunteer-dark;
     }
     .backgroundWhite {
         background-color: white;
@@ -23,11 +23,15 @@
         align-items:center
     }
     .NGOBackgroundDark{
-        background-color: $color-ngo-background-dark;
+        background-color: $color-background-ngo-dark;
     }
     .NGOtextDark {
-        color: $color-ngo-background-dark;
+        color: $color-heading-ngo;
     }
+    .text-left {
+        text-align: left !important;
+    }
+
     .VolunteerSecondaryColor{
         color: $color-volunteer-secondary;
     }
@@ -45,4 +49,6 @@
         }
     }
     
+
+
 }

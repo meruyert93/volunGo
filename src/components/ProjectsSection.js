@@ -9,7 +9,7 @@ import { useStateMachine } from "little-state-machine";
 import updateYourProjects from '../adapters/updateYourProjects';
 
 function ProjectsSection() {
-    const { t } = useTranslation();
+  const { t } = useTranslation();
 
     const history = useHistory();
 
@@ -28,7 +28,7 @@ function ProjectsSection() {
             {state.yourProjects.projects.length !== 0 && <VolunteerYourProjects/>}
             <Segment size='large' padded='very' className="backgroundProject">
             <Grid container>
-                <Header as="h1" className="headingText">
+                <Header as="h2" className="headingText home-section-title">
                     {t('recommended')}
                 </Header>
             </Grid>

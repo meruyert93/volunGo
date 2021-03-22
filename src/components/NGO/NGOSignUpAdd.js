@@ -14,12 +14,12 @@ function NGOSignUpAdd() {
         defaultValues: state.ngoDetails
     });
 
-    const history = useHistory();
+  const history = useHistory();
 
-    const RouteChangeBack = () => {
-        let path = `ngo-sign-up1`;
-        history.push(path);
-    }
+  const RouteChangeBack = () => {
+    let path = `ngo-sign-up1`;
+    history.push(path);
+  };
 
     const RouteChangeNext = async (data) => {
         actions.updateNGOAction(data);
@@ -40,17 +40,17 @@ function NGOSignUpAdd() {
             <Progress percent={100} attached='top' size='medium' color='blue'/>
             <Grid stackable verticalAlign='middle' centered>
             <Grid.Column width={16} textAlign="center">
-                    <Header as="h6" color="grey">
+                    <Header as="h6" color="grey" className="form-step">
                             {t('stepTwo')}
                     </Header>
                 </Grid.Column>
                 <Grid.Column width={16} textAlign="center">
-                    <Header  as='h2' className="headingText"> 
+                    <Header  as='h2' className="NGOtextDark form-title"> 
                         {t('register_org')}
                     </Header>
                 </Grid.Column>
                 <Grid.Column width={16} textAlign="center">
-                    <Header as="h4" color="grey">
+                    <Header as="h4" color="grey" className="form-subtitle">
                     {t('sub_text_register_org')}
                     </Header>
                 </Grid.Column>
@@ -82,12 +82,22 @@ function NGOSignUpAdd() {
                                     placeholder="https://" 
                                 />
                             </Form.Field>
-                            <Grid.Row columns={1}>
-                                <Grid.Column>
-                                    <Button color="blue" onClick={RouteChangeBack}>{t('back')}</Button>
-                                    <Button primary onClick={handleSubmit(RouteChangeNext)}>{t('next')}</Button>
-                                </Grid.Column>
-                            </Grid.Row>
+                             <Grid.Row columns={1}>
+                <Button.Group widths="2" className="btn-group">
+                  <Button
+                    className="btn btn-secondary btn-secondary-ngo"
+                    onClick={RouteChangeBack}
+                  >
+                    {t('back')}
+                  </Button>
+                  <Button
+                    className="btn btn-primary-ngo"
+                    onClick={handleSubmit(RouteChangeNext)}
+                  >
+                    {t('complete')}
+                  </Button>
+                </Button.Group>
+              </Grid.Row>
                         </Form>
                     </Grid.Column>
                 </Grid.Row>
@@ -96,4 +106,4 @@ function NGOSignUpAdd() {
     )
 }
 
-export default NGOSignUpAdd
+export default NGOSignUpAdd;

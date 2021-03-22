@@ -1,8 +1,42 @@
 #root {
-    .headingText {
-         color: $color-dark;
-    }
     .heroHome {
         background: $color-heading-background;
+    }
+
+    .hero {
+        &-title {
+            /* Desktop/Display/Regular 60px */
+            font-family: Manrope;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 52px;
+            line-height: 1.2;
+        }
+        
+        &-subtitle {
+            max-width: 500px;
+            margin-top: 30px;
+
+            /* Desktop/Body/XL/Regular 20px */
+            font-family: Manrope;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 18px;
+            line-height: 1.5;
+
+            /* Text/Gray 60 */
+            color: $color-gray-60;
+        }
+
+        &-image {
+            margin: auto;
+            max-width: 480px;
+            object-fit: cover;
+            border-radius: 40px;
+
+            &-ngo {
+                transform: scale(1.2);
+            }
+        }
     }
 }
