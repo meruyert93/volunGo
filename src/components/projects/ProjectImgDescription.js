@@ -1,6 +1,6 @@
 
 import React, { useState } from 'react'
-import { Grid, Segment, Header, Button, Form, Divider, Image} from 'semantic-ui-react';
+import { Grid, Segment, Header, Button, Form, Image} from 'semantic-ui-react';
 import { useHistory } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { useForm } from "react-hook-form";
@@ -68,7 +68,7 @@ function ProjectImgDescription({ activPicker }) {
         formData.append('locationType', locationType);
         formData.append('numberOfVolunteers', numberOfVolunteers);
         formData.append('postalCode', postalCode);
-        // formData.append('requirements', requirements);
+        formData.append('requirements', requirements);
         formData.append('startDate', startDate);
         formData.append('startTime', startTime);
         formData.append('streetAddress', streetAddress);
