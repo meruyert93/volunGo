@@ -5,7 +5,6 @@ import { useTranslation } from 'react-i18next';
 function NGOMain() {
   const { t } = useTranslation();
 
-
   return (
     <Segment
       size="large"
@@ -24,7 +23,7 @@ function NGOMain() {
         stackable
         container
         columns={2}
-        padded
+        // padded
         divided
       >
         <Grid.Row centered padded>

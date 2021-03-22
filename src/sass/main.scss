@@ -8,7 +8,12 @@
 @import "base/utilities";
 
 @import "pages/home";
+@import "pages/error";
+@import "pages/signIn";
+@import "pages/projectDetail";
+@import "pages/confirmation";
 
+@import "components/navbar";
 @import "components/button";
 @import "components/hero";
 @import "components/detailActivities";

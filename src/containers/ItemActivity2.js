@@ -19,18 +19,22 @@ function ItemActivity2({ id, name, image2, toggleHandler }) {
     <Grid.Column mobile={16} tablet={8} computer={3}>
       <Card
         onClick={() => chosenHandler(id)}
-        className={active && 'imageSelect'}
+        className={`${active && 'imageSelect'} item-activity`}
       >
-        <Image src={image2} rounded className="imageCard overlayImage" />
+        <Image
+          src={image2}
+          rounded
+          className="imageCard overlayImage item-activity__image"
+        />
         <Icon
           name="check circle"
-          size="big"
-          className={
+          size="large"
+          className={`${
             active ? 'iconSelect pinkChecker' : 'iconSelect whiteChecker'
-          }
+          } item-activity__check`}
         />
         <Grid className="textCard">
-          <Header className="textWhite">{name}</Header>
+          <Header className="textWhite item-activity__text">{name}</Header>
         </Grid>
       </Card>
       {/* <Segment  inverted size='big' onClick={() => chosenHandler(id)} className={active ? 'itemPicker' : 'itemDefault'}>

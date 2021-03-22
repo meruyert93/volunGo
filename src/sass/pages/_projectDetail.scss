@@ -1,0 +1,91 @@
+#root {
+  .projectDetail {
+    &-image {
+      border-radius: 20px;
+    }
+
+    &-title {
+      margin-top: 10px;
+      /* Desktop/Headings/H2/Bold 32px */
+      font-family: $font-primary;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 28px;
+      line-height: 40px;
+      /* or 125% */
+
+      /* Text/Gray 80 */
+      color:$color-gray-80;
+    }
+
+    &-organization {
+      margin: 0;
+      margin-bottom: 30px;
+      /* Desktop/Body/XL/Regular 20px */
+      font-family: $font-primary;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 18px;
+      line-height: 32px;
+      /* identical to box height, or 160% */
+    }
+
+    &-description {
+      /* Desktop/Body/LG/Regular 18px */
+
+      font-family: $font-primary;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 16px;
+      line-height: 24px;
+      /* or 156% */
+
+      /* Text/Gray 80 */
+
+      color: $color-gray-80;
+    }
+
+    &-info {
+      border: transparent;
+      box-shadow: none;
+      background-color: $color-background-grey-light;
+      padding: 30px 20px;
+
+      &__icon {
+        color: $color-gray-60;
+      }
+
+      &__title {
+        /* Desktop/Headings/H5/Bold 18px */
+        font-family: $font-primary;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 16px;
+        line-height: 24px;
+        /* identical to box height, or 133% */
+        /* Text/Gray 80 */
+        color: $color-gray-60;
+      }
+
+      &__text {
+        margin: 10px;
+        /* Desktop/Body/MD/Regular 16px */
+        font-family: $font-primary;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 24px;
+        /* identical to box height, or 150% */
+
+        text-align: center;
+
+        /* Text/Gray 80 */
+        color: $color-gray-80;
+      }
+
+      &__link {
+        color: $color-volunteer-primary;
+      }
+    }
+  }
+}
