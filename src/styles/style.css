@@ -5,6 +5,78 @@ html {
 body {
   box-sizing: border-box; }
 
+#root .inputPassword {
+  position: relative;
+  display: flex; }
+
+#root .iconEye1 {
+  position: absolute;
+  top: 39%;
+  right: 3%; }
+
+#root .iconEye2 {
+  position: absolute;
+  top: 66%;
+  right: 3%; }
+
+#root .iconEye3 {
+  position: absolute;
+  top: 41%;
+  right: 3%; }
+
+#root .iconEye4 {
+  position: absolute;
+  top: 69%;
+  right: 3%; }
+
+#root .iconEye5 {
+  position: absolute;
+  top: 53%;
+  right: 3%; }
+
+#root .iconEye6 {
+  position: absolute;
+  top: 53%;
+  right: 3%; }
+
+#root .iconEye:hover {
+  cursor: pointer; }
+
+#root .cursor:hover {
+  cursor: pointer; }
+
+#root .height70 {
+  height: 70vh; }
+
+#root .height80 {
+  height: 80vh; }
+
+#root .height100 {
+  height: 100vh; }
+
+#root .height180 {
+  height: 180vh; }
+
+#root .flexColumn {
+  display: flex;
+  flex-direction: column; }
+
+#root .flexJustifyContent {
+  display: flex;
+  flex-direction: row;
+  justify-content: center; }
+
+#root .timePicker {
+  width: 0;
+  cursor: pointer;
+  line-height: 1.21428571em;
+  padding: .67857143em 1em;
+  font-size: 1em;
+  height: 60px; }
+
+#root .padding15rem {
+  padding-left: 15rem;
+  padding-right: 15rem; }
 #root {
   /* 
     *,
@@ -62,12 +134,6 @@ body {
   #root .padding15rem {
     padding-left: 15rem;
     padding-right: 15rem; }
-
-#root .itemDefault {
-  background-color: #AAB6C5; }
-
-#root .itemPicker {
-  background-color: #F94877; }
 
 #root .red {
   color: red; }
@@ -283,6 +349,23 @@ body {
   border-radius: 12px;
   padding: 12px 40px; }
 
+#root .VolunteerSecondaryColor {
+  color: #6F30FE; }
+
+#root .backgroundLightGrey {
+  background-color: #F7F8F9; }
+
+@media (max-width: 520px) {
+  #root .mobileHide {
+    display: none; } }
+
+@media (min-width: 520px) {
+  #root .largeScreenHide {
+    display: none; } }
+
+#root .headingText {
+  color: #090088; }
+=======
 #root .btn-longtext {
   font-size: 15px; }
 
@@ -404,6 +487,9 @@ body {
   opacity: 0.8;
   filter: brightness(30%); }
 
+#root .projectCard {
+  width: 100%; }
+
 #root .projectCard:hover {
   transform: translateY(-0.5rem) scale(1.01); }
 
@@ -429,12 +515,21 @@ body {
 #root .iconSkillsSelected {
   fill: #2BCDC1; }
 
+#root .iconSkillsVolunteersSelected {
+  fill: #6F30FE; }
+
 #root .ngoSecondaryColorPicker {
   color: #2BCDC1; }
 
 #root .ngoSecondaryBorder {
   border-style: solid;
   border-color: #2BCDC1;
+  border-radius: 12px;
+  border-width: 3px; }
+
+#root .VolunteerSecondaryBorder {
+  border-style: solid;
+  border-color: #6F30FE;
   border-radius: 12px;
   border-width: 3px; }
 

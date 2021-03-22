@@ -5,6 +5,7 @@ import { useTranslation } from 'react-i18next';
 function NGOMain() {
   const { t } = useTranslation();
 
+
   return (
     <Segment
       size="large"
@@ -29,13 +30,13 @@ function NGOMain() {
         <Grid.Row centered padded>
           <Grid.Column mobile={16} tablet={8} computer={8}>
             <Divider hidden />
-            <Image src="./images/heroSection/NGOmockup.png" fluid />
+            <Image src="/./images/heroSection/NGOmockup.png" fluid />
           </Grid.Column>
           <Grid.Column mobile={16} tablet={8} computer={6}>
             <Grid.Column width={5} textAlign="center">
               <Divider hidden />
               <Image
-                src="./images/heroSection/matching.svg"
+                src="/./images/heroSection/matching.svg"
                 centered
                 className="sub-session-icon"
               />

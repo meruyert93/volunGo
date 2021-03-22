@@ -31,4 +31,24 @@
     .text-left {
         text-align: left !important;
     }
+
+    .VolunteerSecondaryColor{
+        color: $color-volunteer-secondary;
+    }
+    .backgroundLightGrey {
+        background-color: $color-light-grey;
+    }
+    .mobileHide {
+        @media (max-width: 520px) {
+        display:none;
+        }
+        }
+    .largeScreenHide {
+        @media (min-width: 520px) {
+        display:none;
+        }
+    }
+    
+
+
 }

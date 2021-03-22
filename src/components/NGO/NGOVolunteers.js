@@ -16,13 +16,16 @@ function NGOVolunteers({ activPicker }) {
     //history.push(path);
   };
 
-  const RouteChangeNext = (data) => {
-    console.log(data);
-    let path = `temporary`;
-    history.push(path);
-    //console.log(data)
-  };
+    const RouteChangeBack = () => {
+        activPicker(4)
+    }
 
+    const RouteChangeNext = (data) => {
+        console.log(data);
+        let path = `ngo-projects-dashboard`;
+        history.push(path);
+    }
+    
   return (
     <Segment basic size="large" padded="very" className="height100">
       <Grid stackable verticalAlign="middle" centered>
@@ -64,6 +67,7 @@ function NGOVolunteers({ activPicker }) {
       </Grid>
     </Segment>
   );
+
 }
 
 export default NGOVolunteers;

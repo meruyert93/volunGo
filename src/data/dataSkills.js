@@ -47,7 +47,7 @@ const activities = [
     {
     id: 10,
     image:'/images/skills/spriteSkills.svg#skill-8',
-    name: 'Film  & photography',
+    name: 'Film & Photography',
     },
     {
     id: 11,

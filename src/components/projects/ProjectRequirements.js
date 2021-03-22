@@ -32,46 +32,36 @@ function ProjectRequirements({ activPicker }) {
     actions.UpdateProjectAction(data);
   };
 
-  const RouteChangeBack = () => {
-    activPicker(2);
-    console.log('clicked');
-    let path = `newpath`;
-    //history.push(path);
-  };
+    const RouteChangeBack = () => {
+        activPicker(2);
+    }
 
-  const RouteChangeNext = () => {
-    activPicker(4);
-    let path = ``;
-    //history.push(path);
-    //console.log(data)
-  };
+    const RouteChangeNext = () => {
+        activPicker(4);
+    }
 
-  return (
-    <Segment basic size="large" padded="very">
-      <Grid>
-        <Grid.Column width={16} textAlign="center">
-          <Header as="h2" className="NGOtextDark form-title">
-            {t('requirements_for_vol')}
-          </Header>
-          <p className="form-subtitle"> {t('sub_text_requirements_for_vol')}</p>
-        </Grid.Column>
-      </Grid>
-      <Grid stackable>
-        <Grid.Row centered padded="horizontally">
-          <Grid doubling stackable container padded="horizontally" columns={6}>
-            {dataSkills.map((item) => {
-              return (
-                <ItemRequirements
-                  key={item.id}
-                  {...item}
-                  toggleHandler={toggleHandler}
-                />
-              );
-            })}
-          </Grid>
-        </Grid.Row>
-      </Grid>
-      <Grid centered>
+    return (
+        <Segment basic size='large' padded='very'>
+                <Grid>
+                    <Grid.Column width={16} textAlign="center">
+                        <Header  as='h2' className="NGOtextDark form-title"> 
+                            {t('requirements_for_vol')}
+                        </Header>
+                        <p className="form-subtitle"> {t('sub_text_requirements_for_vol')}</p>
+                    </Grid.Column>
+                </Grid>
+                <Grid stackable >
+                    <Grid.Row centered padded="horizontally">
+                        <Grid  doubling  stackable container padded='horizontally' columns={6}>
+                        {dataSkills.map((item) => {
+                            return(
+                                <ItemRequirements key={item.id} {...item} toggleHandler={toggleHandler}/>
+                            )
+                        })}
+                        </Grid>
+                    </Grid.Row>
+                </Grid>
+                      <Grid centered>
         <Grid.Column mobile={16} tablet={8} computer={6} textAlign="center">
           <Button.Group widths="2" className="btn-group">
             <Button
@@ -89,8 +79,8 @@ function ProjectRequirements({ activPicker }) {
           </Button.Group>
         </Grid.Column>
       </Grid>
-    </Segment>
-  );
+        </Segment>
+    )
 }
 
 export default ProjectRequirements;

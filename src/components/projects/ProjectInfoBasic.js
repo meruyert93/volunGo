@@ -41,96 +41,98 @@ function ProjectInfoBasic({ activPicker }) {
     activPicker(2);
   };
 
-  return (
-    <Segment basic size="large" padded="very">
-      <Grid stackable verticalAlign="middle" centered>
-        <Grid.Column width={16} textAlign="center">
-          <Header as="h2" className="NGOtextDark form-title">
-            {t('basic_info')}
-          </Header>
-          <p className="form-subtitle"> {t('sub_text_about_project')}</p>
-        </Grid.Column>
-        <Grid.Row centered>
-          <Grid.Column mobile={16} tablet={8} computer={5}>
-            <Form>
-              <Form.Field required>
-                <label>{t('project_title')}</label>
-                <input
-                  type="text"
-                  name="title"
-                  placeholder={t('project_title')}
-                  ref={register({ required: true })}
-                />
-              </Form.Field>
-              <Form.Field required>
-                <label>{t('contact_person')}</label>
-                <input
-                  type="text"
-                  name="contactPersonName"
-                  placeholder={t('contact_person')}
-                  ref={register({ required: true })}
-                />
-              </Form.Field>
-              <Form.Field required>
-                <label>{t('contact_info')}</label>
-                <input
-                  type="text"
-                  name="contactPersonEmail"
-                  placeholder={t('contact_info')}
-                  ref={register({ required: true })}
-                />
-              </Form.Field>
-              <Form.Field>
-                <label>{t('number_of_volunteers')}</label>
-                <input
-                  type="number"
-                  name="numberOfVolunteers"
-                  placeholder={t('number_of_volunteers')}
-                  ref={register}
-                />
-              </Form.Field>
-              <Form.Field
-                label={t('no_specify')}
-                name="not_specified"
-                control="input"
-                type="checkbox"
-              />
-              <Form.Group grouped>
-                <label>{t('online_or_offline')}</label>
-                <Controller
-                  name="locationType"
-                  control={control}
-                  render={() => {
-                    return (
-                      <Form.Radio
-                        label={t('offline')}
-                        value="offline"
-                        checked={radio === ('online' || '')}
-                        onChange={() => {
-                          radioOnChange();
-                        }}
-                      />
-                    );
-                  }}
-                />
-                <Controller
-                  name="locationType"
-                  control={control}
-                  render={() => {
-                    return (
-                      <Form.Radio
-                        label={t('online')}
-                        value="online"
-                        checked={radio === ('offline' || '')}
-                        onChange={() => {
-                          radioOnChange();
-                        }}
-                      />
-                    );
-                  }}
-                />
-              </Form.Group>
-              <Grid centered>
+    const RouteChangeBack = () => {
+        let path = `ngo-projects-dashboard`;
+        history.push(path);
+    }
+
+    const RouteChangeNext = (data) => {
+        actions.UpdateProjectAction(data);
+        activPicker(2)
+    }
+
+    return (
+        <Segment basic size='large' padded='very'>
+            <Grid stackable verticalAlign='middle' centered>
+                <Grid.Column width={16} textAlign="center">
+                    <Header  as='h2' className="NGOtextDark form-title"> 
+                        {t('about_project')}
+                    </Header>
+                    <p className="form-subtitle"> {t('sub_text_about_project')}</p>
+                </Grid.Column>
+                <Grid.Row centered>
+                    <Grid.Column mobile={16} tablet={8} computer={5}>
+                        <Form enctype="multipart/form-data">
+                            <Header>{t('basic_info')}</Header>
+                            <Form.Field required>
+                                <label>{t('project_title')}</label>
+                                <input
+                                    type="text" 
+                                    name="title"
+                                    placeholder={t('project_title')}
+                                    ref={register({ required: true})} 
+                                />
+                            </Form.Field>
+                            <Form.Field required>
+                                <label>{t('contact_person')}</label>
+                                <input
+                                    type="text" 
+                                    name="contactPersonName"
+                                    placeholder={t('contact_person')}
+                                    ref={register({ required: true})} 
+                                />
+                            </Form.Field>
+                            <Form.Field required>
+                                <label>{t('contact_info')}</label>
+                                <input
+                                    type="text" 
+                                    name="contactPersonEmail"
+                                    placeholder={t('contact_info')}
+                                    ref={register({ required: true})} 
+                                />
+                            </Form.Field>
+                            <Form.Field>
+                                <label>{t('number_of_volunteers')}</label>
+                                <input
+                                    type="number" 
+                                    name="numberOfVolunteers"
+                                    placeholder={t('number_of_volunteers')}
+                                    ref={register} 
+                                />                             
+                            </Form.Field>
+                            <Form.Field label={t('no_specify')} name='not_specified' control='input' type='checkbox' />
+                            <Form.Group grouped>
+                                <label>{t('online_or_offline')}</label>
+                                <Controller
+                                    name="locationType"
+                                    control= {control}
+                                    render={() => {
+                                        return(
+                                            <Form.Radio
+                                                label={t('offline')}
+                                                value='offline'
+                                                checked={radio === ('online' || '')}
+                                                onChange={()=> {radioOnChange()}}
+                                            />
+                                        )
+                                    }}
+                                />
+                                <Controller
+                                    name="locationType"
+                                    control= {control}
+                                    render={() => {
+                                        return(
+                                            <Form.Radio
+                                                label={t('online')}
+                                                value='online'
+                                                checked={radio === ('offline' || '')}
+                                                onChange={()=> {radioOnChange()}}
+                                            />
+                                        )
+                                    }}
+                                />
+                            </Form.Group>
+                              <Grid centered>
                 <Button.Group widths="2" className="btn-group">
                   <Divider hidden />
                   <Button
@@ -147,12 +149,12 @@ function ProjectInfoBasic({ activPicker }) {
                   </Button>
                 </Button.Group>
               </Grid>
-            </Form>
-          </Grid.Column>
-        </Grid.Row>
-      </Grid>
-    </Segment>
-  );
+                        </Form>  
+                    </Grid.Column>
+                </Grid.Row>
+            </Grid>
+        </Segment>
+    )
 }
 
 export default ProjectInfoBasic;

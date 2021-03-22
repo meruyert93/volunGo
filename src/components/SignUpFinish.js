@@ -1,17 +1,13 @@
 import React from 'react';
-import {
-  Grid,
-  Segment,
-  Header,
-  Button,
-  Image,
-  Divider,
-} from 'semantic-ui-react';
-import { useTranslation } from 'react-i18next';
-import '../translations/i18n';
-import { useHistory } from 'react-router-dom';
-import { useStateMachine } from 'little-state-machine';
-import updateAction from '../adapters/updateAction';
+
+import { Grid, Segment, Header,  Button, Image, Divider  } from 'semantic-ui-react';
+import { useTranslation } from "react-i18next";
+import "../translations/i18n";
+import { useHistory } from "react-router-dom";
+import { useStateMachine } from "little-state-machine";
+import updateAction from "../adapters/updateAction";
+import { userSignUp } from "../adapters/userAPI";
+import Error from '../pages/Error';
 
 function SignUpFinish() {
   const { t } = useTranslation();
@@ -20,17 +16,27 @@ function SignUpFinish() {
 
   const history = useHistory();
 
-  const RouteChangeHome = () => {
-    let path = `home`;
-    history.push(path);
-    console.log(JSON.stringify(state, null, 2));
-  };
 
-  const RouteChangeMoreInfo = () => {
-    let path = `details-activities2`;
-    history.push(path);
-  };
+    const responseData = async (path) => {
+        const response  = await userSignUp(JSON.stringify(state.yourDetails));
+        if (response.status ===  'success') {
+            const TOKEN = response.token;
+            localStorage.setItem('token', TOKEN);
+            return history.push(path);
+        }
+        return history.push('error');
+    }
 
+    const RouteChangeHome = () => {
+        let path = `home`;
+        responseData(path);
+    }
+
+    const RouteChangeMoreInfo = () => {
+        let path = `details-activities2`;
+        responseData(path);
+    }
+    
   return (
     <Segment size="large" padded="very" className="height100">
       <Grid stackable columns={1} verticalAlign="middle" centered>

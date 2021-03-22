@@ -46,43 +46,39 @@ function DetailsActivities() {
     history.push(path);
   };
 
-  const RouteChangeMoreInfo = () => {
-    let path = `details-skills2`;
-    history.push(path);
-  };
-  return (
-    <Segment size="large">
-      <Progress percent={50} attached="top" size="medium" color="pink" />
-      <Grid>
-        <Grid.Column width={16} textAlign="center">
-          <Header as="h6" color="grey" className="form-step">
-            {t('stepOne')}
-          </Header>
-        </Grid.Column>
-        <Grid.Column width={16} textAlign="center">
-          <Header as="h2" className="headingText form-title">
-            {t('select')}
-          </Header>
-        </Grid.Column>
-        <Grid.Column width={16} textAlign="center">
-          <Header as="h5" color="grey" className="form-subtitle">
-            {t('sub_text_select')}
-          </Header>
-        </Grid.Column>
-      </Grid>
-      <Grid stackable centered>
-        {dataActivities.map((item) => {
-          return (
-            <ItemActivity2
-              key={item.id}
-              {...item}
-              toggleHandler={toggleHandler}
-            />
-          );
-        })}
-      </Grid>
-      <Divider hidden />
-      <Grid centered>
+    const RouteChangeMoreInfo = () => {
+        let path = `details-skills2`;
+        history.push(path);
+    }
+    return (
+        <Segment size='large'>
+            <Progress percent={50} attached='top' size='medium' color='pink'/>
+            <Grid>
+                <Grid.Column width={16} textAlign="center">
+                    <Header as="h6" color="grey" className="form-step">
+                        {t('stepOne')}
+                    </Header>
+                </Grid.Column>
+                <Grid.Column width={16} textAlign="center">
+                    <Header  as='h2' className="headingText form-title"> 
+                        {t('select')}
+                    </Header>
+                </Grid.Column>
+                <Grid.Column width={16} textAlign="center">
+                    <Header as="h5" color="grey" className="form-subtitle">
+                    {t('sub_text_select')}
+                    </Header>
+                </Grid.Column>
+            </Grid>
+                <Grid stackable centered>
+                {dataActivities.map((item) => {
+                    return(
+                        <ItemActivity2 key={item.id} {...item} toggleHandler={toggleHandler}/>
+                    )
+                })}
+                </Grid>
+                <Divider hidden/>
+                      <Grid centered>
         <Grid.Column mobile={16} tablet={8} computer={6} textAlign="center">
           <Button.Group widths="2" compact className="btn-group">
             <Button
@@ -103,8 +99,9 @@ function DetailsActivities() {
           <Divider hidden style={{ marginBottom: '40px' }} />
         </Grid.Column>
       </Grid>
-    </Segment>
-  );
+        </Segment>
+    )
+
 }
 
 export default DetailsActivities;

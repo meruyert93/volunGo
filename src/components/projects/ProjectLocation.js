@@ -75,149 +75,142 @@ function ProjectLocation({ activPicker }) {
     //console.log(data)
   };
 
-  return (
-    <Segment basic size="large" padded="very">
-      <Grid stackable verticalAlign="middle" centered>
-        <Grid.Column width={16} textAlign="center">
-          <Header as="h2" className="NGOtextDark form-title">
-            {t('location_time_info')}
-          </Header>
-          <p className="form-subtitle"> {t('sub_text_location_time_info')}</p>
-        </Grid.Column>
-        <Grid.Row>
-          <Grid.Column mobile={16} tablet={8} computer={5}>
-            <Form>
-              <Header className="form-subsection-title">
-                {t('location_info_project')}
-              </Header>
-              <Form.Field>
-                <label>{t('company_name')}</label>
-                <input
-                  type="text"
-                  name="companyName"
-                  placeholder={t('location_project_placeholder')}
-                  ref={register}
-                />
-              </Form.Field>
-              <Form.Field>
-                <label>{t('address_1')}</label>
-                <input
-                  type="text"
-                  name="addressOne"
-                  placeholder={t('location_project_placeholder')}
-                  ref={register}
-                />
-              </Form.Field>
-              <Form.Group>
-                <Form.Field>
-                  <label>{t('city_project')}</label>
-                  <input
-                    type="text"
-                    name="city"
-                    placeholder={t('location_project_placeholder')}
-                    ref={register}
-                  />
-                </Form.Field>
-                <Form.Field>
-                  <label>{t('postalCode_project')}</label>
-                  <input
-                    type="text"
-                    name="postalCode"
-                    placeholder={t('location_project_placeholder')}
-                    ref={register}
-                  />
-                </Form.Field>
-              </Form.Group>
-              <Header className="form-subsection-title">
-                {t('time_info')}
-              </Header>
-              <Form.Group>
-                <Form.Field>
-                  <label>{t('starting_date')}</label>
-                  <Controller
-                    name="startDate"
-                    control={control}
-                    render={({ value, onChange }) => {
-                      return (
-                        <DatePicker selected={value} onChange={onChange} />
-                      );
-                    }}
-                  />
-                </Form.Field>
-                <Form.Field>
-                  <label>{t('ending_date')}</label>
-                  <Controller
-                    name="endDate"
-                    control={control}
-                    render={({ value, onChange }) => {
-                      return (
-                        <DatePicker selected={value} onChange={onChange} />
-                      );
-                    }}
-                  />
-                </Form.Field>
-              </Form.Group>
-              <Form.Field>
-                <label>{t('weekdays')}</label>
-                <Controller
-                  name="weekdays"
-                  control={control}
-                  placeholder="weekdays"
-                  render={() => {
-                    return (
-                      <Form.Dropdown
-                        options={weekOptions}
-                        fluid
-                        selection
-                        multiple
-                        search
-                        onChange={handleOnChange}
-                      />
-                    );
-                  }}
-                />
-              </Form.Field>
-              <Form.Group>
-                <Form.Field>
-                  <label>{t('starting_time')}</label>
-                  <Controller
-                    name="startTime"
-                    control={control}
-                    render={() => {
-                      return (
-                        <Form.Dropdown
-                          options={timeOptions}
-                          selection
-                          onChange={startTimeOnChange}
-                        />
-                      );
-                    }}
-                  />
-                </Form.Field>
-                <Form.Field>
-                  <label>{t('ending_time')}</label>
-                  <Controller
-                    name="endTime"
-                    control={control}
-                    render={() => {
-                      return (
-                        <Form.Dropdown
-                          options={timeOptions}
-                          selection
-                          onChange={endTimeOnChange}
-                        />
-                      );
-                    }}
-                  />
-                </Form.Field>
-              </Form.Group>
-              <Form.Field
-                label={t('no_specify')}
-                name="not_specified"
-                control="input"
-                type="checkbox"
-              />
-              <Grid.Row>
+    return (
+        <Segment basic size="large" padded="very">
+            <Grid stackable verticalAlign='middle' centered>
+                <Grid.Column width={16} textAlign="center">
+                    <Header  as='h2' className="NGOtextDark form-title"> 
+                        {t('location_time_info')}
+                    </Header>
+                    <p className="form-subtitle"> {t('sub_text_location_time_info')}</p>
+                </Grid.Column>
+                <Grid.Row>
+                    <Grid.Column mobile={16} tablet={8} computer={5}>
+                        <Form>
+                            <Header>{t('location_info_project')}Skip</Header>
+                            <Form.Field>
+                                <label>{t('company_name')}</label>
+                                <input
+                                    type="text" 
+                                    name="companyName"
+                                    placeholder={t('location_project_placeholder')}
+                                    ref={register} 
+                                />
+                            </Form.Field>
+                            <Form.Field>
+                                <label>{t('address_1')}</label>
+                                <input
+                                    type="text" 
+                                    name="streetAddress"
+                                    placeholder={t('location_project_placeholder')}
+                                    ref={register} 
+                                />
+                            </Form.Field>
+                            <Form.Group>
+                                <Form.Field>
+                                    <label>{t('city_project')}</label>
+                                    <input
+                                        type="text" 
+                                        name="city"
+                                        placeholder={t('location_project_placeholder')}
+                                        ref={register} 
+                                    />
+                                </Form.Field>
+                                <Form.Field>
+                                    <label>{t('postalCode_project')}</label>
+                                    <input
+                                        type="text" 
+                                        name="postalCode"
+                                        placeholder={t('location_project_placeholder')}
+                                        ref={register} 
+                                    />
+                                </Form.Field>
+                            </Form.Group>
+                            <Header>{t('time_info')}</Header>
+                            <Form.Group>
+                                <Form.Field>
+                                    <label>{t('starting_date')}</label>
+                                    <Controller
+                                        name="startDate"
+                                        control= {control}
+                                        render={ ({value, onChange}) => {
+                                            return (
+                                                <DatePicker
+                                                    selected={value} 
+                                                    onChange={onChange}
+                                                />
+                                            )
+                                        }}
+                                    />
+                                </Form.Field>
+                                <Form.Field>
+                                    <label>{t('ending_date')}</label>
+                                    <Controller
+                                        name="endDate"
+                                        control= {control}
+                                        render={ ({value, onChange}) => {
+                                            return (
+                                                <DatePicker
+                                                    selected={value} 
+                                                    onChange={onChange} />
+                                            )
+                                        }}
+                                    />
+                                </Form.Field>
+                            </Form.Group>
+                            <Form.Field>
+                                <label>{t('weekdays')}</label>
+                                <Controller
+                                    name="weekdays"
+                                    control= {control}
+                                    placeholder='weekdays'
+                                    render={ () => {
+                                        return (
+                                        <Form.Dropdown
+                                            options={weekOptions} 
+                                            fluid selection multiple search 
+                                            onChange={handleOnChange}
+                                        />
+                                        )
+                                    }}
+                            />
+                            </Form.Field>
+                            <Form.Group>
+                                <Form.Field>
+                                    <label>{t('starting_time')}</label>
+                                    <Controller
+                                        name="startTime"
+                                        control= {control}
+                                        render={ () => {
+                                            return (
+                                            <Form.Dropdown
+                                                options={timeOptions} 
+                                                selection 
+                                                onChange={startTimeOnChange}
+                                            />
+                                            )
+                                        }}
+                                />
+                                </Form.Field>
+                                <Form.Field>
+                                    <label>{t('ending_time')}</label>
+                                    <Controller
+                                        name="endTime"
+                                        control= {control}
+                                        render={ () => {
+                                            return (
+                                            <Form.Dropdown
+                                                options={timeOptions} 
+                                                selection 
+                                                onChange={endTimeOnChange}
+                                            />
+                                            )
+                                        }}
+                                />
+                                </Form.Field>
+                            </Form.Group>
+                            <Form.Field label={t('no_specify')} name='not_specified' control='input' type='checkbox' />
+                                    <Grid.Row>
                 <Button.Group widths="2" className="btn-group">
                   <Divider hidden />
                   <Button
@@ -234,12 +227,12 @@ function ProjectLocation({ activPicker }) {
                   </Button>
                 </Button.Group>
               </Grid.Row>
-            </Form>
-          </Grid.Column>
-        </Grid.Row>
-      </Grid>
-    </Segment>
-  );
+                        </Form>  
+                    </Grid.Column>
+                </Grid.Row>
+            </Grid>
+        </Segment>
+    )
 }
 
 export default ProjectLocation;

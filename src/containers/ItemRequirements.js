@@ -19,7 +19,7 @@ function ItemRequirements({id, name, image, toggleHandler}) {
 
     return (
         <Grid.Column>
-            <Segment onClick={() => chosenHandler(id)} className={active ? "ngoSecondaryBorder heightCard" : "heightCard"} >
+            <Segment onClick={() => chosenHandler(id)} className={active ? "ngoSecondaryBorder heightCard" : "heightCard"}>
                 {/* <Image src={image} size='mini' className="imageCard iconSkills" centered/>    */}
                     <svg className={active ? 'iconSkillsSelected iconSkills' : 'iconSkills'}>
                     <use  xlinkHref={image}></use>

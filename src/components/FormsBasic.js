@@ -27,10 +27,12 @@ function Forms() {
   const password = useRef({});
   password.current = watch('password', '');
 
-  const togglePasswordVisiblity = () => {
-    setPasswordShown(!passwordShown);
-    // console.log('toggling')
-  };
+
+    const togglePasswordVisiblity = () => {
+        setPasswordShown(!passwordShown);
+        // console.log('toggling')
+    };
+
 
   const { t } = useTranslation();
 
