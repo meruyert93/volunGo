@@ -58,7 +58,7 @@ function VolunteerSignIn() {
         history.push('error');
     }
     history.push('error');
-  };
+
 
   return (
     <Segment size="large" padded="very">
