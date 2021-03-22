@@ -5,78 +5,6 @@ html {
 body {
   box-sizing: border-box; }
 
-#root .inputPassword {
-  position: relative;
-  display: flex; }
-
-#root .iconEye1 {
-  position: absolute;
-  top: 39%;
-  right: 3%; }
-
-#root .iconEye2 {
-  position: absolute;
-  top: 66%;
-  right: 3%; }
-
-#root .iconEye3 {
-  position: absolute;
-  top: 41%;
-  right: 3%; }
-
-#root .iconEye4 {
-  position: absolute;
-  top: 69%;
-  right: 3%; }
-
-#root .iconEye5 {
-  position: absolute;
-  top: 53%;
-  right: 3%; }
-
-#root .iconEye6 {
-  position: absolute;
-  top: 53%;
-  right: 3%; }
-
-#root .iconEye:hover {
-  cursor: pointer; }
-
-#root .cursor:hover {
-  cursor: pointer; }
-
-#root .height70 {
-  height: 70vh; }
-
-#root .height80 {
-  height: 80vh; }
-
-#root .height100 {
-  height: 100vh; }
-
-#root .height180 {
-  height: 180vh; }
-
-#root .flexColumn {
-  display: flex;
-  flex-direction: column; }
-
-#root .flexJustifyContent {
-  display: flex;
-  flex-direction: row;
-  justify-content: center; }
-
-#root .timePicker {
-  width: 0;
-  cursor: pointer;
-  line-height: 1.21428571em;
-  padding: .67857143em 1em;
-  font-size: 1em;
-  height: 60px; }
-
-#root .padding15rem {
-  padding-left: 15rem;
-  padding-right: 15rem; }
 #root {
   /* 
     *,
@@ -107,7 +35,17 @@ body {
     position: absolute;
     top: 50%;
     right: 3%; }
+  #root .iconEye5 {
+    position: absolute;
+    top: 53%;
+    right: 3%; }
+  #root .iconEye6 {
+    position: absolute;
+    top: 53%;
+    right: 3%; }
   #root .iconEye:hover {
+    cursor: pointer; }
+  #root .cursor:hover {
     cursor: pointer; }
   #root .height70 {
     height: 70vh; }
@@ -328,6 +266,251 @@ body {
 #root .text-left {
   text-align: left !important; }
 
+#root .VolunteerSecondaryColor {
+  color: #6F30FE; }
+
+#root .backgroundLightGrey {
+  background-color: #F7F8F9; }
+
+@media (max-width: 520px) {
+  #root .mobileHide {
+    display: none; } }
+
+@media (min-width: 520px) {
+  #root .largeScreenHide {
+    display: none; } }
+
+#root .centerAlign {
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
+#root .error-title {
+  /* Desktop/Headings/H2/Regular 32px */
+  font-family: "Manrope", san-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 32px;
+  text-align: center;
+  /* UI/Error */
+  color: #C30052; }
+
+#root .error-text {
+  /* Desktop/Body/LG/Regular 18px */
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-family: "Manrope", san-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 28px;
+  /* identical to box height, or 156% */
+  /* Text/Gray 60 */
+  color: #666666; }
+
+#root .signin-title {
+  /* Desktop/Headings/H2/Bold 32px */
+  font-family: "Manrope", san-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 28px;
+  line-height: 36px; }
+
+#root .signin-text {
+  /* Desktop/Body/LG/Regular 18px */
+  margin: auto;
+  max-width: 480px;
+  font-family: "Manrope", san-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 24px;
+  /* or 156% */
+  /* Text/Gray 60 */
+  color: #666666; }
+
+#root .signin-caption {
+  /* Desktop/Body/MD/Regular 16px */
+  font-family: "Manrope", san-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 20px;
+  /* identical to box height, or 150% */
+  /* Text/Gray 60 */
+  color: #666666; }
+
+#root .signin-inlineBtn {
+  /* Desktop/Interactions/Button 14px */
+  font-family: "Manrope", san-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase; }
+  #root .signin-inlineBtn-volunteer {
+    /* Brand/Volunteer/Primary */
+    color: #F94877; }
+  #root .signin-inlineBtn-ngo {
+    color: #00AFF0; }
+
+#root .signin-illust {
+  display: block;
+  width: auto;
+  height: 380px; }
+
+#root .projectDetail-image {
+  border-radius: 20px; }
+
+#root .projectDetail-title {
+  margin-top: 10px;
+  /* Desktop/Headings/H2/Bold 32px */
+  font-family: "Manrope", san-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 28px;
+  line-height: 40px;
+  /* or 125% */
+  /* Text/Gray 80 */
+  color: #333333; }
+
+#root .projectDetail-organization {
+  margin: 0;
+  margin-bottom: 30px;
+  /* Desktop/Body/XL/Regular 20px */
+  font-family: "Manrope", san-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 32px;
+  /* identical to box height, or 160% */ }
+
+#root .projectDetail-description {
+  /* Desktop/Body/LG/Regular 18px */
+  font-family: "Manrope", san-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 24px;
+  /* or 156% */
+  /* Text/Gray 80 */
+  color: #333333; }
+
+#root .projectDetail-info {
+  border: transparent;
+  box-shadow: none;
+  background-color: #F7F8F9;
+  padding: 30px 20px; }
+  #root .projectDetail-info__icon {
+    color: #666666; }
+  #root .projectDetail-info__title {
+    /* Desktop/Headings/H5/Bold 18px */
+    font-family: "Manrope", san-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 24px;
+    /* identical to box height, or 133% */
+    /* Text/Gray 80 */
+    color: #666666; }
+  #root .projectDetail-info__text {
+    margin: 10px;
+    /* Desktop/Body/MD/Regular 16px */
+    font-family: "Manrope", san-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 24px;
+    /* identical to box height, or 150% */
+    text-align: center;
+    /* Text/Gray 80 */
+    color: #333333; }
+  #root .projectDetail-info__link {
+    color: #F94877; }
+
+#root .confirm-title {
+  /* Desktop/Headings/H2/Bold 32px */
+  font-family: "Manrope", san-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 28px;
+  line-height: 36px; }
+
+#root .confirm-text {
+  /* Desktop/Body/LG/Regular 18px */
+  margin: auto;
+  max-width: 480px;
+  font-family: "Manrope", san-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 24px;
+  /* or 156% */
+  /* Text/Gray 60 */
+  color: #666666; }
+
+#root .confirm-project__title {
+  /* Desktop/Headings/H6/Bold 16px */
+  margin: 0;
+  margin-bottom: 5px;
+  font-family: "Manrope", san-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 24px;
+  color: #333333; }
+
+#root .confirm-project__organization {
+  margin: 0;
+  /* Desktop/Body/SM/Regular 14px */
+  font-family: "Manrope", san-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 20px;
+  color: #666666; }
+
+#root .confirm-project__section {
+  /* All Caps/Bold 12px */
+  font-family: "Manrope", san-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 16px;
+  /* identical to box height, or 133% */
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  /* Text/Gray 40 */
+  color: #999999; }
+
+#root .confirm-project__detail {
+  /* Desktop/Body/SM/Regular 14px */
+  font-family: "Manrope", san-serif;
+  text-transform: initial;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 20px;
+  /* identical to box height, or 143% */
+  /* Text/Gray 80 */
+  color: #333333; }
+
+#root .navbar-logo > img {
+  height: 32px; }
+
+#root .navbar-item > * {
+  /* Desktop/Body/MD/Regular 16px */
+  font-family: "Manrope", san-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 24px;
+  text-align: right;
+  /* Text/Gray 70 */
+  color: #4D4D4D; }
+
 #root .btn-group {
   margin: 40px 0 20px 0; }
 
@@ -349,23 +532,6 @@ body {
   border-radius: 12px;
   padding: 12px 40px; }
 
-#root .VolunteerSecondaryColor {
-  color: #6F30FE; }
-
-#root .backgroundLightGrey {
-  background-color: #F7F8F9; }
-
-@media (max-width: 520px) {
-  #root .mobileHide {
-    display: none; } }
-
-@media (min-width: 520px) {
-  #root .largeScreenHide {
-    display: none; } }
-
-#root .headingText {
-  color: #090088; }
-=======
 #root .btn-longtext {
   font-size: 15px; }
 
@@ -483,9 +649,7 @@ body {
   background-color: #F8F8F8; }
 
 #root .overlayImage {
-  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 100%);
-  opacity: 0.8;
-  filter: brightness(30%); }
+  filter: brightness(60%); }
 
 #root .projectCard {
   width: 100%; }
@@ -535,6 +699,40 @@ body {
 
 #root .grey60 {
   color: #666666; }
+
+#root .item-skill {
+  padding: 15px; }
+  #root .item-skill__text {
+    font-family: Manrope;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 20px;
+    /* or 125% */
+    text-align: center;
+    text-transform: capitalize;
+    /* Text/Gray 60 */
+    color: #666666; }
+  #root .item-skill__check {
+    margin: 8px 4px 0 0; }
+
+#root .item-activity {
+  border-radius: 10px;
+  overflow: hidden; }
+  #root .item-activity__text {
+    margin-left: 5px;
+    margin-bottom: 0;
+    font-family: Manrope;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 20px;
+    /* or 125% */
+    text-align: left;
+    text-transform: capitalize;
+    color: #fff; }
+  #root .item-activity__check {
+    margin: 8px 4px 0 0; }
 
 #root .profile-image {
   display: block;

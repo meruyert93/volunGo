@@ -20,7 +20,7 @@ function ProjectInfoBasic({ activPicker }) {
   const [radio, setRadio] = useState('');
   const { t } = useTranslation();
   const { state, actions } = useStateMachine({ UpdateProjectAction });
-  const { handleSubmit, errors, register, watch, control, setValue } = useForm({
+  const { handleSubmit, register,  control, setValue } = useForm({
     defaultValues: state.projects,
   });
 

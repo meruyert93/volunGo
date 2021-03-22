@@ -1,0 +1,35 @@
+#root {
+  .error {
+    &-title {
+      /* Desktop/Headings/H2/Regular 32px */
+      font-family: $font-primary;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 24px;
+      line-height: 32px;
+      text-align: center;
+
+      /* UI/Error */
+
+      color: #C30052;
+
+    }
+
+    &-text {
+      /* Desktop/Body/LG/Regular 18px */
+      margin-top: 10px;
+      margin-bottom: 10px;
+      font-family: $font-primary;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 18px;
+      line-height: 28px;
+      /* identical to box height, or 156% */
+
+
+      /* Text/Gray 60 */
+
+      color: $color-gray-60;
+    }
+  }
+}

@@ -1,0 +1,65 @@
+#root {
+  .signin {
+    &-title {
+        /* Desktop/Headings/H2/Bold 32px */
+        font-family: $font-primary;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 28px;
+        line-height: 36px;
+    }
+
+    &-text {
+      /* Desktop/Body/LG/Regular 18px */
+      margin: auto;
+      max-width: 480px;
+      font-family: $font-primary;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 16px;
+      line-height: 24px;
+      /* or 156% */
+
+      /* Text/Gray 60 */
+      color: $color-gray-60;
+    }
+
+    &-caption {
+      /* Desktop/Body/MD/Regular 16px */
+      font-family: $font-primary;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 14px;
+      line-height: 20px;
+      /* identical to box height, or 150% */
+
+      /* Text/Gray 60 */
+      color: $color-gray-60;
+    }
+
+    &-inlineBtn {
+      /* Desktop/Interactions/Button 14px */
+
+      font-family: $font-primary;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 14px;
+      line-height: 20px;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      
+      &-volunteer {
+        /* Brand/Volunteer/Primary */
+        color: $color-volunteer-primary;
+      }
+
+      &-ngo { color: $color-ngo-primary; }
+    }
+
+    &-illust {
+      display: block;
+      width: auto;
+      height: 380px;
+    }
+  }
+}

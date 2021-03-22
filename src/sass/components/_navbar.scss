@@ -1,0 +1,24 @@
+#root {
+  .navbar {
+    &-logo {
+      & > img {
+        height: 32px;
+      }
+    }
+
+    &-item {
+      & > * {
+        /* Desktop/Body/MD/Regular 16px */
+        font-family: $font-primary;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 24px;
+        text-align: right;
+  
+        /* Text/Gray 70 */
+        color: #4D4D4D;
+      }
+    }
+  }
+}
