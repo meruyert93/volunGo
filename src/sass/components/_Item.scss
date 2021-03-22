@@ -49,6 +49,8 @@
         // filter: brightness(30%);
     }
     .projectCard{
+        border-radius: 10px;
+        overflow: hidden;
         width: 100%;
     }
     .projectCard:hover {
