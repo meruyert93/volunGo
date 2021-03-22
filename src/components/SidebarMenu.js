@@ -8,7 +8,7 @@ import {
 
 
 function SidebarMenu({visible, setVisible}) {
-    const [active, setActive] = useState('');
+    const [active, setActive] = useState('volunteers');
     const history = useHistory();
     const location = useLocation();
 

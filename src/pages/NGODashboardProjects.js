@@ -24,14 +24,11 @@ function NGODashboardProjects() {
     const getAllMyProjectsFromAPI = async () => {
         const getNGOProjects = await getAllMyProjects();
         //console.log(getNGOProjects.data.doc.projects);
-        if (getNGOProjects['data']['doc']['projects']) {
-            setProjects(getNGOProjects.data.doc.projects);
-        } else {
-            return console.log('not available')
-            //to handle error component
-            //return component with error
-        }
-        
+        if (localStorage.getItem('token')) {
+            return setProjects(getNGOProjects.data.doc.projects);
+        }   
+        return history.push('error');
+
     }
 
     useEffect(() => {
@@ -47,11 +44,14 @@ function NGODashboardProjects() {
 
   const history = useHistory();
 
-  const RouteChangeNext = () => {
-    let path = `ngo-project-registration`;
-    history.push(path);
+    const RouteChangeNext = () => {
+    if (localStorage.getItem('token')) {
+        let path = `ngo-project-registration`;
+        return history.push(path);
+    } 
+        return history.push('error');
     //console.log(data)
-  };
+};
 
     let projectComponents;
     if (projects.length === 0) {

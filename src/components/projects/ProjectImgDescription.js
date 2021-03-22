@@ -35,13 +35,45 @@ function ProjectImgDescription({ activPicker }) {
     const RouteChangeNext =  async (data) => {
         actions.UpdateProjectAction(data);
         Object.assign(state.projects, data);
+        const { 
+                city, 
+                companyName, 
+                contactPersonEmail, 
+                contactPersonName,
+                description,
+                endDate,
+                endTime,
+                images,
+                locationType,
+                numberOfVolunteers,
+                postalCode,
+                requirements,
+                startDate,
+                startTime,
+                streetAddress,
+                title,
+                weekdays
+            } = state.projects;
         const formData = new FormData();
-        formData.append('images', state.projects.images);
-        formData.append('title', 'AlexAlex');
-        console.log(formData.keys());
-        console.log(formData.getAll('images'));
-        console.log(formData.getAll('title'));
-        const response = await createProject(JSON.stringify(state.projects.images));
+        console.log(images[0]);
+        formData.append('images', images[0]);
+        formData.append('title', title);
+        formData.append('city', city);
+        formData.append('companyName', companyName);
+        formData.append('contactPersonEmail', contactPersonEmail);
+        formData.append('contactPersonName', contactPersonName);
+        formData.append('description', description);
+        formData.append('endTime', endTime);
+        formData.append('endDate', endDate);
+        formData.append('locationType', locationType);
+        formData.append('numberOfVolunteers', numberOfVolunteers);
+        formData.append('postalCode', postalCode);
+        // formData.append('requirements', requirements);
+        formData.append('startDate', startDate);
+        formData.append('startTime', startTime);
+        formData.append('streetAddress', streetAddress);
+        formData.append('weekdays', weekdays);
+        const response = await createProject(formData);
         console.log(response);
         if (response.status === 'success') {
             return activPicker(5)
@@ -60,7 +92,7 @@ function ProjectImgDescription({ activPicker }) {
                 </Grid.Column>
                 <Grid.Row>
                     <Grid.Column mobile={16} tablet={8} computer={9}>
-                        <Form enctype="multipart/form-data">
+                        <Form encType="multipart/form-data">
                             <Form.Group>
                                 <Form.Field width={12} required>
                                     <label>{t('attach_image')}</label>

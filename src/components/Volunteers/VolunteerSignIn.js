@@ -40,7 +40,7 @@ function VolunteerSignIn() {
         let path = `projects`;
         actions.updateAction(data);
         Object.assign(state.yourDetails, data);
-        const response = await userSignInFromApi(JSON.stringify(state.ngoDetails));
+        const response = await userSignInFromApi(JSON.stringify(state.yourDetails));
         
         if (response.status ===  'success') {
             const TOKEN = response.token;
