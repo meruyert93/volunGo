@@ -43,14 +43,22 @@ function ItemProjectForUsers({
         <Card.Content>
           <Card.Meta>
             <p className="card-info">
-              <Icon name="calendar alternate outline" color="grey" />
+              <Icon
+                name="calendar alternate outline"
+                color="grey"
+                style={{ marginRight: '4px' }}
+              />
               {duration && ' | ' + duration} {days && ' | ' + days}{' '}
               {time && ' | ' + time}
             </p>
           </Card.Meta>
           <Card.Meta>
             <p className="card-info">
-              <Icon name="map marker alternate" color="grey" />
+              <Icon
+                name="map marker alternate"
+                color="grey"
+                style={{ marginRight: '4px' }}
+              />
               {place}
             </p>
           </Card.Meta>

@@ -51,20 +51,25 @@ function SidebarMenu({ visible, setVisible }) {
       <Menu text vertical fluid size="huge">
         <Menu.Item
           as="a"
-          className="navbar-item"
+          className="navbar-item navbar-item-collapsed"
           onClick={() => RouteChangeVolunteers()}
         >
           Volunteers
         </Menu.Item>
         <Menu.Item
           as="a"
-          className="navbar-item"
+          className="navbar-item navbar-item-collapsed"
           onClick={() => RouteChangeOrganization()}
         >
           Organizations
         </Menu.Item>
         <Menu.Item as="a" onClick={() => RouteSignIn()}>
-          <Button basic color={active === 'volunteers' ? 'pink' : 'blue'}>
+          <Button
+            basic
+            className={`navBtn navBtn-collapsed navBtn-${
+              active === 'volunteers' ? 'volunteer' : 'ngo'
+            }`}
+          >
             Sign in
           </Button>
         </Menu.Item>

@@ -3,7 +3,7 @@
     &-image {
       display: block;
       width: 120px;
-      height: 120px;
+      object-fit: cover;
     }
 
     &-name {

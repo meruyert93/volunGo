@@ -97,11 +97,13 @@
         border-width: 3px;
     }
     .grey60 {
-        color:$color-gray-60;
+        color: #999999;
     }
 
     .item-skill {
         padding: 15px;
+        border-radius: 10px;
+        overflow: hidden;
 
         &__text {
             font-family: Manrope;
@@ -112,10 +114,6 @@
             /* or 125% */
             text-align: center;
             text-transform: capitalize;
-
-            /* Text/Gray 60 */
-
-            color: #666666;
         }
 
         &__check {

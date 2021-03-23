@@ -36,9 +36,7 @@ function ItemYourProjects({
           </p>
         </Card.Content>
         <Card.Content>
-          <Button color="yellow" className="tag">
-            {t('pending')}
-          </Button>
+          <div className="tag tag-pending">{t('pending')}</div>
         </Card.Content>
       </Card>
     </Grid.Column>

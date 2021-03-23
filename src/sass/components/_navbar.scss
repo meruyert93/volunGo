@@ -7,18 +7,26 @@
     }
 
     &-item {
-      & > * {
         /* Desktop/Body/MD/Regular 16px */
         font-family: $font-primary;
         font-style: normal;
-        font-weight: normal;
+        // font-weight: normal;
         font-size: 16px;
         line-height: 24px;
         text-align: right;
   
         /* Text/Gray 70 */
         color: #4D4D4D;
-      }
+        margin-right: 50px;
+
+        &-collapsed {
+          text-align: center;
+          margin-right: 0;
+        }
+    }
+
+    &-item.active {
+      font-weight: bold;
     }
   }
 }

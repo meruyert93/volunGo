@@ -1,0 +1,23 @@
+#root {
+  .tag {
+    display: inline-block;
+    padding: 4px 12px;
+    color: white;
+    border-radius: 100px;
+    font-family: Manrope, san-serif;
+    font-weight: bold;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+
+    &-pending {
+      background-color: #FFC147;
+    }
+
+    &-upcoming {
+      background: #F7F8F9;
+      border: 1px solid #E5E5E5;
+      color: $color-gray-40;
+    }
+  }
+}
