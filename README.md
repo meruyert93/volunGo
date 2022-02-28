@@ -1,7 +1,7 @@
 # VolunGo App
 
 ## Description
-I developed this App as part of internship at[Digital Product School](https://digitalproductschool.io/
+I developed this App as part of internship at [Digital Product School](https://digitalproductschool.io/
 )
 Digital Product School is a 3-month full-time training and experience building
 program. Participants learn to build digital products that solve real-world problems.
