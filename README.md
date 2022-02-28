@@ -1,6 +1,17 @@
-# Getting Started with Create React App
+# VolunGo App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Description
+I developed this App as part of internship at[Digital Product School](https://digitalproductschool.io/
+)
+Digital Product School is a 3-month full-time training and experience building
+program. Participants learn to build digital products that solve real-world problems.
+Here is the deployed version of the product: https://volungo.netlify.app/ 
+
+The program is supposed to simulate lean start up environment by using agile principles. Our product idea is to develop a web platform to connect volunteers and NGO’s via an intelligent matching system by considering the interests and availability times of volunteers.
+
+I took lead Front-End Developer role in the project and designing,
+building, debugging, providing coding support by using following tools:
+HTML, CSS, JavaScript, React.js, Node.js and Semantic UI.
 
 ## Available Scripts
 
